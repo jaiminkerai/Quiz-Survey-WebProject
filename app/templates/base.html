@@ -1,17 +1,37 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
     <head>
+        <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+
         {% if title %}
         <title>{{ title }} - microblog</title>
         {% else %}
         <title>microblog</title>
         {% endif %}
     </head>
+
     <body>
-      <div>
-        Microblog:
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('login') }}">Login</a>
-    </div>
+        <!--NAV BAR  -->
+        <div>
+            <!-- Theirs -->
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+
+            <!-- Jayden's -->
+            <nav>
+                <ul>
+                    <li><a href="html.html"  class="currentPage">html</a></li>
+                    <li><a href="css.html">css</a></li>
+                    <li><a href="javascript.html">javascript</a></li>
+                    <li><a href="about.html">about me</a></li>
+                    <li class="logoRight"><a href="#">jayden teo</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
         <hr>
         {% with messages = get_flashed_messages() %}
         {% if messages %}

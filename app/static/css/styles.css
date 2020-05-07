@@ -1,0 +1,69 @@
+/* SETTING THE INITIAL SCREEN SIZES TO BE INHERITED */
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;  
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* NAV BAR STYLES */
+.logoLeft {
+    height: 50px;
+    padding-left: 5%;
+    padding-top: 10px;
+    position: absolute;
+}
+
+.logoRight {
+    margin-left: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    right: 5%;
+    position: absolute;
+}
+
+.logoRight a:hover {
+    color: white;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul, .footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li, .footer li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+nav a, .footer a {
+    color: black;
+    text-decoration: solid;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 11.5px;
+}
+
+nav a:hover, .footer a:hover {
+    color: rgb(245, 189, 143);
+}
+
+nav a.currentPage {
+    color: rgb(245, 189, 143);
+}
