@@ -1,5 +1,11 @@
 pip install flask K T H
 pip install python-dotenv K T H
+<<<<<<< HEAD
+pip install flask-wtf T H
+pip install flask-sqlalchemy K T
+pip install flask-migrate  K T
+=======
 pip install flask-wtf H K 
 pip install flask-sqlalchemy K
 pip install flask-migrate  K
+>>>>>>> e9a310094838cfb9f7b20f00eb770d1bb329a0cf
