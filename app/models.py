@@ -40,29 +40,6 @@ class Post(db.Model):
 
 @login.user_loader
 def load_user(id):
-<<<<<<< HEAD
-    return User.query.get(int(id))
-=======
     return User.query.get(int(id))
 
-class User(UserMixin, db.Model):
-
-    def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
-
-    def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
-    
-    def is_active(self):
-        return True
-
-    def get_id(self):
-        return self.email
-
-    def is_authenticated(self):
-        return self.authenticated
-
-    def is_anonymous(self):
-        return False
-
->>>>>>> c2361aacb49c9902a449a838f21e3a13c14b84ee
+   
