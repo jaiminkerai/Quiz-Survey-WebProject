@@ -40,6 +40,9 @@ class Post(db.Model):
 
 @login.user_loader
 def load_user(id):
+<<<<<<< HEAD
+    return User.query.get(int(id))
+=======
     return User.query.get(int(id))
 
 class User(UserMixin, db.Model):
@@ -62,3 +65,4 @@ class User(UserMixin, db.Model):
     def is_anonymous(self):
         return False
 
+>>>>>>> c2361aacb49c9902a449a838f21e3a13c14b84ee
