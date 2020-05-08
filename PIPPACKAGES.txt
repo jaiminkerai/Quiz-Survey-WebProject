@@ -3,3 +3,4 @@ pip install python-dotenv K T H
 pip install flask-wtf T H K
 pip install flask-sqlalchemy K T
 pip install flask-migrate  K T
+pip install flask-login K
