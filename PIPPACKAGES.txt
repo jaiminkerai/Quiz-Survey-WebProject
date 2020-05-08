@@ -3,5 +3,5 @@ pip install python-dotenv K T H
 pip install flask-wtf T H
 pip install flask-sqlalchemy K T H
 pip install flask-migrate  K T H
-pip install flask-login K H
-pip install email_validator K H
+pip install flask-login K H T
+pip install email_validator K H T
