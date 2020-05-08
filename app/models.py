@@ -29,9 +29,19 @@ class Post(db.Model):
     def __repr__(self):
         return '<Post {}>'.format(self.body)
 
-class User(UserMixin, db.Model):
-
-
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
+
+class User(UserMixin, db.Model):
+    def is_active(self):
+        return True
+
+    def get_id(self):
+        return self.email
+
+    def is_authenticated(self):
+        return self.authenticated
+
+    def is_anonymous(self):
+        return False
