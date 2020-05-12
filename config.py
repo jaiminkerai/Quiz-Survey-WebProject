@@ -13,7 +13,7 @@ class Config(object):
     MAIL_USE_TLS = 1
     MAIL_USERNAME = 'cits3403test@gmail.com'
     MAIL_PASSWORD = '3403projecttest'
-    ADMINS = ['22718975@student.uwa.edu.au']
+    ADMINS = ['cits3403test@gmail.com']
 
     #Posts per page configuration
     POSTS_PER_PAGE = 25
