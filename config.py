@@ -8,11 +8,11 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Admin Email Configuration to receive emails (in event of errors...)
-    MAIL_SERVER = os.environ.get('MAIL_SERVER')
-    MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)
-    MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
-    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
-    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    MAIL_SERVER = 'smtp.googlemail.com'
+    MAIL_PORT = 587
+    MAIL_USE_TLS = 1
+    MAIL_USERNAME = 'cits3403test@gmail.com'
+    MAIL_PASSWORD = '3403projecttest'
     ADMINS = ['22718975@student.uwa.edu.au']
 
     #Posts per page configuration
