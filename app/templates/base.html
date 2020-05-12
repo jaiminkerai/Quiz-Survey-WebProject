@@ -43,6 +43,26 @@
             {% endif %}
         </section>
 
+        <section>
+        <div class="navbar">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('explore') }}">Explore</a>
+            {% if current_user.is_anonymous %}
+            <a href="{{ url_for('login') }}">Login</a>
+            {% else %}
+            <div class="dropdown">
+                <button class="dropbtn" onclick="location.href ='{{ url_for('user', username=current_user.username) }}';">{{ current_user.username }}
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+                    <a href="{{ url_for('logout') }}">Logout</a>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        </section>
+
         <hr>
         {% with messages = get_flashed_messages() %}
         {% if messages %}
