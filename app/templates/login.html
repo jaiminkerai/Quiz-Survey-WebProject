@@ -21,5 +21,12 @@
         </p>
         <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
         <p>{{ form.submit() }}</p>
+        <p>
+            {% if current_user.is_anonymous %}
+            {% else %}
+            {% endif %}
+            Forgot Your Password?
+            <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
+        </p>
     </form>
 {% endblock %}
