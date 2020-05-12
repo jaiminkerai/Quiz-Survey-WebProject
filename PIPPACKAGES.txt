@@ -5,5 +5,5 @@ pip install flask-sqlalchemy K T H
 pip install flask-migrate  K T H
 pip install flask-login K H T
 pip install email_validator K H T
-pip install flask-mail K
-pip install pyjwt K
+pip install flask-mail K T
+pip install pyjwt K T
