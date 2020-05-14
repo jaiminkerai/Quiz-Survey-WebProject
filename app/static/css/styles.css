@@ -62,7 +62,7 @@ header {
 }
 
 .basenav .baselogo{
-  transform: translateX(-15px);
+  transform: translateX(10px);
   width: 300px;
   height: auto;
 }
@@ -146,23 +146,34 @@ header {
 
 .messages{
   text-align: center;
+
 }
 
 .messages ul li{
   list-style: none;
   color: white;
+  text-align: center;
+
 }
 
 .wrapper{
-  position: absolute;
+  position: relative;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-47.5%, 0%);
   max-width: 350px;
   width: 100%;
   background: white;
   padding: 25px;
   border-radius: 5px;
-  box-shadow: 4px 4px 2px rgb(170, 180, 194);
+}
+
+.wrapper h1{
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.wrapper .rbtn{
+  transform: translate(-60px ,20px);
 }
 
 .wrapper .input_field{
@@ -171,8 +182,10 @@ header {
 
 .wrapper .input_field .inputbox{
     width: 100%;
+    height: 20px;
     border: 1px solid #e0e0e0;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-align: center;
     justify-content: center;
 }
@@ -180,6 +193,8 @@ header {
 .wrapper .input_field .label{
   text-transform: uppercase;
   font-weight: bold;
+  padding-bottom: 2px;
+
 }
 
 .wrapper .sbtn{
@@ -196,3 +211,22 @@ header {
   border-radius: 25px;
   cursor: pointer;
 }
+
+.wrapper #error_message{
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: #fe8b8e;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 14px;
+  animation: errorbar;
+  animation-duration: 0.5s;
+}
+
+@keyframes errorbar{
+  from{padding: 0px;}
+  to{padding: 5px;}
+}
+
+
