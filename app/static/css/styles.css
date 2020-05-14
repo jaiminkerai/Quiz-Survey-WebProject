@@ -3,6 +3,7 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;  
+    background-color: rgb(133, 133, 133);
 }
 
 header {
@@ -141,4 +142,57 @@ header {
     display: block;
   }
 
-/*NAV TRY*/
+/*Login Form*/
+
+.messages{
+  text-align: center;
+}
+
+.messages ul li{
+  list-style: none;
+  color: white;
+}
+
+.wrapper{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  max-width: 350px;
+  width: 100%;
+  background: white;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px rgb(170, 180, 194);
+}
+
+.wrapper .input_field{
+  margin-bottom: 10px;
+}
+
+.wrapper .input_field .inputbox{
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.wrapper .input_field .label{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.wrapper .sbtn{
+  border: 0;
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  border: 3px solid white;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
