@@ -16,7 +16,7 @@ from app.models import Post
 from app.forms import ResetPasswordRequestForm
 from app.email import send_password_reset_email
 from app.forms import ResetPasswordForm
-from app.models import Quizes
+from app.models import Quizzes
 from app.models import Questions
 from app.models import ADMINS
 
