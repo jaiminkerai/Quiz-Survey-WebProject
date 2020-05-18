@@ -8,6 +8,8 @@ from logging.handlers import SMTPHandler
 from logging.handlers import RotatingFileHandler
 import os
 from flask_mail import Mail
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -16,6 +18,7 @@ migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
 mail = Mail(app)
+admin = Admin(app)
 
 from app import routes, models, errors
 
@@ -48,3 +51,7 @@ if not app.debug: #When debug mode is FALSE
 
         app.logger.setLevel(logging.INFO)
         app.logger.info('Quizzards startup')
+
+admin.add_view(ModelView(models.User, db.session))
+admin.add_view(ModelView(models.Quizzes, db.session))
+admin.add_view(ModelView(models.Questions, db.session))
