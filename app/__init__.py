@@ -1,3 +1,8 @@
+'''
+Tells python that the app directory is a package.
+Initialises and congregates the app. 
+'''
+
 from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
@@ -11,9 +16,9 @@ from flask_mail import Mail
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 
-app = Flask(__name__)
+app = Flask(__name__) # Instantiate Flask application; __name__ a variable equal to the name of the module
 app.config.from_object(Config)
-db = SQLAlchemy(app)
+db = SQLAlchemy(app) # Create a database instance
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
