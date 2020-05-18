@@ -1,3 +1,8 @@
+'''
+Decorators which allows us to write a function that 
+returns the information displayed on the website for a specific route. 
+'''
+
 from flask import render_template, flash, redirect, url_for
 from app import app
 from app.forms import LoginForm
@@ -18,7 +23,7 @@ from app.email import send_password_reset_email
 from app.forms import ResetPasswordForm
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST']) 
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
