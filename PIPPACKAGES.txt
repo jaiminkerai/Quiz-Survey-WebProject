@@ -7,4 +7,4 @@ pip install flask-login K H T
 pip install email_validator K H T
 pip install flask-mail K T
 pip install pyjwt K T
-pip install flask-Admin K
+pip install flask-Admin K T

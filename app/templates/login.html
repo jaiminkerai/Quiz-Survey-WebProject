@@ -4,9 +4,7 @@
     <div class="wrapper">
     <h1>Sign In</h1>
     <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
-    {% if form.errors %}
-    <div id="error_message">You have entered incorrect details!</div>
-    {% endif %}
+    
                 <form id="myform" action="" method="post" novalidate>
                     {{ form.hidden_tag() }}
                     <div class="input_field">
