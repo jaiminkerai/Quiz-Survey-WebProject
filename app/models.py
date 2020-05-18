@@ -89,6 +89,7 @@ class Post(db.Model):
     def __repr__(self):
         return '<Post {}>'.format(self.body)
 
+# Reloading the user from the user id stored in a session
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
