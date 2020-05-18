@@ -1,4 +1,5 @@
-from app import app
+'''Runs the application'''
+from app import app # From app folder __init__.py file import app variable
 from app.models import User, Post, db, Quizzes, Questions
 
 @app.shell_context_processor
