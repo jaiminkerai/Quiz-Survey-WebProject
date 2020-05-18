@@ -20,8 +20,11 @@ app = Flask(__name__) # Instantiate Flask application; __name__ a variable equal
 app.config.from_object(Config)
 db = SQLAlchemy(app) # Create a database instance
 migrate = Migrate(app, db)
+
 login = LoginManager(app)
-login.login_view = 'login'
+login.login_view = 'login' # Tells @login_required the route for the login
+login.login_message_category = "error_message" #Category for need to login before accessing page messages on base.html
+
 mail = Mail(app)
 admin = Admin(app)
 
