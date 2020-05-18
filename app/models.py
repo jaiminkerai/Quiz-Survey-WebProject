@@ -8,6 +8,9 @@ from time import time
 import jwt
 from app import app
 
+
+ADMINS = ['cits3403test@gmail.com']
+
 followers = db.Table('followers',
     db.Column('follower_id', db.Integer, db.ForeignKey('user.id')),
     db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
@@ -19,7 +22,8 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(120), index=True, unique=True)
     password_hash = db.Column(db.String(128))
     posts = db.relationship('Post', backref='author', lazy='dynamic')
-
+    authorOf = db.relationship('Quizes', backref='author', lazy='dynamic')
+    
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
@@ -89,3 +93,25 @@ class Post(db.Model):
 def load_user(id):
     return User.query.get(int(id))
 
+#databases for quizes and questions
+
+class Quizes(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True, unique=True)
+    name = db.Column(db.String(64))
+    description = db.Column(db.String(255))
+    # Connected to user for now
+    questions = db.relationship('Questions', backref='Quizes', lazy='dynamic')
+    author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    pub_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+
+    def __repr__(self):
+        return '<Quiz {}>'.format(self.name)  
+    
+class Questions(db.Model):
+    id = db.Column(db.Integer, primary_key = True, autoincrement=True)
+    question = db.Column(db.String(255))
+    solution = db.Column(db.String(255))
+    quiz_id = db.Column(db.Integer, db.ForeignKey('quizes.id'))
+
+    def __repr__(self):
+        return '<Quiz {}>'.format(self.question)
