@@ -39,16 +39,20 @@
                 </ul>
         </div>
         <br>
+
+        <!-- Display Flashed Messages -->
         <div class="messages">
-            {% with messages = get_flashed_messages() %}
+            {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
-            <ul>
-                {% for message in messages %} 
-                <li>{{ message }}</li>
+            <ul class="wrapper">
+                {% for category, message in messages %} 
+                <li id="{{ category }}" >{{ message }}</li>
                 {% endfor %}
             </ul>
             {% endif %}
             {% endwith %}
+
+            <!-- Block content to be inherited by other templates -->
             {% block content %}{% endblock %}
         </div>
     </body>
