@@ -4,8 +4,10 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config(object):
     # Secret keys protect against modifying cookies, cross-site forgery attacks, etc.
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+
+    # Relative path to the SQLite database file. 
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        'sqlite:///' + os.path.join(basedir, 'app.db')
+        'sqlite:///' + os.path.join(basedir, 'app.db') 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Admin Email Configuration to receive emails (in event of errors...)
