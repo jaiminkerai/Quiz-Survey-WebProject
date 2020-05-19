@@ -55,4 +55,4 @@ if not app.debug: #When debug mode is FALSE
         app.logger.addHandler(file_handler)
 
         app.logger.setLevel(logging.INFO)
-        app.logger.info('Quizzards startup')
+        app.logger.info('Quizards startup')
