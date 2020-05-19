@@ -33,7 +33,7 @@ from flask_admin import Admin, AdminIndexView
 from flask_admin.contrib.sqla import ModelView
 
 
-@app.route('/', methods=['GET', 'POST'])     
+@app.route('/', methods=['GET', 'POST']) 
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
@@ -61,7 +61,7 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('/'))
+        return redirect(url_for('index'))
     form = LoginForm()
     if form.validate_on_submit():
         # If user does not exist or the password is incorrect, redirect back to login
