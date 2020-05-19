@@ -63,4 +63,8 @@ if not app.debug: #When debug mode is FALSE
 admin.add_view(ModelView(models.User, db.session))
 admin.add_view(ModelView(models.Quizzes, db.session))
 admin.add_view(ModelView(models.Questions, db.session))
+<<<<<<< HEAD
 admin.add_view(ModelView(models.multiChoice, db.session))
+=======
+admin.add_view(ModelView(models.quizMarks, db.session))
+>>>>>>> 70a76e428b4370e7a988e76fbc5301d85d8d3376

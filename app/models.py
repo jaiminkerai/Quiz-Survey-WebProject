@@ -25,6 +25,7 @@ class User(UserMixin, db.Model):
     authorOf = db.relationship('Quizzes', backref='author', lazy='dynamic')
     isAdmin = db.Column(db.Boolean, unique=False, default=True)
 
+    marksOf = db.relationship('quizMarks', backref='markOf', lazy='dynamic')
     def isAdmin(self):
         return self.isAdmin
 
@@ -112,6 +113,8 @@ class Quizzes(db.Model):
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     pub_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
+    quizMarks = db.relationship('quizMarks', backref='quizMarks', lazy='dynamic')
+
     def __repr__(self):
         return '<Quiz {}>'.format(self.name)  
     
@@ -124,6 +127,12 @@ class Questions(db.Model):
     def __repr__(self):
         return '<Quiz {}>'.format(self.question)
 
+class quizMarks(db.Model):
+    quizMarks_id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
+    mark = db.Column(db.Float)
+    
 class multiChoice(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
@@ -135,4 +144,15 @@ class multiChoice(db.Model):
     correct = db.Column(db.Integer, unique=False, nullable=False)
     
     def __repr__(self):
+<<<<<<< HEAD
         return "< Quiz {}>".format(self.question)
+=======
+        return "< Quiz {} question: {}  {} {} {} {} {} {} >".format(
+            self.question,
+            self.choice1,
+            self.choice2,
+            self.choice3,
+            self.choice4,
+            self.correct
+        )
+>>>>>>> 70a76e428b4370e7a988e76fbc5301d85d8d3376
