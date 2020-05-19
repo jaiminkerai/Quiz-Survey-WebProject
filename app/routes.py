@@ -31,6 +31,7 @@ from app.models import multiChoice
 from app.models import load_user
 from flask_admin import Admin, AdminIndexView
 from flask_admin.contrib.sqla import ModelView
+from flask_admin.menu import MenuLink
 from flask import g
 
 
@@ -278,3 +279,4 @@ admin.add_view(MyModelView(Quizzes, db.session))
 admin.add_view(MyModelView(Questions, db.session))
 admin.add_view(MyModelView(multiChoice, db.session))
 admin.add_view(MyModelView(quizMarks, db.session))
+admin.add_link(MenuLink(name='Back to Website', category='', url='/'))
