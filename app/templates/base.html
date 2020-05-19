@@ -16,6 +16,7 @@
     <body>
         <!--NAV BAR  -->
         <div>
+<<<<<<< HEAD
             <ul class="basenav topnav">
                 <!-- If user is not logged in -->
                 {% if current_user.is_anonymous %}
@@ -40,6 +41,32 @@
                 </div>
                 {% endif %}
             </ul>
+=======
+                <ul class="basenav topnav">
+                    {% if current_user.is_anonymous %}
+                    <li class="tags"><a>tutorial</a></li>
+                    <li><a href="{{ url_for('index') }}"><img class='baselogo' src="../static/css/templogo.png"></a></li>
+                    <li class="tags"><a href="{{ url_for('login') }}">Sign In</a></li>
+                    {% else %}
+                    <li class="tags"><a>tutorial</a></li>
+                    <li><a href="{{ url_for('quizzes') }}"><img class='baselogo' src="../static/css/templogo.png"></a></li>
+                        <div class="dropdown">
+                            <button class="dropbtn"><li class="tags"><a href="{{ url_for('quizzes') }}">Menu</a></li>
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="{{ url_for('index') }}">Home</a>
+                                <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+                                <a href="{{ url_for('explore') }}">Explore</a>  
+                                {% if g.user.admin %} 
+                                <a href="{{ url_for('admin.index') }}">Admin</a>  
+                                {% endif %}
+                                <a href="{{ url_for('logout') }}">Logout</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                </ul>
+>>>>>>> 3a49f363de46020b6b6439b57b9daf5f55ad2f8e
         </div>
         <br>
 

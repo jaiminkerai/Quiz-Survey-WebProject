@@ -31,6 +31,7 @@ from app.models import multiChoice
 from app.models import load_user
 from flask_admin import Admin, AdminIndexView
 from flask_admin.contrib.sqla import ModelView
+from flask import g
 
 
 @app.route('/', methods=['GET', 'POST']) 
@@ -123,8 +124,10 @@ def user(username):
 @app.before_request
 def before_request():
     if current_user.is_authenticated:
+        g.user = load_user(current_user.id)
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
+
 
 @app.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
