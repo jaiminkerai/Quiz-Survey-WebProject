@@ -28,6 +28,7 @@ from app.models import quizMarks
 from app.models import ADMINS
 
 
+
 @app.route('/', methods=['GET', 'POST']) 
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
