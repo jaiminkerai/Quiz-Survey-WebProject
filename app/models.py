@@ -144,9 +144,7 @@ class multiChoice(db.Model):
     correct = db.Column(db.Integer, unique=False, nullable=False)
     
     def __repr__(self):
-<<<<<<< HEAD
         return "< Quiz {}>".format(self.question)
-=======
         return "< Quiz {} question: {}  {} {} {} {} {} {} >".format(
             self.question,
             self.choice1,
@@ -155,4 +153,3 @@ class multiChoice(db.Model):
             self.choice4,
             self.correct
         )
->>>>>>> 70a76e428b4370e7a988e76fbc5301d85d8d3376
