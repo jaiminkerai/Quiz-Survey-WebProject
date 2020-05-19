@@ -45,7 +45,7 @@ def index():
         post = Post(body=form.post.data, author=current_user)
         db.session.add(post)
         db.session.commit()
-        flash('Your post is now live!')
+        flash('Your post is now live!', 'alertSuccess')
         return redirect(url_for('index'))
     
     # Get current user's posts
@@ -69,7 +69,7 @@ def login():
         # If user does not exist or the password is incorrect, redirect back to login
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
-            flash('Invalid username or password', category='error_message')
+            flash('Invalid username or password', category='alertError')
             return redirect(url_for('login'))
 
         # Log the user in
@@ -104,7 +104,7 @@ def register():
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
-        flash(f'Account created for {form.username.data}!') # A one time message
+        flash(f'Account created for {form.username.data}!','alertSuccess') # A one time message
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
@@ -141,7 +141,7 @@ def edit_profile():
         current_user.email = form.email.data
         current_user.about_me = form.about_me.data
         db.session.commit()
-        flash('Your changes have been saved.')
+        flash('Your changes have been saved.', 'alertSuccess')
         return redirect(url_for('edit_profile'))
     
     # Show current account details
@@ -158,14 +158,14 @@ def edit_profile():
 def follow(username):
     user = User.query.filter_by(username=username).first()
     if user is None:
-        flash('User {} not found.'.format(username))
+        flash('User {} not found.'.format(username), 'alertError')
         return redirect(url_for('index'))
     if user == current_user:
-        flash('You cannot follow yourself!')
+        flash('You cannot follow yourself!', 'alertError')
         return redirect(url_for('user', username=username))
     current_user.follow(user)
     db.session.commit()
-    flash('You are following {}!'.format(username))
+    flash('You are following {}!'.format(username), 'alertSuccess')
     return redirect(url_for('user', username=username))
 
 @app.route('/unfollow/<username>')
@@ -173,14 +173,14 @@ def follow(username):
 def unfollow(username):
     user = User.query.filter_by(username=username).first()
     if user is None:
-        flash('User {} not found.'.format(username))
+        flash('User {} not found.'.format(username), 'alertError')
         return redirect(url_for('index'))
     if user == current_user:
-        flash('You cannot unfollow yourself!')
+        flash('You cannot unfollow yourself!', 'alertError')
         return redirect(url_for('user', username=username))
     current_user.unfollow(user)
     db.session.commit()
-    flash('You are not following {}.'.format(username))
+    flash('You are not following {}.'.format(username), 'alertError')
     return redirect(url_for('user', username=username))
 
 @app.route('/explore')
@@ -206,7 +206,7 @@ def reset_password_request():
         user = User.query.filter_by(email=form.email.data).first()
         if user:
             send_password_reset_email(user)
-        flash('Check your email for the instructions to reset your password')
+        flash('Check your email for the instructions to reset your password', 'alertInfo')
         return redirect(url_for('login'))
     return render_template('reset_password_request.html',
                            title='Reset Password', form=form)
@@ -222,7 +222,7 @@ def reset_password(token):
     if form.validate_on_submit():
         user.set_password(form.password.data)
         db.session.commit()
-        flash('Your password has been reset.')
+        flash('Your password has been reset.', 'alertSuccess')
         return redirect(url_for('login'))
     return render_template('reset_password.html', form=form)
 
