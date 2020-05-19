@@ -108,6 +108,7 @@ class Quizzes(db.Model):
     description = db.Column(db.String(255))
     # Connected to user for now
     questions = db.relationship('Questions', backref='Quizzes', lazy='dynamic')
+    mcquestion = db.relationship('multiChoice',backref='Quizzes',lazy='dynamic')
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     pub_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
@@ -122,3 +123,23 @@ class Questions(db.Model):
 
     def __repr__(self):
         return '<Quiz {}>'.format(self.question)
+
+class multiChoice(db.Model):
+    id = db.Column(db.Integer, primary_key = True, autoincrement=True)
+    quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
+    question = db.Column(db.String(128), unique=False, nullable=False)
+    choice1 = db.Column(db.String(128), unique=False, nullable=False)
+    choice2 = db.Column(db.String(128), unique=False, nullable=False)
+    choice3 = db.Column(db.String(128), unique=False, nullable=False)
+    choice4 = db.Column(db.String(128), unique=False, nullable=False)
+    correct = db.Column(db.Integer, unique=False, nullable=False)
+    
+    def __repr__(self):
+        return "< Quiz {} question: {}  {} {} {} {} {} {} >".format(
+            self.question,
+            self.choice1,
+            self.choice2,
+            self.choice3,
+            self.choice4,
+            self.correct
+        )
