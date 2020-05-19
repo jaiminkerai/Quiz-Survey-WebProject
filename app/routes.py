@@ -25,6 +25,9 @@ from app.models import Quizzes
 from app.models import Questions
 from app.models import ADMINS
 from app.models import quizMarks
+from app.models import multiChoice
+
+
 
 
 @app.route('/', methods=['GET', 'POST']) 
