@@ -1,6 +1,6 @@
 '''Runs the application'''
 from app import app # From app folder __init__.py file import app variable
-from app.models import User, Post, db, Quizzes, Questions
+from app.models import User, Post, db, Quizzes, Questions, quizMarks, multiChoice
 
 @app.shell_context_processor
 def make_shell_context():
