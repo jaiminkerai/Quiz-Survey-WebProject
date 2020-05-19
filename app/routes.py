@@ -23,6 +23,8 @@ from app.email import send_password_reset_email
 from app.forms import ResetPasswordForm
 from app.models import Quizzes
 from app.models import Questions
+from app.models import multiChoice
+from app.models import quizMarks
 from app.models import ADMINS
 
 
@@ -214,3 +216,12 @@ def reset_password(token):
         flash('Your password has been reset.')
         return redirect(url_for('login'))
     return render_template('reset_password.html', form=form)
+
+@app.route('/quizzes')
+@login_required
+def quizzes():
+    page = request.args.get('page', 1, type=int)
+    quizzes = Quizzes.query.order_by(Quizzes.pub_date.desc()).paginate(
+        page, app.config['POSTS_PER_PAGE'], False)
+    return render_template("quiz.html", title='Explore', quizzes=quizzes.items,
+                          )
