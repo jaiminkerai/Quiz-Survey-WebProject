@@ -25,7 +25,12 @@ class User(UserMixin, db.Model):
     authorOf = db.relationship('Quizzes', backref='author', lazy='dynamic')
     isAdmin = db.Column(db.Boolean, unique=False, default=True)
 
+<<<<<<< HEAD
     marksOf = db.relationship('quizMarks', backref='markOf', lazy='dynamic')
+=======
+    def isAdmin(self):
+        return self.isAdmin
+>>>>>>> 743536bdc3aa391397ebee51f23401d709f2df08
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -73,6 +78,8 @@ class User(UserMixin, db.Model):
         return jwt.encode(
             {'reset_password': self.id, 'exp': time() + expires_in},
             app.config['SECRET_KEY'], algorithm='HS256').decode('utf-8')
+    
+
 
     @staticmethod
     def verify_reset_password_token(token):
@@ -105,6 +112,7 @@ class Quizzes(db.Model):
     description = db.Column(db.String(255))
     # Connected to user for now
     questions = db.relationship('Questions', backref='Quizzes', lazy='dynamic')
+    mcquestion = db.relationship('multiChoice',backref='Quizzes',lazy='dynamic')
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     pub_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
@@ -122,8 +130,30 @@ class Questions(db.Model):
     def __repr__(self):
         return '<Quiz {}>'.format(self.question)
 
+<<<<<<< HEAD
 class quizMarks(db.Model):
     quizMarks_id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
     mark = db.Column(db.Float)
+=======
+class multiChoice(db.Model):
+    id = db.Column(db.Integer, primary_key = True, autoincrement=True)
+    quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
+    question = db.Column(db.String(128), unique=False, nullable=False)
+    choice1 = db.Column(db.String(128), unique=False, nullable=False)
+    choice2 = db.Column(db.String(128), unique=False, nullable=False)
+    choice3 = db.Column(db.String(128), unique=False, nullable=False)
+    choice4 = db.Column(db.String(128), unique=False, nullable=False)
+    correct = db.Column(db.Integer, unique=False, nullable=False)
+    
+    def __repr__(self):
+        return "< Quiz {} question: {}  {} {} {} {} {} {} >".format(
+            self.question,
+            self.choice1,
+            self.choice2,
+            self.choice3,
+            self.choice4,
+            self.correct
+        )
+>>>>>>> 743536bdc3aa391397ebee51f23401d709f2df08
