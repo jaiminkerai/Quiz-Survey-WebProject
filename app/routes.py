@@ -30,6 +30,7 @@ from app.models import ADMINS
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
+    # For posting comments 1-140 characters long
     form = PostForm()
     if form.validate_on_submit():
         post = Post(body=form.post.data, author=current_user)
@@ -37,6 +38,8 @@ def index():
         db.session.commit()
         flash('Your post is now live!')
         return redirect(url_for('index'))
+    
+    # Get current user's posts
     page = request.args.get('page', 1, type=int)
     posts = current_user.followed_posts().paginate(
         page, app.config['POSTS_PER_PAGE'], False)
@@ -172,6 +175,7 @@ def unfollow(username):
 @app.route('/explore')
 @login_required
 def explore():
+    # Get all user's posts
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.timestamp.desc()).paginate(
         page, app.config['POSTS_PER_PAGE'], False)
