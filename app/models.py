@@ -28,7 +28,7 @@ class User(UserMixin, db.Model):
 
     marksOf = db.relationship('quizMarks', backref='markOf', lazy='dynamic')
     def isAdmin(self):
-        return self.isAdmin
+        return self.admin
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
