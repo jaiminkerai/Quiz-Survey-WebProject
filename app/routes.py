@@ -8,11 +8,12 @@ from app import app
 from app.forms import LoginForm
 from flask_login import current_user, login_user
 from app.models import User
-from flask_login import logout_user
+from flask_login import logout_user, LoginManager
 from flask_login import login_required
 from flask import request
 from werkzeug.urls import url_parse
 from app import db
+from app import login
 from app.forms import RegistrationForm
 from datetime import datetime
 from app.forms import EditProfileForm
@@ -27,11 +28,12 @@ from app.models import ADMINS
 from app.models import quizMarks
 from app.models import ADMINS
 from app.models import multiChoice
+from app.models import load_user
+from flask_admin import Admin, AdminIndexView
+from flask_admin.contrib.sqla import ModelView
 
 
-
-
-@app.route('/', methods=['GET', 'POST']) 
+@app.route('/', methods=['GET', 'POST'])     
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
@@ -59,7 +61,7 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('index'))
+        return redirect(url_for('/'))
     form = LoginForm()
     if form.validate_on_submit():
         # If user does not exist or the password is incorrect, redirect back to login
@@ -245,3 +247,31 @@ def assessments(username):
     
 
     return render_template('assessments.html', user=user, posts=posts.items, quizzes=quizzes.items )
+
+class MyModelView(ModelView):
+    def is_accessible(self):
+        if current_user.is_authenticated:
+            user = load_user(current_user.id)
+            return user.isAdmin()
+        return current_user.is_authenticated
+    
+    def inaccessible_callback(self, name, **kwargs):
+        return redirect(url_for('login'))
+ 
+class MyAdminIndexView(AdminIndexView):
+    def is_accessible(self):
+        if current_user.is_authenticated:
+            user = load_user(current_user.id)
+            return user.isAdmin()
+        return current_user.is_authenticated
+    
+    def inaccessible_callback(self, name, **kwargs):
+        return redirect(url_for('login'))
+
+admin = Admin(app, index_view=MyAdminIndexView())
+
+admin.add_view(MyModelView(User, db.session))
+admin.add_view(MyModelView(Quizzes, db.session))
+admin.add_view(MyModelView(Questions, db.session))
+admin.add_view(MyModelView(multiChoice, db.session))
+admin.add_view(MyModelView(quizMarks, db.session))
