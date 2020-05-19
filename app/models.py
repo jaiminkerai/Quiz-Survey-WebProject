@@ -23,7 +23,7 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(128))
     posts = db.relationship('Post', backref='author', lazy='dynamic')
     authorOf = db.relationship('Quizzes', backref='author', lazy='dynamic')
-    
+    isAdmin = db.Column(db.Boolean, unique=False, default=True)
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
