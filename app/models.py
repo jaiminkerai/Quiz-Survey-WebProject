@@ -24,6 +24,10 @@ class User(UserMixin, db.Model):
     posts = db.relationship('Post', backref='author', lazy='dynamic')
     authorOf = db.relationship('Quizzes', backref='author', lazy='dynamic')
     isAdmin = db.Column(db.Boolean, unique=False, default=True)
+
+    def isAdmin(self):
+        return self.isAdmin
+
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
@@ -70,6 +74,8 @@ class User(UserMixin, db.Model):
         return jwt.encode(
             {'reset_password': self.id, 'exp': time() + expires_in},
             app.config['SECRET_KEY'], algorithm='HS256').decode('utf-8')
+    
+
 
     @staticmethod
     def verify_reset_password_token(token):
