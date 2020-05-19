@@ -24,6 +24,9 @@ class User(UserMixin, db.Model):
     posts = db.relationship('Post', backref='author', lazy='dynamic')
     authorOf = db.relationship('Quizzes', backref='author', lazy='dynamic')
     isAdmin = db.Column(db.Boolean, unique=False, default=True)
+
+    marksOf = db.relationship('quizMarks', backref='markOf', lazy='dynamic')
+
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
@@ -105,6 +108,8 @@ class Quizzes(db.Model):
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     pub_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
+    quizMarks = db.relationship('quizMarks', backref='quizMarks', lazy='dynamic')
+
     def __repr__(self):
         return '<Quiz {}>'.format(self.name)  
     
@@ -116,3 +121,9 @@ class Questions(db.Model):
 
     def __repr__(self):
         return '<Quiz {}>'.format(self.question)
+
+class quizMarks(db.Model):
+    quizMarks_id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
+    mark = db.Column(db.Float)
