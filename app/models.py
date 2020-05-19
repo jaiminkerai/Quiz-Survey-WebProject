@@ -25,12 +25,9 @@ class User(UserMixin, db.Model):
     authorOf = db.relationship('Quizzes', backref='author', lazy='dynamic')
     isAdmin = db.Column(db.Boolean, unique=False, default=True)
 
-<<<<<<< HEAD
     marksOf = db.relationship('quizMarks', backref='markOf', lazy='dynamic')
-=======
     def isAdmin(self):
         return self.isAdmin
->>>>>>> 743536bdc3aa391397ebee51f23401d709f2df08
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -130,13 +127,12 @@ class Questions(db.Model):
     def __repr__(self):
         return '<Quiz {}>'.format(self.question)
 
-<<<<<<< HEAD
 class quizMarks(db.Model):
     quizMarks_id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
     mark = db.Column(db.Float)
-=======
+    
 class multiChoice(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
@@ -156,4 +152,3 @@ class multiChoice(db.Model):
             self.choice4,
             self.correct
         )
->>>>>>> 743536bdc3aa391397ebee51f23401d709f2df08
