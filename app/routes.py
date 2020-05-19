@@ -23,7 +23,9 @@ from app.email import send_password_reset_email
 from app.forms import ResetPasswordForm
 from app.models import Quizzes
 from app.models import Questions
-from app.models import ADMINS
+from app.models import multiChoice
+from app.models import quizMarks
+
 
 
 @app.route('/', methods=['GET', 'POST']) 
