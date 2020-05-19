@@ -24,6 +24,7 @@ from app.forms import ResetPasswordForm
 from app.models import Quizzes
 from app.models import Questions
 from app.models import ADMINS
+from app.models import quizMarks
 
 
 @app.route('/', methods=['GET', 'POST']) 
@@ -214,3 +215,21 @@ def reset_password(token):
         flash('Your password has been reset.')
         return redirect(url_for('login'))
     return render_template('reset_password.html', form=form)
+
+@app.route('/assessments/<username>')
+@login_required
+def assessments(username):
+    user = User.query.filter_by(username=username).first_or_404()
+    quiz = Quizzes.query.filter_by(id=user.id)
+    marks = quizMarks.query.filter_by(user_id=user.id)
+    page = request.args.get('page', 1, type=int)
+    
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+        page, app.config['POSTS_PER_PAGE'], False)
+
+    quizzes = user.marksOf.paginate(page)
+    #quizzes = user.query.join(Quizzes, Quizzes.author_id == user.id).filter(Quizzes.author_id == user.id).paginate(page)
+    #quizzes = user.query.join(marks).join(quiz, marks.quiz_id==quiz.id).paginate(page)
+    
+
+    return render_template('assessments.html', user=user, posts=posts.items, quizzes=quizzes.items )
