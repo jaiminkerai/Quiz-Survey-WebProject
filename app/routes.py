@@ -3,7 +3,7 @@ Decorators which allows us to write a function that
 returns the information displayed on the website for a specific route. 
 '''
 
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash, redirect, url_for, abort
 from app import app
 from app.forms import LoginForm
 from flask_login import current_user, login_user
@@ -12,7 +12,7 @@ from flask_login import logout_user, LoginManager
 from flask_login import login_required
 from flask import request
 from werkzeug.urls import url_parse
-from app import db
+from app import db  
 from app import login
 from app.forms import RegistrationForm
 from datetime import datetime
@@ -237,6 +237,9 @@ def quizzes():
 @app.route('/assessments/<username>')
 @login_required
 def assessments(username):
+    if username != current_user.username:
+        abort(403)
+
     # Get the user object
     user = User.query.filter_by(username=username).first_or_404()
 
