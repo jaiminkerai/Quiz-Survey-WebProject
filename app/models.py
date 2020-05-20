@@ -110,7 +110,7 @@ class Quizzes(db.Model):
     description = db.Column(db.String(255))
     # Connected to user for now
     questions = db.relationship('Questions', backref='Quizzes', lazy='dynamic')
-    mcquestion = db.relationship('multiChoice', backref='Quizzes', lazy='dynamic')
+    mcquestion = db.relationship('multiChoice', backref='MCQuizzes', lazy='dynamic')
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     pub_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
