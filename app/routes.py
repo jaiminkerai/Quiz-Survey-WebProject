@@ -18,6 +18,7 @@ from datetime import datetime
 from app.forms import EditProfileForm
 from app.forms import PostForm
 from app.forms import AnswerForm
+from app.forms import LongAnswerForm
 from app.models import Post
 from app.forms import ResetPasswordRequestForm
 from app.email import send_password_reset_email
@@ -28,6 +29,7 @@ from app.models import ADMINS
 from app.models import quizMarks
 from app.models import ADMINS
 from app.models import multiChoice
+from app.models import LongQuestions
 from app.models import load_user
 from flask_admin import Admin, AdminIndexView
 from flask_admin.contrib.sqla import ModelView
@@ -265,13 +267,15 @@ def assessments(username):
 def quizform(quizname, quizid):
     # Get Quiz by ID
     form = AnswerForm()
+    Lform = LongAnswerForm()
     quiz = Quizzes.query.filter_by(id=quizid).first_or_404()
     page = request.args.get('page', 1, type=int)
 
     # Find Short Answer and MCQ
     worded = quiz.questions.paginate(page)
     MCQ = quiz.mcquestion.paginate(page)
-    return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items, form=form)
+    longworded = quiz.longquestions.paginate(page)
+    return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items, longworded=longworded.items,form=form, Lform=Lform)
 
 # Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal
 class MyModelView(ModelView):
@@ -300,5 +304,6 @@ admin.add_view(MyModelView(User, db.session))
 admin.add_view(MyModelView(Quizzes, db.session))
 admin.add_view(MyModelView(Questions, db.session))
 admin.add_view(MyModelView(multiChoice, db.session))
+admin.add_view(MyModelView(LongQuestions, db.session))
 admin.add_view(MyModelView(quizMarks, db.session))
 admin.add_link(MenuLink(name='Back to Website', category='', url='/'))

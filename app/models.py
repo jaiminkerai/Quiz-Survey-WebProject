@@ -111,6 +111,7 @@ class Quizzes(db.Model):
     # Connected to user for now
     questions = db.relationship('Questions', backref='Quizzes', lazy='dynamic')
     mcquestion = db.relationship('multiChoice', backref='MCQuizzes', lazy='dynamic')
+    longquestions = db.relationship('LongQuestions', backref='LongQuizzes', lazy='dynamic')
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     pub_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
@@ -127,6 +128,11 @@ class Questions(db.Model):
 
     def __repr__(self):
         return '<Quiz {}>'.format(self.question)
+
+class LongQuestions(db.Model):
+    id = db.Column(db.Integer, primary_key = True, autoincrement=True)
+    question = db.Column(db.String(255))
+    quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
 
 class quizMarks(db.Model):
     quizMarks_id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
