@@ -18,6 +18,7 @@ from app.forms import RegistrationForm
 from datetime import datetime
 from app.forms import EditProfileForm
 from app.forms import PostForm
+from app.forms import AnswerForm
 from app.models import Post
 from app.forms import ResetPasswordRequestForm
 from app.email import send_password_reset_email
@@ -227,7 +228,6 @@ def reset_password(token):
     return render_template('reset_password.html', form=form)
 
 @app.route('/quizzes')
-@login_required
 def quizzes():
     page = request.args.get('page', 1, type=int)
     quizzes = Quizzes.query.order_by(Quizzes.pub_date.desc()).paginate(
@@ -260,11 +260,12 @@ def assessments(username):
 @app.route('/quizzes/<quizname>')
 @login_required
 def quizform(quizname):
+    form = AnswerForm()
     quiz = Quizzes.query.filter_by(name=quizname).first_or_404()
     page = request.args.get('page', 1, type=int)
     worded = quiz.questions.paginate(page)
     MCQ = quiz.mcquestion.paginate(page)
-    return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items)
+    return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items, form=form)
 
 
 class MyModelView(ModelView):
