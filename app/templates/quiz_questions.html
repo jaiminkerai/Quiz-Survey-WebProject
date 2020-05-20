@@ -17,4 +17,10 @@
            {{ form.longanswer }}
     {% endfor %}
     </form>
+    <form method="POST">
+    {% for lqs in longworded %}
+        <p>{{ lqs.question }}</p>
+           {{ Lform.longanswer}}
+    {% endfor %}
+    </form>
 {% endblock %}
