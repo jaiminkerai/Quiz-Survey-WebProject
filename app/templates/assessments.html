@@ -1,28 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {{ user.username }}
-    {% for quiz in quizzes %}
-        <p>
-            <!-- Backref to Quizzes table -->
-            {{ quiz.quizMarks.name }} 
-            {{ quiz.quizMarks.description }}
+    <h1>{{ user.username }}</h1>
 
-            <!-- from quizMarks table -->
-            {{ quiz.mark }}
+    <table>
+        <tr>
+            <th>Quiz</th>
+            <th>Publish Date</th>
+            <th>Score</th>
+            <th>Feedback</th>
+            <th>Distribution</th>
+        </tr>
 
-        </p>
+        {% for quiz in quizzes %}
+            <tr>
+                <!-- Backref to Quizzes table -->
+                <th>{{ quiz.quizMarks.name }}</th>
+                <th>{{ quiz.quizMarks.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</th>
 
-    {% endfor %}
+                <!-- from quizMarks table -->
+                <th>{{ quiz.mark }}%</th>
+                <th>{{ quiz.feedback }}</th>
+            </tr>
 
-    {% for q in usethis %}
-        <p>
-            {{ q.username }}
-            
-
-        </p>
-        <p>Test</p>
-
-    {% endfor %}
+        {% endfor %} 
+    </table>
     
 {% endblock %}
