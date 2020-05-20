@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3>{{ quiz.name }}</h3>
+    <h4>{{ quiz.description }}</h4>
+
+    {% for mcqs in MCQ %}
+        <p>{{ mcqs.question }}</p>
+        <p>{{ mcqs.choice1 }}, {{ mcqs.choice2 }}, {{ mcqs.choice3 }}, {{ mcqs.choice4 }}</p>
+    {% endfor %}
+
+    {% for qs in worded %}
+        <p>{{ qs.question }}</p>
+    {% endfor %}
+{% endblock %}
