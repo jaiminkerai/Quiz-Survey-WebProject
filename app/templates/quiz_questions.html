@@ -2,13 +2,19 @@
 {% block content %}
     <h3>{{ quiz.name }}</h3>
     <h4>{{ quiz.description }}</h4>
-
+    <form method="POST">
     {% for mcqs in MCQ %}
         <p>{{ mcqs.question }}</p>
-        <p>{{ mcqs.choice1 }}, {{ mcqs.choice2 }}, {{ mcqs.choice3 }}, {{ mcqs.choice4 }}</p>
+        <p>A. {{ mcqs.choice1 }}<br>
+           B. {{ mcqs.choice2 }}<br>
+           C. {{ mcqs.choice3 }}<br>
+           D. {{ mcqs.choice4 }}</p>
+            {{ form.options }}
+            
     {% endfor %}
-
     {% for qs in worded %}
         <p>{{ qs.question }}</p>
+           {{ form.longanswer }}
     {% endfor %}
+    </form>
 {% endblock %}
