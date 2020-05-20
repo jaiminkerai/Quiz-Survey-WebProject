@@ -232,7 +232,7 @@ def quizzes():
     # Find all the quizzes
     page = request.args.get('page', 1, type=int)
     quizzes = Quizzes.query.order_by(Quizzes.pub_date.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
-    
+
     return render_template("quiz.html", title='Explore', quizzes=quizzes.items)
 
 @app.route('/assessments/<username>')
@@ -270,6 +270,7 @@ def quizform(quizname, quizid):
     form.options.choices = [radio.choice1, radio.choice2, radio.choice3, radio.choice4]
     quiz = Quizzes.query.filter_by(id=quizid).first_or_404()
     page = request.args.get('page', 1, type=int)
+    marks = quiz.quizMarks.paginate(page)
 
     # Find Short Answer and MCQ
     worded = quiz.questions.paginate(page)
@@ -278,6 +279,7 @@ def quizform(quizname, quizid):
 
     # Submitting Validation
     
+        
     return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items, longworded=longworded.items,form=form)
 
 # Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal
