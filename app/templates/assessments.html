@@ -1,30 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-    
-    {% for post in posts %}
-    <table>
-        <tr valign="top">
-            <td><img src="{{ post.author.avatar(36) }}"></td>
-            <td>
-                <a href="{{ url_for('user', username=post.author.username) }}">
-                    {{ post.author.username }}
-                </a>
-            </td>
-            <td> {{ post.timestamp.strftime('%d/%m/%Y, %I:%M%p') }}</td>
-            <td>
-                </br>{{ post.body }}
-            </td>
-        </tr>
-    </table>
-    {% endfor %}
-    <p>Test 0</p>
+    {{ user.username }}
     {% for quiz in quizzes %}
         <p>
-            {{ quiz.markOf.username }}
-            {{ quiz.quiz_id }}
+            <!-- Backref to Quizzes table -->
+            {{ quiz.quizMarks.name }} 
+            {{ quiz.quizMarks.description }}
+
+            <!-- from quizMarks table -->
             {{ quiz.mark }}
-            {{ quiz.name }}
+
+        </p>
+
+    {% endfor %}
+
+    {% for q in usethis %}
+        <p>
+            {{ q.username }}
             
 
         </p>
