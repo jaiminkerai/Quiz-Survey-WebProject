@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% for quiz in quizzes %}
-<div class="row">
+<div class="row" onclick="location.href='{{ url_for('quizform', quizid=quiz.id, quizname=quiz.name) }}';">
     <div class="content-wrap">
         <table>
             <tr valign="top">

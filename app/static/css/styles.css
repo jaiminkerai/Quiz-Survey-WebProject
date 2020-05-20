@@ -265,6 +265,7 @@ body {
   border-radius: 10px;
   margin-bottom: 20px;
   border: 1px solid #A5A4A4;
+  style="cursor:pointer;"
 }
 
 .row:hover{
