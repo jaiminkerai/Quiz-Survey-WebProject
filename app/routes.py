@@ -237,20 +237,25 @@ def quizzes():
 @app.route('/assessments/<username>')
 @login_required
 def assessments(username):
+    # Get the user object
     user = User.query.filter_by(username=username).first_or_404()
-    quiz = Quizzes.query.filter_by(id=user.id)
-    marks = quizMarks.query.filter_by(user_id=user.id)
+
+    # For pagination, start page
     page = request.args.get('page', 1, type=int)
     
     posts = user.posts.order_by(Post.timestamp.desc()).paginate(
         page, app.config['POSTS_PER_PAGE'], False)
 
-    quizzes = user.marksOf.paginate(page)
-    #quizzes = user.query.join(Quizzes, Quizzes.author_id == user.id).filter(Quizzes.author_id == user.id).paginate(page)
-    #quizzes = user.query.join(marks).join(quiz, marks.quiz_id==quiz.id).paginate(page)
-    
+    # quizMarks iterable for the specific user
+    quizzes = user.marksOf.paginate(page, app.config['POSTS_PER_PAGE'], False)
 
-    return render_template('assessments.html', user=user, posts=posts.items, quizzes=quizzes.items )
+    # Links that allow users to navigate to the next or previous page
+    next_url = url_for('assessments', page=quizzes.next_num) \
+        if quizzes.has_next else None
+    prev_url = url_for('assessments', page=quizzes.prev_num) \
+        if quizzes.has_prev else None
+
+    return render_template('assessments.html', user=user, posts=posts.items, quizzes=quizzes.items)
 
 class MyModelView(ModelView):
     def is_accessible(self):
