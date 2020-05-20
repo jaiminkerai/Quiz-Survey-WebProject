@@ -1,28 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
+{% for quiz in quizzes %}
 <div class="row">
     <div class="content-wrap">
         <table>
             <tr valign="top">
-                {% for quiz in quizzes %}
+                
                     <div class="column">
-                        <td><img src="{{ quiz.author.avatar(36) }}"></td>
+                        
+                        <td><img src="{{ quiz.author.avatar(36) }}" class="profile-pic"></td>
                         <td>
-                            <a href="{{ url_for('user', username=quiz.author.username) }}">
+                            <a href="{{ url_for('user', username=quiz.author.username) }}" class = "author">
                                 {{ quiz.author.username }}
                             </a>
                         </td>
-                        <td><a href="{{ url_for('quizform', quizid=quiz.id, quizname=quiz.name) }}"> 
+                        <td><a href="{{ url_for('quizform', quizid=quiz.id, quizname=quiz.name) }}" class="quiz-name"> 
                             {{ quiz.name }} </a></td>
-                        <td> {{ quiz.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</td>
-                        <td>
+                        <td class="date"> {{ quiz.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</td>
+                        <td class="desc">
                             </br>{{ quiz.description }}
                         </td>
                     </div>
             </tr>
-                {% endfor %}
+                
         </table>
     </div>
 </div>
+{% endfor %}
 {% endblock %}
     
