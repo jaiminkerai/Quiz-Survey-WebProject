@@ -257,6 +257,16 @@ def assessments(username):
 
     return render_template('assessments.html', user=user, posts=posts.items, quizzes=quizzes.items)
 
+@app.route('/quizzes/<quizname>')
+@login_required
+def quizform(quizname):
+    quiz = Quizzes.query.filter_by(name=quizname).first_or_404()
+    page = request.args.get('page', 1, type=int)
+    worded = quiz.questions.paginate(page)
+    MCQ = quiz.mcquestion.paginate(page)
+    return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items)
+
+
 class MyModelView(ModelView):
     def is_accessible(self):
         if current_user.is_authenticated:
