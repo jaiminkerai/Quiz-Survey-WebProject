@@ -21,7 +21,7 @@ migrate = Migrate(app, db)
 
 login = LoginManager(app)
 login.login_view = 'login' # Tells @login_required the route for the login
-login.login_message_category = "error_message" #Category for need to login before accessing page messages on base.html
+login.login_message_category = "alertInfo" #Category for need to login before accessing page messages on base.html
 
 mail = Mail(app)
 
