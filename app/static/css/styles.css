@@ -262,10 +262,11 @@ body {
   width: 100%;
   background: #222222;
   padding: 25px;
-  border-radius: 25px;
-  margin-bottom: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
   border: 1px solid #A5A4A4;
 }
+
 .row:hover{
   border-color: white;
 }
@@ -279,20 +280,37 @@ body {
 }
 
 .author {
-  color: #A5A4A4;
-  padding: 20px;
-  ma;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  background-color: #A5A4A4;
+  border-radius:10px;
+  margin: 20px;
 }
 
+.author:hover{
+  text-decoration:underline;
+}
 .quiz-name {
-  color:lightgrey;
+  text-decoration:none;
+  color:white;
+  padding:10px;
+  background-color: #A5A4A4;
+  border-radius:10px;
+  margin-right:20px;
+}
+
+.quiz-name:hover{
+  text-decoration:underline;
 }
 
 .desc {
   color: white;
+  padding-left:20px;
 }
 
 .date {
+  font-size:15px;
   color: lightgrey;
-
+  padding-top:2px;
 }

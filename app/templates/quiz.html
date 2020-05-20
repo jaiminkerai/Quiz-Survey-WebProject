@@ -10,13 +10,14 @@
                         
                         <td><img src="{{ quiz.author.avatar(36) }}" class="profile-pic"></td>
                         <td>
+                            
                             <a href="{{ url_for('user', username=quiz.author.username) }}" class = "author">
-                                {{ quiz.author.username }}
+                               {{ quiz.author.username }}
                             </a>
                         </td>
                         <td><a href="{{ url_for('quizform', quizid=quiz.id, quizname=quiz.name) }}" class="quiz-name"> 
                             {{ quiz.name }} </a></td>
-                        <td class="date"> {{ quiz.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</td>
+                        <td class="date"> posted: {{ quiz.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</td>
                         <td class="desc">
                             </br>{{ quiz.description }}
                         </td>
