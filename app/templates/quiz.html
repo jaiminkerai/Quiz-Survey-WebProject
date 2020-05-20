@@ -10,7 +10,8 @@
                 {{ quiz.author.username }}
             </a>
         </td>
-        <td> {{ quiz.name }}</td>
+        <td><a href="{{ url_for('quizform', quizname=quiz.name) }}"> 
+            {{ quiz.name }} </a></td>
         <td> {{ quiz.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</td>
         <td>
             </br>{{ quiz.description }}
