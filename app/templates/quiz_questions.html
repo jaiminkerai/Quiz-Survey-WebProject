@@ -16,11 +16,9 @@
         <p>{{ qs.question }}</p>
            {{ form.longanswer }}
     {% endfor %}
-    </form>
-    <form method="POST">
     {% for lqs in longworded %}
         <p>{{ lqs.question }}</p>
-           {{ Lform.longanswer}}
+           {{ form.longanswer }}
     {% endfor %}
     </form>
 {% endblock %}
