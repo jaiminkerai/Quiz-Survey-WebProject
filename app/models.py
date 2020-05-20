@@ -131,7 +131,7 @@ class Questions(db.Model):
 
 class LongQuestions(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
-    question = db.Column(db.String(255))
+    question = db.Column(db.String(500))
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
 
 class quizMarks(db.Model):
@@ -139,6 +139,7 @@ class quizMarks(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
     mark = db.Column(db.Float)
+    feedback = db.Column(db.String(500))
     
 class multiChoice(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
