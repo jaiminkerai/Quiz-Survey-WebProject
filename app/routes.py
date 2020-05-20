@@ -2,7 +2,6 @@
 Decorators which allows us to write a function that 
 returns the information displayed on the website for a specific route. 
 '''
-
 from flask import render_template, flash, redirect, url_for, abort
 from app import app
 from app.forms import LoginForm
@@ -229,11 +228,12 @@ def reset_password(token):
 @app.route('/quizzes')
 @login_required
 def quizzes():
+    # Find all the quizzes
     page = request.args.get('page', 1, type=int)
-    quizzes = Quizzes.query.order_by(Quizzes.pub_date.desc()).paginate(
-        page, app.config['POSTS_PER_PAGE'], False)
-    return render_template("quiz.html", title='Explore', quizzes=quizzes.items,
-                          )
+    quizzes = Quizzes.query.order_by(Quizzes.pub_date.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
+    
+    return render_template("quiz.html", title='Explore', quizzes=quizzes.items)
+
 @app.route('/assessments/<username>')
 @login_required
 def assessments(username):
@@ -260,16 +260,20 @@ def assessments(username):
 
     return render_template('assessments.html', user=user, posts=posts.items, quizzes=quizzes.items)
 
-@app.route('/quizzes/<quizname>')
+@app.route('/quizzes/<quizname>/<quizid>')
 @login_required
-def quizform(quizname):
-    quiz = Quizzes.query.filter_by(name=quizname).first_or_404()
+def quizform(quizname, quizid):
+    # Get Quiz by ID
+    quiz = Quizzes.query.filter_by(id=quizid).first_or_404()
     page = request.args.get('page', 1, type=int)
+
+    # Find Short Answer and MCQ
     worded = quiz.questions.paginate(page)
     MCQ = quiz.mcquestion.paginate(page)
+
     return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items)
 
-
+# Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal
 class MyModelView(ModelView):
     def is_accessible(self):
         if current_user.is_authenticated:
