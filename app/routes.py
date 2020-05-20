@@ -264,9 +264,10 @@ def assessments(username):
 @app.route('/quizzes/<quizname>/<quizid>')
 @login_required
 def quizform(quizname, quizid):
-    # Get Quiz by ID
+    # Get Quiz by ID and adding multiple choice options
     form = AnswerForm()
-    form.options.choices = [(mcq.choice1) for mcq in multiChoice.query.filter_by(quiz_id=quizid).all()]
+    radio = multiChoice.query.filter_by(quiz_id=quizid).first_or_404()
+    form.options.choices = [radio.choice1, radio.choice2, radio.choice3, radio.choice4]
     quiz = Quizzes.query.filter_by(id=quizid).first_or_404()
     page = request.args.get('page', 1, type=int)
 
@@ -274,6 +275,9 @@ def quizform(quizname, quizid):
     worded = quiz.questions.paginate(page)
     MCQ = quiz.mcquestion.paginate(page)
     longworded = quiz.longquestions.paginate(page)
+
+    # Submitting Validation
+    
     return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items, longworded=longworded.items,form=form)
 
 # Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal

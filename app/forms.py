@@ -61,8 +61,8 @@ class ResetPasswordForm(FlaskForm):
     submit = SubmitField('Request Password Reset')
 
 class AnswerForm(FlaskForm):
-    options = RadioField("Answer", choices=[], validators=[DataRequired()])
-    longanswer = TextAreaField(validators=[DataRequired(), Length(min=1, max=140)])
+    options = RadioField("Answer", choices=[], validators=[])
+    longanswer = TextAreaField(validators=[Length(min=1, max=300)])
     submit = SubmitField('Submit')
     
     
