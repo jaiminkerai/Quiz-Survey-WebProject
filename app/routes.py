@@ -266,6 +266,7 @@ def assessments(username):
 def quizform(quizname, quizid):
     # Get Quiz by ID
     form = AnswerForm()
+    form.options.choices = [(mcq.choice1) for mcq in multiChoice.query.filter_by(quiz_id=quizid).all()]
     quiz = Quizzes.query.filter_by(id=quizid).first_or_404()
     page = request.args.get('page', 1, type=int)
 
