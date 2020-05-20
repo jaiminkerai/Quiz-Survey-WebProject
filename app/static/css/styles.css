@@ -248,3 +248,20 @@ header {
   animation: errorbar;
   animation-duration: 0.5s;
 }
+
+/* Quizzes page */
+body {
+  background-color: #222222;
+}
+.row {
+  position: relative;
+  left: 50%;
+  transform: translate(-47.5%, 0%);
+  max-width: 80%;
+  width: 100%;
+  background: #666666;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+

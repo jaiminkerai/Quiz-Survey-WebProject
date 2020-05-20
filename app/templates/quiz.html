@@ -1,23 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-<table>
-    <tr valign="top">
-        {% for quiz in quizzes %}
-        
-        <td><img src="{{ quiz.author.avatar(36) }}"></td>
-        <td>
-            <a href="{{ url_for('user', username=quiz.author.username) }}">
-                {{ quiz.author.username }}
-            </a>
-        </td>
-        <td><a href="{{ url_for('quizform', quizid=quiz.id, quizname=quiz.name) }}"> 
-            {{ quiz.name }} </a></td>
-        <td> {{ quiz.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</td>
-        <td>
-            </br>{{ quiz.description }}
-        </td>
-    </tr>
-        {% endfor %}
-</table>
+<div class="row">
+    <div class="content-wrap">
+        <table>
+            <tr valign="top">
+                {% for quiz in quizzes %}
+                    <div class="column">
+                        <td><img src="{{ quiz.author.avatar(36) }}"></td>
+                        <td>
+                            <a href="{{ url_for('user', username=quiz.author.username) }}">
+                                {{ quiz.author.username }}
+                            </a>
+                        </td>
+                        <td><a href="{{ url_for('quizform', quizid=quiz.id, quizname=quiz.name) }}"> 
+                            {{ quiz.name }} </a></td>
+                        <td> {{ quiz.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</td>
+                        <td>
+                            </br>{{ quiz.description }}
+                        </td>
+                    </div>
+            </tr>
+                {% endfor %}
+        </table>
+    </div>
+</div>
 {% endblock %}
     
