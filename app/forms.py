@@ -64,6 +64,10 @@ class AnswerForm(FlaskForm):
     options = SelectField("Answer", choices=[("A"),("B"),("C"),("D")], validators=[DataRequired()])
     longanswer = TextAreaField(validators=[DataRequired(), Length(min=1, max=140)])
     submit = SubmitField('Submit')
+
+class LongAnswerForm(FlaskForm):
+    longanswer = TextAreaField(validators=[DataRequired(), Length(min=1, max=140)])
+    submit = SubmitField('Submit')
     
     
 
