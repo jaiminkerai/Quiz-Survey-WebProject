@@ -27,6 +27,8 @@ class User(UserMixin, db.Model):
     admin = db.Column(db.Boolean, unique=False, default=False)
 
     marksOf = db.relationship('quizMarks', backref='markOf', lazy='dynamic')
+    longanswers = db.relationship('LongAnswers', backref='longanswers', lazy='dynamic')
+
     def isAdmin(self):
         return self.admin
 
@@ -133,6 +135,13 @@ class LongQuestions(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
     question = db.Column(db.String(500))
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
+    lanswers = db.relationship('LongAnswers', backref='lanswer', lazy='dynamic')
+
+class LongAnswers(db.Model):
+    id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
+    answer = db.Column(db.String(500))
+    longquestion_id = db.Column(db.Integer, db.ForeignKey('long_questions.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 class quizMarks(db.Model):
     quizMarks_id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
