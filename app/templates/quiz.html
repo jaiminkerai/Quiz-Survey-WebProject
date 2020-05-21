@@ -2,7 +2,6 @@
 {% block content %}
 {% for quiz in quizzes %}
 <div class="row" onclick="location.href='{{ url_for('quizform', quizid=quiz.id, quizname=quiz.name) }}';" style="cursor:pointer;">
-    <div class="content-wrap">
         <table>
             <tr valign="top">
                 
@@ -25,7 +24,6 @@
             </tr>
                 
         </table>
-    </div>
 </div>
 {% endfor %}
 {% endblock %}

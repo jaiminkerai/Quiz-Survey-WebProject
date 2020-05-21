@@ -251,20 +251,21 @@ header {
 
 /* Quizzes page */
 body {
-  background-color: black;
+  
   font-family: Verdana;
 }
 .row {
-  position: relative;
+  position:relative;
   left: 50%;
   transform: translate(-47.5%, 0%);
-  max-width: 80%;
-  width: 50%;
+  max-width: 700px;
+  width: 100%;
   background: #222222;
   padding: 25px;
   border-radius: 10px;
   margin-bottom: 20px;
   border: 1px solid #A5A4A4;
+  
 }
 
 .row:hover{
@@ -307,10 +308,15 @@ body {
 .desc {
   color: white;
   padding-left:20px;
+
 }
 
 .date {
   font-size:15px;
   color: lightgrey;
   padding-top:2px;
+}
+
+.text-wrap {
+  display:inline-block;
 }
