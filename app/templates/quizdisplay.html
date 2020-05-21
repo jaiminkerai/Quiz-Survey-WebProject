@@ -1,12 +1,12 @@
 <div class="row" onclick="location.href='{{ url_for('quizform', quizid=quiz.id,  quizname=quiz.name) }}';" style="cursor:pointer;">
         <table>
             <tr>
-                <td colspan=0><img src="{{ quiz.author.avatar(36) }}" class="profile-pic">
+                <td colspan=100%;><img src="{{ quiz.author.avatar(36) }}" class="profile-pic">
+                    <a href="{{ url_for('user', username=quiz.author.username) }}" class = "author">
+                        /{{ quiz.author.username }}
+                    </a><span class="date">Posted: {{ quiz.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</span>
                 </td>
-                <td colspan=2><a href="{{ url_for('user', username=quiz.author.username) }}" class = "author">
-                    /{{ quiz.author.username }}
-                </a></td>
-                <td class="date"> posted: {{ quiz.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</td>
+                
             </tr>
                         <td colspan=5><a href="{{ url_for('quizform', quizid=quiz.id, quizname=quiz.name) }}" class="quiz-name"> 
                             {{ quiz.name }} </a></td>
