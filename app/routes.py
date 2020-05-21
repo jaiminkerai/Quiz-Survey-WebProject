@@ -329,7 +329,7 @@ def quizform(quizname, quizid):
         score = 0
 
         for i, ans in enumerate(mcqans):
-            if ans == str(multicq[i].correct):
+            if ans == multicq[i].correct:
                 score += 1
         
         for i, ans in enumerate(sans):
@@ -341,6 +341,7 @@ def quizform(quizname, quizid):
             submission = LongAnswers(answer=ans, user_id=current_user.id, longquestion_id=longans[i].id)
             db.session.add(submission)
             db.session.commit()
+
 
         return '<h1>{}</h1>'.format(score)
 
