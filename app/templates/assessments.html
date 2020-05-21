@@ -3,7 +3,8 @@
 {% block content %}
     <h1>{{ user.username }}</h1>
 
-    <table>
+    <div style="overflow-x:auto;">
+    <table class="assessments">
         <tr>
             <th>Quiz</th>
             <th>Publish Date</th>
@@ -15,15 +16,18 @@
         {% for quiz in quizzes %}
             <tr>
                 <!-- Backref to Quizzes table -->
-                <th>{{ quiz.quizMarks.name }}</th>
-                <th>{{ quiz.quizMarks.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</th>
+                <td>{{ quiz.quizMarks.name }}</td>
+                <td>
+                    {{ quiz.quizMarks.pub_date.strftime('%d/%m/%Y') }} </br>
+                    {{ quiz.quizMarks.pub_date.strftime('%I:%M%p') }}
+                </td>
 
                 <!-- from quizMarks table -->
-                <th>{{ quiz.mark }}%</th>
-                <th>{{ quiz.feedback }}</th>
+                <td>{{ quiz.mark }}%</td>
+                <td>{{ quiz.feedback }}</td>
             </tr>
 
         {% endfor %} 
     </table>
-    
+    </div>
 {% endblock %}
