@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="container">
     <table class= "profile-table" width="100%">
         <tr>
             <td width="100%" style="text-align: center;"><img src="{{ user.avatar(128) }}" class="profile-avatar"></td>
@@ -43,4 +44,5 @@
     {% for quiz in quizzes %}
         {% include 'quizdisplay.html' %}
     {% endfor %}
+</div>
 {% endblock %}
