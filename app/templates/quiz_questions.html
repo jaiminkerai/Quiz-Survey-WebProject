@@ -5,29 +5,28 @@
 
     <div class="quizwrapper">
     <form method="POST" action="">
-        {{ form.hidden_tag() }}
-    <div class=qwrapper>
     {% for mcqs in MCQ %}
+    <div class=qwrapper>
         <p class="questions">{{ mcqs.question }}</p>
         <div>{{ form.options[loop.index0] }}</div>
-            
-    {% endfor %}
     </div>
-    <div class=qwrapper>
+    {% endfor %}
     {% for qs in worded %}
+    <div class=qwrapper>
         <p class="questions">{{ qs.question }}</p>
            {{ form.shortanswer[loop.index0](class="inputbox")}}
-    {% endfor %}
     </div>
-    <div class=qwrapper>
+    {% endfor %}
     {% for lqs in longworded %}
+    <div class=qwrapper>
         <p class="questions">{{ lqs.question }}</p>
            {{ form.longanswer[loop.index0](class="inputbox") }}
+    </div>
     {% endfor %}
     </div>
-    {{ form.submit() }}
+    {{ form.submit(class="subbutton") }}
     </form>
-    </div>
+    
 
     
 {% endblock %}
