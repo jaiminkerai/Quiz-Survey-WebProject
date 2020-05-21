@@ -134,7 +134,7 @@ header {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #A5A4A4;
+  background-color: rgb(102, 102, 102);
   width: 108px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -153,7 +153,7 @@ header {
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #545452;
+  background-color: #2c2c2c;
 }
 
 /* Show the dropdown menu on hover */
@@ -209,13 +209,13 @@ header {
   text-align: center;
   justify-content: center;
   background-color: #545452;
+  transform: translate(0, 20%);
 }
 
 .wrapper .input_field .label{
   text-transform: uppercase;
   font-weight: bold;
   padding-bottom: 2px;
-
 }
 
 .wrapper .sbtn{
@@ -235,8 +235,19 @@ header {
 
 .wrapper .sbtn:hover{
   border-color: lightgrey;
-  box-shadow: 0 0 10px white;
+  box-shadow: 0 0 3px white;
 }
+
+.wrapper .sbtn:active{
+  border-color:white;
+  background: rgb(88, 88, 88);
+  color: white;
+}
+
+.wrapper .sbtn:focus{
+  outline: none;
+}
+
 
 .wrapper #error_message{
   margin-top: 0px;
@@ -302,7 +313,7 @@ header {
   margin-top: 0px;
   margin-bottom: 10px;
   padding: 5px;
-  background: lightblue;
+  background:#6e6e6e;
   border-radius: 25px;
   text-align: center;
   font-size: 14px;
@@ -314,21 +325,19 @@ header {
 .row {
   position:relative;
   left: 50%;
-  transform: translate(-47.5%, 0%);
+  transform: translate(-50%, 0%);
   max-width: 1000px;
-  width: 100%;
+  width: 80%;
   background: #222222;
   padding: 25px;
   border-radius: 10px;
   margin-bottom: 20px;
   border: 1px solid #A5A4A4;
-  
 }
 
 .row:hover{
   border-color: white;
   box-shadow: 0 0 10px white;
-
 }
 
 .profile-pic{
@@ -340,12 +349,12 @@ header {
 }
 .author {
   margin: 20px;
-  color: grey;
+  color: rgb(168, 168, 168);
   padding: 5px;
   text-decoration: none;
   background-color: RGBA(84, 84, 82, 1);
   border-radius:2px;
-
+  text-align: center;
 }
 
 .author:hover{
