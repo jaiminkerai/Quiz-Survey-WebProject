@@ -279,6 +279,8 @@ header {
 
 .row:hover{
   border-color: white;
+  box-shadow: 0 0 10px white;
+
 }
 
 .profile-pic{
@@ -384,7 +386,7 @@ header {
   font-family: 'Montserrat';
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: rgb(255, 208, 0);
+  color: red;
 }
 
 .quiz_desc{
@@ -403,6 +405,10 @@ header {
   border-radius: 10px;
   align-content: center;
   border: #333;
+  border-width: 2px;
+  border-style: solid;
+  border-color: red;
+  margin-bottom: 6px;
 }
 
 
@@ -419,9 +425,15 @@ header {
   margin-bottom: 6px;
 }
 
+.qwrapper:hover {
+  border-radius: 10px;
+  box-shadow: 0 0 8px white;
+}
+
 .qwrapper .questions{
   padding-top: 10px;
   color: white;
+  text-transform: capitalize;
 }
 
 .qwrapper div{
@@ -431,13 +443,41 @@ header {
 .qwrapper .inputbox{
   transform: translate(0,30%);
   width: 80%;
-  height: 40px;
+  height: 50px;
   border: 1px solid #e0e0e0;
   border-radius: 5px;
   justify-content: center;
   resize: none;
   font-size: 15px;
 }
+
+.subbutton{
+  border: 0;
+  margin-top: 20px;
+  padding: 10px;
+  width: 30%;
+  background: black;
+  border: 3px solid limegreen;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.subbutton:hover{
+  background: limegreen;
+  border: 3px solid limegreen;
+  color: white;
+}
+
+.subbutton:active{
+  background: black;
+  border: 3px solid limegreen;
+  color: white;
+}
+
 /* TUTORIAL PAGE */
 .tutorialcontainer {
   margin-top: 50px;
