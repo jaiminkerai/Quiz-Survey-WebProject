@@ -486,19 +486,21 @@ header {
 }
 
 /* FOOTER */
-.footer {
-  background-color: #222222;
-  color: #545452;
-  height:50px;
-  position:relative;
+html,body{
+  height:100%;
 }
-.footer .footer-bottom {
+.container{
+  min-height:100%;
+}
+
+.footer-bottom {
   height: 40px;
   text-align: center;
   vertical-align: auto;
   bottom:0px;
   left:0px;
-  position:absolute;
+  position:fixed;
   width:100%;
   padding-top:20px;
+  color: #545452;
 }
