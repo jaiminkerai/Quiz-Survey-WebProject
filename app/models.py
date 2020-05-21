@@ -99,6 +99,7 @@ class Post(db.Model):
     body = db.Column(db.String(140))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
@@ -122,6 +123,7 @@ class Quizzes(db.Model):
     pub_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     quizMarks = db.relationship('quizMarks', backref='quizMarks', lazy='dynamic')
+    posts= db.relationship('Post', backref='post', lazy='dynamic')
 
     def __repr__(self):
         return '<Quiz {}>'.format(self.name)  

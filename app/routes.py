@@ -282,7 +282,7 @@ def assessments(username):
 def quizform(quizname, quizid):
     if not current_user.doneQuiz(quizid):
         flash("You have already completed this quiz!", "alertError")
-        return redirect(url_for('quizzes'))
+        return redirect(url_for('comments', quizid=quizid,  quizname=quizname))
     # Get Quiz by ID, Forms and Questions by Quiz ID
     form = AnswerForm(request.form)
     multicq = multiChoice.query.filter_by(quiz_id=quizid).all()
@@ -358,7 +358,32 @@ def quizform(quizname, quizid):
 def tutorial():
     return render_template('tutorial.html')
 
+@app.route('/quizzes/<quizname>/<quizid>/comments', methods=['GET', 'POST'])
+@login_required
+def comments(quizname, quizid):
+    # For posting comments 1-140 characters long
+    form = PostForm()
+    if form.validate_on_submit():
+        quiz = Quizzes.query.filter_by(id=quizid).first_or_404()
+        post = Post(body=form.post.data, author=current_user, post=quiz)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post is now live!', 'alertSuccess')
+        return redirect(url_for('comments', quizid=quizid,  quizname=quizname))
     
+    # Get all user's posts
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.filter_by(quiz_id=quizid).order_by(Post.timestamp.desc()).paginate(
+        page, app.config['POSTS_PER_PAGE'], False)
+    next_url = url_for('explore', page=posts.next_num) \
+        if posts.has_next else None
+    prev_url = url_for('explore', page=posts.prev_num) \
+        if posts.has_prev else None
+
+    return render_template('index.html', title='Home', form=form,
+                           posts=posts.items, next_url=next_url,
+                           prev_url=prev_url)
+
 # Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal
 class MyModelView(ModelView):
     def is_accessible(self):
