@@ -137,11 +137,17 @@ class LongQuestions(db.Model):
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
     lanswers = db.relationship('LongAnswers', backref='lQuestion', lazy='dynamic')
 
+    def __repr__(self):
+        return '<L-Question {}>'.format(self.question)
+
 class LongAnswers(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
     answer = db.Column(db.String(500))
     longquestion_id = db.Column(db.Integer, db.ForeignKey('long_questions.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+    def __repr__(self):
+        return '<L-Answer {}>'.format(self.longquestion_id)
 
 class quizMarks(db.Model):
     quizMarks_id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
@@ -149,7 +155,10 @@ class quizMarks(db.Model):
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
     mark = db.Column(db.Float)
     feedback = db.Column(db.String(500))
-    
+
+def __repr__(self):
+        return '<quizMarks {}>'.format(self.user_id)
+
 class multiChoice(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
