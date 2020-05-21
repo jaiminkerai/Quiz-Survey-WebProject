@@ -145,9 +145,22 @@ header {
   background: white;
   padding: 25px;
   border-radius: 5px;
-  color:black;
+  color:lightgrey;
+  background-color: #222222;
+  border: 1px solid #666666;
 }
 
+.wrapper:hover{
+  border-color: lightgrey;
+}
+.wrapper a{
+  text-decoration: none;
+  color: grey;
+}
+
+.wrapper a:hover{
+  text-decoration: underline;
+}
 .wrapper h1{
   padding-bottom: 10px;
   text-transform: uppercase;
@@ -164,7 +177,7 @@ header {
 .wrapper .input_field .inputbox{
   width: 100%;
   height: 20px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #666666;
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
@@ -184,13 +197,18 @@ header {
   padding: 10px;
   width: 100%;
   background: rgb(0, 0, 0);
-  border: 3px solid white;
+  border: 3px solid #666666;
   color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: bold;
   border-radius: 25px;
-  cursor: pointer;
+  cursor: pointer; 
+}
+
+.wrapper .sbtn:hover{
+  border-color: lightgrey;
+  box-shadow: 0 0 10px white;
 }
 
 .wrapper #error_message{
@@ -508,4 +526,5 @@ header {
   width:100%;
   padding-top:20px;
   color: #545452;
+  
 }
