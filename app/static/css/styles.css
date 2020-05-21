@@ -19,7 +19,7 @@ header {
   margin: 0;
   list-style: none;
   display: flex;
-  background-color: #ddd;
+  background-color: black;
 }
 
 .topnav{
@@ -33,7 +33,7 @@ header {
 }
 
 .basenav a{
-  color: black;
+  color: white;
   text-decoration: solid;
   text-transform: uppercase;
   letter-spacing: 1.8px;
@@ -96,7 +96,7 @@ header {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: black;
   width: 108px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -105,7 +105,7 @@ header {
 /* Links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -115,7 +115,7 @@ header {
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #545452;
 }
 
 /* Show the dropdown menu on hover */
@@ -252,6 +252,8 @@ header {
 /* Quizzes page */
 body {
   font-family: Verdana;
+  background-color: black;
+  color: rgb(215, 218, 220);;
 }
 .row {
   position:relative;
@@ -339,5 +341,5 @@ body {
 }
 
 .assessments tr:hover {
-  background-color: #777;
+  background-color: #222222;
 }
