@@ -261,25 +261,51 @@ def assessments(username):
 
     return render_template('assessments.html', user=user, posts=posts.items, quizzes=quizzes.items)
 
-@app.route('/quizzes/<quizname>/<quizid>')
+@app.route('/quizzes/<quizname>/<quizid>', methods=['GET', 'POST'])
 @login_required
 def quizform(quizname, quizid):
-    # Get Quiz by ID and adding multiple choice options
-    form = AnswerForm()
-    radio = multiChoice.query.filter_by(quiz_id=quizid).first_or_404()
-    form.options.choices = [radio.choice1, radio.choice2, radio.choice3, radio.choice4]
+    # Get Quiz by ID, Forms and Questions by Quiz ID
+    form = AnswerForm(request.form)
+    multicq = multiChoice.query.filter_by(quiz_id=quizid).all()
+    shortans = Questions.query.filter_by(quiz_id=quizid).all()
+    longans = LongQuestions.query.filter_by(quiz_id=quizid).all()
+
+    #Iterating through the multiple choice questions and adding them to the Field List
+    for i, multi in enumerate(multicq):
+        form.options.append_entry()
+        choices = [multi.choice1, multi.choice2, multi.choice3, multi.choice4]
+        form.options.entries[i].choices = choices
+    
+    #Iterating through the short answer questions and adding them to the Field List
+    for i, short in enumerate(shortans):
+        form.shortanswer.append_entry()
+        form.shortanswer.entries[i].shortanswer = short.question
+
+    #Iterating through the long answer questions and adding them to the Field List
+    for i, longq in enumerate(longans):
+        form.longanswer.append_entry()
+        form.longanswer.entries[i].longanswer = longq.question
+    
+
     quiz = Quizzes.query.filter_by(id=quizid).first_or_404()
     page = request.args.get('page', 1, type=int)
     marks = quiz.quizMarks.paginate(page)
 
-    # Find Short Answer and MCQ
+    # Find Short Answer and MCQ of given Quiz
     worded = quiz.questions.paginate(page)
     MCQ = quiz.mcquestion.paginate(page)
     longworded = quiz.longquestions.paginate(page)
 
     # Submitting Validation
-    
-        
+    if request.method == 'POST':
+        mcqhalf = int(len(form.options.data)/2)
+        sahalf = int(len(form.shortanswer.data)/2)
+        lahalf = int(len(form.longanswer.data)/2)
+
+        mcqans = form.options.data[0:mcqhalf]
+        sans = form.shortanswer.data[0:sahalf]
+        lans = form.longanswer.data[0:lahalf]
+
     return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items, longworded=longworded.items,form=form)
 
 # Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal

@@ -2,21 +2,21 @@
 {% block content %}
     <h3>{{ quiz.name }}</h3>
     <h4>{{ quiz.description }}</h4>
-    <form method="POST">
+    <form method="POST" action="">
     {% for mcqs in MCQ %}
         <p>{{ mcqs.question }}</p>
-            {{ form.options }}
+            {{ form.options[loop.index0] }}
             
     {% endfor %}
     {% for qs in worded %}
         <p>{{ qs.question }}</p>
-           {{ form.longanswer }}
+           {{ form.shortanswer[loop.index0]}}
     {% endfor %}
     {% for lqs in longworded %}
         <p>{{ lqs.question }}</p>
-           {{ form.longanswer }}
+           {{ form.longanswer[loop.index0] }}
     {% endfor %}
     <br>
-    {{ form.submit }}
+    {{ form.submit() }}
     </form>
 {% endblock %}
