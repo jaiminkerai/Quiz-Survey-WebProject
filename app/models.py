@@ -158,7 +158,7 @@ class multiChoice(db.Model):
     choice2 = db.Column(db.String(128), unique=False, nullable=False)
     choice3 = db.Column(db.String(128), unique=False, nullable=False)
     choice4 = db.Column(db.String(128), unique=False, nullable=False)
-    correct = db.Column(db.Integer, unique=False, nullable=False)
+    correct = db.Column(db.String(128), unique=False, nullable=False)
     
     def __repr__(self):
         return "< Quiz {}>".format(self.question)
