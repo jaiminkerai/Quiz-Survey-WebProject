@@ -9,8 +9,7 @@
             <th>Quiz</th>
             <th>Publish Date</th>
             <th>Score</th>
-            <th>Feedback</th>
-            <th>Distribution</th>
+            <th colspan="2">Feedback</th>
         </tr>
 
         {% for quiz in quizzes %}
@@ -24,7 +23,7 @@
 
                 <!-- from quizMarks table -->
                 <td>{{ quiz.mark }}%</td>
-                <td>{{ quiz.feedback }}</td>
+                <td colspan="2">{{ quiz.feedback }}</td>
             </tr>
 
         {% endfor %} 

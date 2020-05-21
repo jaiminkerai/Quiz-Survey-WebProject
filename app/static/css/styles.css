@@ -3,7 +3,9 @@ body{
   margin: 0;
   padding: 0;
   height: 100vh;  
+  font-family: Verdana;
   background-color: black;
+  color: rgb(215, 218, 220);
 }
 
 header {
@@ -20,6 +22,7 @@ header {
   list-style: none;
   display: flex;
   background-color: black;
+  border-bottom: 1px solid #545452;
 }
 
 .topnav{
@@ -27,10 +30,19 @@ header {
 }
 
 .tags{
-  margin-top: 25px;
+  padding-top: 25px;
   margin-left: 20px;
   margin-right: 20px;
 }
+
+.tags a{
+  padding-bottom: 25px;
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+
 
 .basenav a{
   color: white;
@@ -96,7 +108,7 @@ header {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: #A5A4A4;
   width: 108px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -251,11 +263,6 @@ header {
 }
 
 /* Quizzes page */
-body {
-  font-family: Verdana;
-  background-color: black;
-  color: rgb(215, 218, 220);;
-}
 .row {
   position:relative;
   left: 50%;
@@ -324,18 +331,22 @@ body {
 
 /* RESULTS PAGE */
 .assessments {
-  width: 80%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 5%;
   /* margin-right: 10%; */
   table-layout: fixed;
   border-collapse: collapse;
+}
+
+.assessments table, .assessments th, .assessments td {
+  border: 1px solid #545452
 }
 
 .assessments td {
   height: 80px;
 }
 
-.assessments th, td {
+.assessments th, .assessments td {
   padding: 15px;
   text-align: left;
 }
