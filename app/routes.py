@@ -353,6 +353,11 @@ def quizform(quizname, quizid):
 
     return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items, longworded=longworded.items,form=form)
 
+@app.route('/tutorial')
+def tutorial():
+    return render_template('tutorial.html')
+
+    
 # Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal
 class MyModelView(ModelView):
     def is_accessible(self):
