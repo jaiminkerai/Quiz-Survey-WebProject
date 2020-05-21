@@ -310,6 +310,7 @@ def quizform(quizname, quizid):
 
     # Submitting Validation
     if request.method == 'POST':
+        
         mcqhalf = int(len(form.options.data)/2)
         sahalf = int(len(form.shortanswer.data)/2)
         lahalf = int(len(form.longanswer.data)/2)
@@ -317,6 +318,14 @@ def quizform(quizname, quizid):
         mcqans = form.options.data[0:mcqhalf]
         sans = form.shortanswer.data[0:sahalf]
         lans = form.longanswer.data[0:lahalf]
+
+        score = 0
+
+        for i, ans in enumerate(mcqans):
+            if int(ans) == multicq[i].correct:
+                score += 1
+
+        return '<h1>{}</h1>'.format(score)
 
     return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items, longworded=longworded.items,form=form)
 

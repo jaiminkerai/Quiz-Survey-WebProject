@@ -5,7 +5,7 @@
     <form method="POST" action="">
     {% for mcqs in MCQ %}
         <p>{{ mcqs.question }}</p>
-            {{ form.options[loop.index0] }}
+            {{ form.options[loop.index0]}}
             
     {% endfor %}
     {% for qs in worded %}

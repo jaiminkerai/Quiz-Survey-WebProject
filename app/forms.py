@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField, SelectField, RadioField, FieldList
-from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
+from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length, Required, InputRequired
 from app.models import User
 
 class LoginForm(FlaskForm):
@@ -61,7 +61,11 @@ class ResetPasswordForm(FlaskForm):
     submit = SubmitField('Request Password Reset')
 
 class AnswerForm(FlaskForm):
-    options = FieldList(RadioField("Answer", choices=[], validators=[]))
+    class Meta:
+        def render_field(self, field, render_kw):
+            render_kw.setdefault('required', True)
+            return super().render_field(field, render_kw)
+    options = FieldList(RadioField("Answer", choices=[]))
     shortanswer = FieldList(TextAreaField(validators=[Length(min=1, max=300)]))
     longanswer = FieldList(TextAreaField(validators=[Length(min=1, max=300)]))
     submit = SubmitField('Submit')
