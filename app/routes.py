@@ -279,12 +279,14 @@ def assessments(username):
 @app.route('/quizzes/<quizname>/<quizid>', methods=['GET', 'POST'])
 @login_required
 def quizform(quizname, quizid):
+    if not current_user.doneQuiz(quizid):
+        return redirect(url_for('quizzes'))
     # Get Quiz by ID, Forms and Questions by Quiz ID
     form = AnswerForm(request.form)
     multicq = multiChoice.query.filter_by(quiz_id=quizid).all()
     shortans = Questions.query.filter_by(quiz_id=quizid).all()
     longans = LongQuestions.query.filter_by(quiz_id=quizid).all()
-    numOfQuestions = 0
+    numOfQuestions = 0.0
 
     #Iterating through the multiple choice questions and adding them to the Field List
     for i, multi in enumerate(multicq):
@@ -326,7 +328,7 @@ def quizform(quizname, quizid):
         sans = form.shortanswer.data[0:sahalf]
         lans = form.longanswer.data[0:lahalf]
 
-        score = 0
+        score = 0.0
 
         for i, ans in enumerate(mcqans):
             if ans == multicq[i].correct:
@@ -334,6 +336,7 @@ def quizform(quizname, quizid):
         
         for i, ans in enumerate(sans):
             ratio = fuzz.WRatio(ans, shortans[i].solution)
+            print(ratio)
             if ratio >= 80:
                 score += 1 
 
@@ -342,8 +345,10 @@ def quizform(quizname, quizid):
             db.session.add(submission)
             db.session.commit()
 
-
-        return '<h1>{}</h1>'.format(score)
+        mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=100*(score/numOfQuestions))
+        db.session.add(mark)
+        db.session.commit()
+        return redirect(url_for('assessments', username=current_user.username))
 
     return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items, longworded=longworded.items,form=form)
 
