@@ -40,7 +40,7 @@ header {
   display:block;
   width:0;
   height:2px;
-  background: darkred;
+  background: #666666;
   transition: transform .5s ease;
   transform: scaleX(0);
   margin-top:25px;
