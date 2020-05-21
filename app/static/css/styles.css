@@ -425,6 +425,10 @@ header {
   margin-bottom: 6px;
 }
 
+.lqwrapper {
+  height: 300px;
+}
+
 .qwrapper:hover {
   border-radius: 10px;
   box-shadow: 0 0 8px white;
@@ -449,6 +453,14 @@ header {
   justify-content: center;
   resize: none;
   font-size: 15px;
+}
+
+.qwrapper .long{
+  height: 150px;
+}
+
+.qwrapper .lquestion{
+  transform: translate(0,20%);
 }
 
 .subbutton{
