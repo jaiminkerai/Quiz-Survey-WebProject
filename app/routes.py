@@ -29,11 +29,14 @@ from app.models import quizMarks
 from app.models import ADMINS
 from app.models import multiChoice
 from app.models import LongQuestions
+from app.models import LongAnswers
 from app.models import load_user
 from flask_admin import Admin, AdminIndexView
 from flask_admin.contrib.sqla import ModelView
 from flask_admin.menu import MenuLink
 from flask import g
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
 
 
 @app.route('/', methods=['GET', 'POST']) 
@@ -281,20 +284,24 @@ def quizform(quizname, quizid):
     multicq = multiChoice.query.filter_by(quiz_id=quizid).all()
     shortans = Questions.query.filter_by(quiz_id=quizid).all()
     longans = LongQuestions.query.filter_by(quiz_id=quizid).all()
+    numOfQuestions = 0
 
     #Iterating through the multiple choice questions and adding them to the Field List
     for i, multi in enumerate(multicq):
+        numOfQuestions += 1
         form.options.append_entry()
         choices = [multi.choice1, multi.choice2, multi.choice3, multi.choice4]
         form.options.entries[i].choices = choices
     
     #Iterating through the short answer questions and adding them to the Field List
     for i, short in enumerate(shortans):
+        numOfQuestions += 1
         form.shortanswer.append_entry()
         form.shortanswer.entries[i].shortanswer = short.question
 
     #Iterating through the long answer questions and adding them to the Field List
     for i, longq in enumerate(longans):
+        numOfQuestions += 1
         form.longanswer.append_entry()
         form.longanswer.entries[i].longanswer = longq.question
     
@@ -322,8 +329,19 @@ def quizform(quizname, quizid):
         score = 0
 
         for i, ans in enumerate(mcqans):
-            if int(ans) == multicq[i].correct:
+            if ans == multicq[i].correct:
                 score += 1
+        
+        for i, ans in enumerate(sans):
+            ratio = fuzz.WRatio(ans, shortans[i].solution)
+            if ratio >= 80:
+                score += 1 
+
+        for i, ans in enumerate(lans):
+            submission = LongAnswers(answer=ans, user_id=current_user.id, longquestion_id=longans[i].id)
+            db.session.add(submission)
+            db.session.commit()
+
 
         return '<h1>{}</h1>'.format(score)
 
@@ -357,5 +375,6 @@ admin.add_view(MyModelView(Quizzes, db.session))
 admin.add_view(MyModelView(Questions, db.session))
 admin.add_view(MyModelView(multiChoice, db.session))
 admin.add_view(MyModelView(LongQuestions, db.session))
+admin.add_view(MyModelView(LongAnswers, db.session))
 admin.add_view(MyModelView(quizMarks, db.session))
 admin.add_link(MenuLink(name='Back to Website', category='', url='/'))

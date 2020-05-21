@@ -27,7 +27,7 @@ class User(UserMixin, db.Model):
     admin = db.Column(db.Boolean, unique=False, default=False)
 
     marksOf = db.relationship('quizMarks', backref='markOf', lazy='dynamic')
-    longanswers = db.relationship('LongAnswers', backref='longanswers', lazy='dynamic')
+    longanswers = db.relationship('LongAnswers', backref='user', lazy='dynamic')
 
     def isAdmin(self):
         return self.admin
@@ -135,7 +135,10 @@ class LongQuestions(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
     question = db.Column(db.String(500))
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
-    lanswers = db.relationship('LongAnswers', backref='lanswer', lazy='dynamic')
+    lanswers = db.relationship('LongAnswers', backref='lQuestion', lazy='dynamic')
+
+    def __repr__(self):
+        return '<L-Question {}>'.format(self.question)
 
 class LongAnswers(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
@@ -143,13 +146,19 @@ class LongAnswers(db.Model):
     longquestion_id = db.Column(db.Integer, db.ForeignKey('long_questions.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
+    def __repr__(self):
+        return '<L-Answer {}>'.format(self.longquestion_id)
+
 class quizMarks(db.Model):
     quizMarks_id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
     mark = db.Column(db.Float)
     feedback = db.Column(db.String(500))
-    
+
+def __repr__(self):
+        return '<quizMarks {}>'.format(self.user_id)
+
 class multiChoice(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
@@ -158,7 +167,7 @@ class multiChoice(db.Model):
     choice2 = db.Column(db.String(128), unique=False, nullable=False)
     choice3 = db.Column(db.String(128), unique=False, nullable=False)
     choice4 = db.Column(db.String(128), unique=False, nullable=False)
-    correct = db.Column(db.Integer, unique=False, nullable=False)
+    correct = db.Column(db.String(128), unique=False, nullable=False)
     
     def __repr__(self):
         return "< Quiz {}>".format(self.question)
