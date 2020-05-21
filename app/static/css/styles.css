@@ -319,3 +319,25 @@ body {
 .text-wrap {
   display:inline-block;
 }
+
+/* RESULTS PAGE */
+.assessments {
+  width: 80%;
+  margin-left: 10%;
+  /* margin-right: 10%; */
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.assessments td {
+  height: 80px;
+}
+
+.assessments th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.assessments tr:hover {
+  background-color: #777;
+}
