@@ -35,13 +35,39 @@ header {
   margin-right: 20px;
 }
 
-.tags a{
-  padding-bottom: 25px;
+.tags a::after{
+  content: '';
+  display:block;
+  width:0;
+  height:2px;
+  background: darkred;
+  transition: transform .5s ease;
+  transform: scaleX(0);
+  margin-top:25px;
 }
 
-.topnav a:hover {
-  border-bottom: 3px solid red;
+.tags a:hover::after{
+  width: 100%;
+  transform: scaleX(1);
 }
+
+.logo::after{
+  content: '';
+  display:block;
+  width:0;
+  height:2px;
+  background: #666666;
+  transition: transform .5s ease-in-out;
+  transform: scaleX(0);  
+}
+
+.logo:hover::after{
+  width: 100%;
+  transform: scaleX(1);
+ 
+}
+
+
 
 
 .basenav a{

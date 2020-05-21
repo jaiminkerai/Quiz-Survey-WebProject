@@ -25,7 +25,7 @@
                 <!-- If user is not logged in -->
                 {% if current_user.is_anonymous %}
                 <li class="tags"><a href="{{ url_for('tutorial') }}">tutorial</a></li>
-                <li><a href="{{ url_for('quizzes') }}"><img class='baselogo' src="{{ url_for('static', filename='css/templogo.png') }}"></a></li>
+                <li class="logo"><a href="{{ url_for('quizzes') }}"><img class='baselogo' src="{{ url_for('static', filename='css/templogo.png') }}"></a></li>
                 <li class="tags"><a href="{{ url_for('login') }}">Sign In</a></li>
 
                 <!-- If user is logged in -->
