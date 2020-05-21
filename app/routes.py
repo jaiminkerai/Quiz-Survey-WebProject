@@ -280,6 +280,7 @@ def assessments(username):
 @login_required
 def quizform(quizname, quizid):
     if not current_user.doneQuiz(quizid):
+        flash("You have already completed this quiz!", "alertError")
         return redirect(url_for('quizzes'))
     # Get Quiz by ID, Forms and Questions by Quiz ID
     form = AnswerForm(request.form)
@@ -345,7 +346,7 @@ def quizform(quizname, quizid):
             db.session.add(submission)
             db.session.commit()
 
-        mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=100*(score/numOfQuestions))
+        mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=round(100*(score/numOfQuestions),2))
         db.session.add(mark)
         db.session.commit()
         return redirect(url_for('assessments', username=current_user.username))
