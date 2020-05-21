@@ -347,7 +347,7 @@ def quizform(quizname, quizid):
             db.session.add(submission)
             db.session.commit()
 
-        mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=round(100*(score/numOfQuestions),2))
+        mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=round(100*(score/numOfQuestions),2), feedback="This is only a preliminary mark, your teacher will update it at a later date")
         db.session.add(mark)
         db.session.commit()
         return redirect(url_for('assessments', username=current_user.username))
