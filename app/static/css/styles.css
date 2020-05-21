@@ -145,6 +145,7 @@ header {
   background: white;
   padding: 25px;
   border-radius: 5px;
+  color:black;
 }
 
 .wrapper h1{
@@ -153,7 +154,7 @@ header {
 }
 
 .wrapper .rbtn{
-  transform: translate(-60px ,20px);
+  transform: translate(-70px ,20px);
 }
 
 .wrapper .input_field{
