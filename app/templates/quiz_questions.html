@@ -1,22 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
-    <h3>{{ quiz.name }}</h3>
-    <h4>{{ quiz.description }}</h4>
+    <h3 class="quiz_title">{{ quiz.name }}</h3>
+    <h4 class="quiz_desc">{{ quiz.description }}</h4>
+
+    <div class="quizwrapper">
     <form method="POST" action="">
     {% for mcqs in MCQ %}
-        <p>{{ mcqs.question }}</p>
-            {{ form.options[loop.index0]}}
-            
+    <div class=qwrapper>
+        <p class="questions">{{ mcqs.question }}</p>
+        <div>{{ form.options[loop.index0] }}</div>
+    </div>
     {% endfor %}
     {% for qs in worded %}
-        <p>{{ qs.question }}</p>
-           {{ form.shortanswer[loop.index0]}}
+    <div class=qwrapper>
+        <p class="questions">{{ qs.question }}</p>
+           {{ form.shortanswer[loop.index0](class="inputbox")}}
+    </div>
     {% endfor %}
     {% for lqs in longworded %}
-        <p>{{ lqs.question }}</p>
-           {{ form.longanswer[loop.index0] }}
+    <div class=qwrapper>
+        <p class="questions">{{ lqs.question }}</p>
+           {{ form.longanswer[loop.index0](class="inputbox") }}
+    </div>
     {% endfor %}
-    <br>
-    {{ form.submit() }}
+    </div>
+    {{ form.submit(class="subbutton") }}
     </form>
+    
+
+    
 {% endblock %}
