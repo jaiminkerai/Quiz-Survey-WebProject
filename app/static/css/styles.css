@@ -532,3 +532,49 @@ html, body{
   color: #545452;
   
 }
+
+/* Make a post page */
+.postlabel{
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+}
+
+.postbox{
+  resize: none;
+  transform: translate(0%, 20%);
+  height: 100px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.postbox:focus{
+  outline: none;
+}
+
+.postbtn{
+  border: 0;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding: 10px;
+  width: 200px;
+  background: black;
+  border: 3px solid limegreen;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.postbtn:hover{
+  background: limegreen;
+  border: 3px solid limegreen;
+  color: white;
+}
+
+.postbtn:active{
+  background: black;
+  border: 3px solid limegreen;
+  color: white;
+}
