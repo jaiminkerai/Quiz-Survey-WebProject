@@ -3,7 +3,7 @@ body{
   margin: 0;
   padding: 0;
   height: 100vh;  
-  background-color: rgb(133, 133, 133);
+  background-color: black;
 }
 
 header {
@@ -257,7 +257,7 @@ body {
   position:relative;
   left: 50%;
   transform: translate(-47.5%, 0%);
-  max-width: 700px;
+  max-width: 1000px;
   width: 100%;
   background: #222222;
   padding: 25px;
@@ -274,18 +274,17 @@ body {
 .profile-pic{
   border-radius: 50%;
   padding: 5px;
-  width:100%;
-  left:100%;
-  margin-top:-5px;
+  width:50px;
+  margin-top:0px;
 }
-
 .author {
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-  background-color: #A5A4A4;
-  border-radius:10px;
   margin: 20px;
+  color: grey;
+  padding: 5px;
+  text-decoration: none;
+  background-color: RGBA(84, 84, 82, 1);
+  border-radius:2px;
+
 }
 
 .author:hover{
@@ -295,9 +294,9 @@ body {
   text-decoration:none;
   color:white;
   padding:10px;
-  background-color: #A5A4A4;
-  border-radius:10px;
+  border-radius:2px;
   margin-right:20px;
+  font-size:30px;
 }
 
 .quiz-name:hover{
@@ -305,15 +304,14 @@ body {
 }
 
 .desc {
-  color: white;
-  padding-left:20px;
-
+  color: lightgrey;
+  padding-left:25px;
 }
 
 .date {
   font-size:15px;
   color: lightgrey;
-  padding-top:2px;
+  padding-top:15px;
 }
 
 .text-wrap {
