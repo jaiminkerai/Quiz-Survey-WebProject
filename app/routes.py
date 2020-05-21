@@ -39,7 +39,7 @@ from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
 
-@app.route('/', methods=['GET', 'POST']) 
+
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
@@ -67,7 +67,7 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('index'))
+        return redirect(url_for('quizzes'))
     form = LoginForm()
     if form.validate_on_submit():
         # If user does not exist or the password is incorrect, redirect back to login
@@ -82,17 +82,17 @@ def login():
 
         # If there is not a next page, redirect to the home page 
         if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for('index')
+            next_page = url_for('quizzes')
 
         # Redirect to the next page
         return redirect(next_page)
-        return redirect(url_for('index'))
+        return redirect(url_for('quizzes'))
     return render_template('login.html', title='Sign In', form=form)
 
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return redirect(url_for('quizzes'))
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -242,6 +242,7 @@ def reset_password(token):
         return redirect(url_for('login'))
     return render_template('reset_password.html', form=form)
 
+@app.route('/', methods=['GET', 'POST']) 
 @app.route('/quizzes')
 def quizzes():
     # Find all the quizzes
