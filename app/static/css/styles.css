@@ -285,6 +285,7 @@ header {
   padding: 5px;
   width:50px;
   margin-top:0px;
+  vertical-align: middle;
 }
 .author {
   margin: 20px;
@@ -319,7 +320,7 @@ header {
 
 .date {
   font-size:15px;
-  color: lightgrey;
+  color: grey;
   padding-top:15px;
 }
 
@@ -351,4 +352,27 @@ header {
 
 .assessments tr:hover {
   background-color: #222222;
+}
+
+/* PROFILE PAGE */
+.profile-avatar {
+  text-align: center;
+}
+
+.profile-table td{
+  text-align:center;
+  line-height:5px;
+}
+
+.profile-table .username {
+  font-size: 30px;
+  color:lightgrey;
+}
+
+.profile-table p{
+  color:grey;
+}
+
+.profile-table .about-me{
+  color: lightgrey;
 }
