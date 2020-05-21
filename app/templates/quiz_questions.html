@@ -6,21 +6,21 @@
     <div class="quizwrapper">
     <form method="POST" action="">
     {% for mcqs in MCQ %}
-    <div class=qwrapper>
+    <div class="qwrapper">
         <p class="questions">{{ mcqs.question }}</p>
         <div>{{ form.options[loop.index0] }}</div>
     </div>
     {% endfor %}
     {% for qs in worded %}
-    <div class=qwrapper>
+    <div class="qwrapper">
         <p class="questions">{{ qs.question }}</p>
            {{ form.shortanswer[loop.index0](class="inputbox")}}
     </div>
     {% endfor %}
     {% for lqs in longworded %}
-    <div class=qwrapper>
-        <p class="questions">{{ lqs.question }}</p>
-           {{ form.longanswer[loop.index0](class="inputbox") }}
+    <div class="qwrapper lqwrapper">
+        <p class="questions lquestion">{{ lqs.question }}</p>
+           {{ form.longanswer[loop.index0](class="inputbox long") }}
     </div>
     {% endfor %}
     </div>
