@@ -29,4 +29,8 @@
     {% if next_url %}
     <a href="{{ next_url }}">Older posts</a>
     {% endif %}
+
+    {% for quiz in quizzes %}
+        {% include 'quizdisplay.html' %}
+    {% endfor %}
 {% endblock %}
