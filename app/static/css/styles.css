@@ -345,7 +345,7 @@ header {
   height: 80px;
 }
 
-.assessments th, .assessments td {
+.assessments th, td {
   padding: 15px;
   text-align: left;
 }
