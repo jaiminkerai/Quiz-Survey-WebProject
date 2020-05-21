@@ -182,6 +182,7 @@ header {
   padding-bottom: 5px;
   text-align: center;
   justify-content: center;
+  background-color: #545452;
 }
 
 .wrapper .input_field .label{
