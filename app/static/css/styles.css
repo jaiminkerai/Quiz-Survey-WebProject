@@ -484,3 +484,21 @@ header {
   margin-left: 100px;
   margin-right: 100px;
 }
+
+/* FOOTER */
+.footer {
+  background-color: #222222;
+  color: #545452;
+  height:50px;
+  position:relative;
+}
+.footer .footer-bottom {
+  height: 40px;
+  text-align: center;
+  vertical-align: auto;
+  bottom:0px;
+  left:0px;
+  position:absolute;
+  width:100%;
+  padding-top:20px;
+}
