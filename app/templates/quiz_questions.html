@@ -3,8 +3,8 @@
     <h3 class="quiz_title">{{ quiz.name }}</h3>
     <h4 class="quiz_desc">{{ quiz.description }}</h4>
 
-    <div class="quizwrapper">
     <form method="POST" action="">
+    <div class="quizwrapper">
     {% for mcqs in MCQ %}
     <div class="qwrapper">
         <p class="questions">{{ mcqs.question }}</p>
