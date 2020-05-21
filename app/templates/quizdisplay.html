@@ -4,7 +4,7 @@
                 <td colspan=100%;><img src="{{ quiz.author.avatar(36) }}" class="profile-pic">
                     <a href="{{ url_for('user', username=quiz.author.username) }}" class = "author">
                         /{{ quiz.author.username }}
-                    </a><span class="date">Posted: {{ quiz.pub_date.strftime('%d/%m/%Y, %I:%M%p') }}</span>
+                    </a><span class="date">Posted: {{ moment(quiz.pub_date).format('DD/MM/YYYY, hh:mmA') }}</span>
                 </td>
                 
             </tr>

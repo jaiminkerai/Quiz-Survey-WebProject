@@ -13,11 +13,14 @@ from logging.handlers import SMTPHandler
 from logging.handlers import RotatingFileHandler
 import os
 from flask_mail import Mail
+from flask_moment import Moment
 
 app = Flask(__name__) # Instantiate Flask application; __name__ a variable equal to the name of the module
 app.config.from_object(Config)
 db = SQLAlchemy(app) # Create a database instance
 migrate = Migrate(app, db)
+
+moment = Moment(app) # Instantiating flask moments
 
 login = LoginManager(app)
 login.login_view = 'login' # Tells @login_required the route for the login

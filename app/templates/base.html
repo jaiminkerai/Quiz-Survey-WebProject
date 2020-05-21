@@ -11,6 +11,10 @@
         {% else %}
         <title>Quizards</title>
         {% endif %}
+
+        {{ moment.include_jquery() }}
+        {{ moment.include_moment() }}
+        
     </head>
 
     <body>
@@ -63,6 +67,7 @@
             {% block content %}
             
             {% endblock %}
+
         </div>
 
         <!-- linking scripts.js folder -->
