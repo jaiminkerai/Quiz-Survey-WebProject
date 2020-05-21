@@ -377,3 +377,64 @@ header {
 .profile-table .about-me{
   color: lightgrey;
 }
+
+/* Answer Page */
+
+.quiz_title{
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(255, 208, 0);
+}
+
+.quiz_desc{
+  font-family: 'Montserrat';
+  font-style: italic;
+}
+
+.quizwrapper{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  max-width: 650px;
+  width: 100%;
+  background:  #222222;
+  padding: 20px;
+  border-radius: 10px;
+  align-content: center;
+  border: #333;
+}
+
+
+.qwrapper {
+  transform: translate(0,0);
+  position: center;
+  background-color: rgb(80, 80, 80);
+  height: 200px;
+  width: 650px;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #8f8d8d;
+  margin-bottom: 6px;
+}
+
+.qwrapper .questions{
+  padding-top: 10px;
+  color: white;
+}
+
+.qwrapper div{
+  transform: translate(-4%,15%);
+}
+
+.qwrapper .inputbox{
+  transform: translate(0,30%);
+  width: 80%;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  justify-content: center;
+  resize: none;
+  font-size: 15px;
+}
