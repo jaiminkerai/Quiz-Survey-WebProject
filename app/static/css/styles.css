@@ -378,7 +378,6 @@ header {
   color: lightgrey;
 }
 
-<<<<<<< HEAD
 /* Answer Page */
 
 .quiz_title{
@@ -439,11 +438,9 @@ header {
   resize: none;
   font-size: 15px;
 }
-=======
 /* TUTORIAL PAGE */
 .tutorialcontainer {
   margin-top: 50px;
   margin-left: 100px;
   margin-right: 100px;
 }
->>>>>>> a9d7fd0dc0e620fb27f4644cb8e898425747ddde
