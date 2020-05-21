@@ -517,6 +517,9 @@ header {
 }
 
 /* FOOTER */
+html, body{
+  height:100%;
+}
 .footer-bottom {
   height: 40px;
   text-align: center;
