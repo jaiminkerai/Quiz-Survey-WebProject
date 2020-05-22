@@ -409,6 +409,7 @@ class MyAdminIndexView(AdminIndexView):
 admin = Admin(app, index_view=MyAdminIndexView())
 
 admin.add_view(MyModelView(User, db.session))
+admin.add_view(MyModelView(Post, db.session))
 admin.add_view(MyModelView(Quizzes, db.session))
 admin.add_view(MyModelView(Questions, db.session))
 admin.add_view(MyModelView(multiChoice, db.session))

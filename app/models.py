@@ -8,7 +8,6 @@ from time import time
 import jwt
 from app import app
 
-
 ADMINS = ['cits3403test@gmail.com']
 
 followers = db.Table('followers',
@@ -123,7 +122,7 @@ class Quizzes(db.Model):
     pub_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     quizMarks = db.relationship('quizMarks', backref='quizMarks', lazy='dynamic')
-    posts= db.relationship('Post', backref='post', lazy='dynamic')
+    posts= db.relationship('Post', backref='Quiz', lazy='dynamic')
 
     def __repr__(self):
         return 'Quiz: {}'.format(self.name)  
