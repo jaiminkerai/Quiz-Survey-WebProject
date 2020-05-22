@@ -166,7 +166,7 @@ header {
   position: relative;
   left: 50%;
   transform: translate(-47.5%, 0%);
-  max-width: 350px;
+  max-width: 800px;
   width: 100%;
   background: white;
   padding: 25px;
@@ -486,8 +486,8 @@ header {
 .quizwrapper{
   position: relative;
   left: 50%;
-  transform: translate(-50%, 0%);
-  max-width: 650px;
+  transform: translate(-50%, 2%);
+  max-width: 800px;
   width: 100%;
   background:  #222222;
   padding: 20px;
@@ -505,7 +505,8 @@ header {
   position: center;
   background-color: rgb(80, 80, 80);
   height: 200px;
-  width: 650px;
+  max-width: 800px;
+  width: 100%;
   border-radius: 10px;
   border-width: 2px;
   border-style: solid;
@@ -651,4 +652,26 @@ html, body{
   background: black;
   border: 3px solid limegreen;
   color: white;
+}
+
+/* Admin Page */
+.intro{
+  text-align: center;
+  transform: translate();
+  color: #6e6e6e;
+}
+
+.jumbotron h1{
+  color: #545452;
+  font-family: 'Montserrat';
+}
+
+.jumbotron p{
+  font-size: 18px;
+  color:#6e6e6e;
+}
+
+.jumbotron .intro{
+  text-align: justify;
+  font-size: 15px;
 }

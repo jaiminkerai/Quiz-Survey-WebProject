@@ -1,4 +1,51 @@
 {% extends 'admin/master.html' %}
 {% block head_css %}
 {{ super() }}
+<link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
 {% endblock head_css %}
+{% block body %}
+<h1 class="intro">Welcome, <b>{{g.user.username}}</b>, to the Admin Page<h1>
+    <div class="jumbotron"><br>
+        <p class="intro">This page for admins only. It is designed to be able to create and manage quizzes with
+            their respective multiple choice, short answer and long answer questions. This page also allows you to
+            manipulate the information of a User and of Posts where you see fit.<br>
+            There are also functionalities which allow you to assess responses to long answer questions, provide feedback
+            on them, then update a Users marks accordingly. Above you will see a navigation bar leading to tables of stored
+            data through which you are able to efficiently search through to find specific users, quizzes, questions, marks or posts.
+        </p>
+    </div>
+    <div class="jumbotron"><br>
+        <h1>Users Table</h1>
+        <p>The users table is able to be refined to find specific users with a given username or email. </p>
+    </div>
+    <div class="jumbotron"><br>
+        <h1>Post</h1>
+        <p>The post table contains the posts and how they connected to the user and the quiz it was posted underneath.</p>
+    </div>
+    <div class="jumbotron"><br>
+        <h1>Questions</h1>
+        <p>The question table allows you to view questions and which quiz they are allocated to. You also are able to add questions to quizzes yourself.
+            When making a question you are able to assign yourself as the authour of the quiz. Questions must be brief and could contain both worded or numeral solutions.
+        </p>
+    </div>
+    <div class="jumbotron"><br>
+        <h1>Multiple Choice</h1>
+        <p>The multichoice table allows you to view questions and which quiz they are allocated to. You also are able to add questions to quizzes yourself.
+        When making a question you are able to assign yourself authour of the quiz. Questions can be assigned options, with one as the solution, and may contain both worded or numeral responses.
+        </p>
+    </div>
+    <div class="jumbotron"><br>
+        <h1>Long Answer</h1>
+        <p>The longanswer table allows you to view questions and which quiz they are allocated to. You also are able to add questions to quizzes yourself.
+            When making a question you are able to assign yourself authour of the quiz. There are no solutions as these are manually graded. Your are able to filter
+            this table by both quiz, user or question for your ease.</p>
+    </div>
+    <div class="jumbotron"><br>
+        <h1>Quiz Marks</h1>
+        <p>The quizMarks table allows you to see marks of users for each quiz. You are able to edits marks for users and provide feedback if it is for a long worded
+            response.
+        </p>
+    </div>
+    
+
+{% endblock body %}
