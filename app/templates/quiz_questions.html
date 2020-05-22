@@ -2,7 +2,7 @@
 {% block content %}
     <h3 class="quiz_title">{{ quiz.name }}</h3>
     <h4 class="quiz_desc">{{ quiz.description }}</h4>
-
+    <h5 class="quiz_warning">All questions must be answered!<h5>
     <form method="POST" action="">
     <div class="quizwrapper">
     {% for mcqs in MCQ %}

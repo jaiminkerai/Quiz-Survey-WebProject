@@ -449,6 +449,13 @@ header {
 .quiz_desc{
   font-family: 'Montserrat';
   font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.quiz_warning{
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .quizwrapper{
@@ -494,6 +501,8 @@ header {
   padding-top: 10px;
   color: white;
   text-transform: capitalize;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .qwrapper div{
@@ -511,8 +520,11 @@ header {
   font-size: 15px;
 }
 
+.lqwrapper{
+  height: 400px;
+}
 .qwrapper .long{
-  height: 150px;
+  height: 200px;
 }
 
 .qwrapper .lquestion{
