@@ -132,7 +132,8 @@ class Quizzes(db.Model):
         count = float(quizMarks.query.filter_by(quiz_id=self.id).count())
         if count > 0:
             return round(total_sum/count,2)
-        return 0
+        if count == 0:
+            return False
     
 class Questions(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
