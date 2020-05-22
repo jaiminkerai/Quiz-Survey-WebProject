@@ -1,7 +1,10 @@
 {% extends "base.html" %}
+
 {% block content %}
+    {% if current_user.is_authenticated %}
+    <h1 id=greeting>Quizzes</h1>
+    {% endif %}
 {% for quiz in quizzes %}
     {% include 'quizdisplay.html' %}
 {% endfor %}
 {% endblock %}
-    
