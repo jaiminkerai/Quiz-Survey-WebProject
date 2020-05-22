@@ -154,7 +154,8 @@ class LongAnswers(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
-        return 'L-Answer: {}'.format(self.longquestion_id)
+        user = User.query.filter_by(id=self.user_id).first()
+        return 'L-Answer: {}'.format(user)
 
 class quizMarks(db.Model):
     quizMarks_id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
