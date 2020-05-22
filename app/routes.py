@@ -337,7 +337,8 @@ def quizform(quizname, quizid):
                 score += 1
         
         for i, ans in enumerate(sans):
-            ratio = fuzz.ratio(ans.lower(), shortans[i].solution.lower())
+            ratio = fuzz.token_sort_ratio(ans.lower(), shortans[i].solution.lower())
+            print(ratio)
             if ratio >= 80:
                 score += 1 
 
