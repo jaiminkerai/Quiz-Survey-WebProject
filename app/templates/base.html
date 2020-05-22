@@ -37,9 +37,7 @@
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="{{ url_for('index') }}">Home</a>
                         <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
-                        <a href="{{ url_for('explore') }}">Explore</a>  
                         <a href="{{ url_for('assessments', username=current_user.username) }}">Results</a>
                         {% if g.user.admin %} 
                         <a href="{{ url_for('admin.index') }}">Admin</a>  
