@@ -350,6 +350,7 @@ def quizform(quizname, quizid):
         mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=round(100*(score/numOfQuestions),2), feedback="This is only a preliminary mark, your teacher will update it at a later date")
         db.session.add(mark)
         db.session.commit()
+        flash('Your quiz has successfully been submitted!', 'alertSuccess')
         return redirect(url_for('assessments', username=current_user.username))
 
     return render_template('quiz_questions.html', quiz=quiz, worded=worded.items, MCQ=MCQ.items, longworded=longworded.items,form=form)
