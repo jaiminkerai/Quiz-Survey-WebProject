@@ -40,7 +40,7 @@ from fuzzywuzzy import process
 
 
 
-
+@app.route('/', methods=['GET', 'POST']) 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -205,7 +205,6 @@ def reset_password(token):
         return redirect(url_for('login'))
     return render_template('reset_password.html', form=form)
 
-@app.route('/', methods=['GET', 'POST']) 
 @app.route('/quizzes')
 def quizzes():
     # Find all the quizzes
