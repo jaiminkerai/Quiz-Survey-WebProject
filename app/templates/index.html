@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi, {{ current_user.username }}!</h1>
+    <h1>What did you think of the {{ quizname }} quiz, {{ current_user.username }}?</h1>
     {% if form %}
     <form action="" method="post">
         {{ form.hidden_tag() }}

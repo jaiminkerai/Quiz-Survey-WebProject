@@ -231,7 +231,6 @@ def assessments(username):
 @login_required
 def quizform(quizname, quizid):
     if not current_user.doneQuiz(quizid):
-        flash("You have already completed this quiz!", "alertError")
         return redirect(url_for('comments', quizid=quizid,  quizname=quizname))
     # Get Quiz by ID, Forms and Questions by Quiz ID
     form = AnswerForm(request.form)
@@ -331,9 +330,9 @@ def comments(quizname, quizid):
     prev_url = url_for('quizzes', page=posts.prev_num) \
         if posts.has_prev else None
 
-    return render_template('index.html', title='Home', form=form,
+    return render_template('index.html', title=quizname, form=form,
                            posts=posts.items, next_url=next_url,
-                           prev_url=prev_url)
+                           prev_url=prev_url, quizname=quizname)
 
 # Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal
 class MyModelView(ModelView):
