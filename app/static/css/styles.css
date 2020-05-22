@@ -166,7 +166,7 @@ header {
   position: relative;
   left: 50%;
   transform: translate(-47.5%, 0%);
-  max-width: 800px;
+  max-width: 500px;
   width: 100%;
   background: white;
   padding: 25px;
@@ -201,9 +201,10 @@ header {
 }
 
 .wrapper .input_field .inputbox{
-  width: 100%;
+  width: 80%;
   height: 20px;
   border: 1px solid #666666;
+  border-radius: 6px;
   padding-top: 5px;
   padding-bottom: 5px;
   text-align: center;
@@ -222,7 +223,7 @@ header {
   border: 0;
   margin-top: 15px;
   padding: 10px;
-  width: 100%;
+  width: 70%;
   background: rgb(0, 0, 0);
   border: 3px solid #666666;
   color: white;
@@ -469,6 +470,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 2px;
   color:rgb(131, 131, 131);
+  font-size: 20px;
 }
 
 .quiz_desc{
@@ -486,7 +488,7 @@ header {
 .quizwrapper{
   position: relative;
   left: 50%;
-  transform: translate(-50%, 2%);
+  transform: translate(-50%, 0%);
   max-width: 800px;
   width: 100%;
   background:  #222222;
