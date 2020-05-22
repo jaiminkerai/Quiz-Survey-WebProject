@@ -429,6 +429,11 @@ header {
   color:lightgrey;
 }
 
+.profile-table .email {
+  color:lightgrey;
+}
+
+
 .profile-table p{
   color:grey;
 }
