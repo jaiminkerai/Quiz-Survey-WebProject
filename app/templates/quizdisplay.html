@@ -8,6 +8,13 @@
                     <a href="{{ url_for('user', username=quiz.author.username) }}" class = "author">
                         /{{ quiz.author.username }}
                     </a><span class="date">Posted: {{ moment(quiz.pub_date).format('DD/MM/YYYY, hh:mmA') }}</span>
+                    {% if quiz.Avgmark() >= 75.0 %}
+                    <span class="avgmark good">Avg. {{ quiz.Avgmark() }}%</span>
+                    {% elif quiz.Avgmark() < 75.0 and quiz.Avgmark() >= 50.0 %}
+                    <span class="avgmark ok">Avg. {{ quiz.Avgmark() }}%</span>
+                    {% elif quiz.Avgmark() < 50 and quiz.Avgmark() >= 0.0 %}
+                    <span class="avgmark bad">Avg. {{ quiz.Avgmark() }}%</span>
+                    {% endif %}
                 </td>
                 
             </tr>
