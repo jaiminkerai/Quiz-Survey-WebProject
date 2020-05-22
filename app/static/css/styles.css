@@ -569,18 +569,18 @@ header {
 /* FOOTER */
 html, body{
   height:100%;
+  position:relative;
+  overflow:auto;
 }
 .footer-bottom {
   height: 40px;
   text-align: center;
-  vertical-align: auto;
   bottom:0px;
   left:0px;
-  position:fixed;
+  position:relative;
   width:100%;
-  padding-top:20px;
   color: #545452;
-  
+  padding-top:20px;
 }
 
 /* Make a post page */
