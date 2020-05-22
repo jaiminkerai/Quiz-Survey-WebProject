@@ -43,7 +43,7 @@ class User(UserMixin, db.Model):
         return check_password_hash(self.password_hash, password)
 
     def __repr__(self):
-        return '<User {}>'.format(self.username)
+        return '{}'.format(self.username)
 
     def avatar(self, size):
         digest = md5(self.email.lower().encode('utf-8')).hexdigest()
@@ -102,7 +102,7 @@ class Post(db.Model):
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
 
     def __repr__(self):
-        return '<Post {}>'.format(self.body)
+        return 'Post: {}'.format(self.body)
 
 # Reloading the user from the user id stored in a session
 @login.user_loader
@@ -126,7 +126,7 @@ class Quizzes(db.Model):
     posts= db.relationship('Post', backref='post', lazy='dynamic')
 
     def __repr__(self):
-        return '<Quiz {}>'.format(self.name)  
+        return 'Quiz: {}'.format(self.name)  
     
 class Questions(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
@@ -135,16 +135,17 @@ class Questions(db.Model):
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
 
     def __repr__(self):
-        return '<Quiz {}>'.format(self.question)
+        return 'Question: {}'.format(self.question)
 
 class LongQuestions(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
     question = db.Column(db.String(500))
     quiz_id = db.Column(db.Integer, db.ForeignKey('quizzes.id'))
-    lanswers = db.relationship('LongAnswers', backref='lQuestion', lazy='dynamic')
+    lanswers = db.relationship('LongAnswers', backref='Question', lazy='dynamic')
 
     def __repr__(self):
-        return '<L-Question {}>'.format(self.question)
+        quizfrom = Quizzes.query.filter_by(id=self.quiz_id).first()
+        return '{}, L-Question {}'.format(quizfrom , self.question)
 
 class LongAnswers(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
@@ -153,7 +154,7 @@ class LongAnswers(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
-        return '<L-Answer {}>'.format(self.longquestion_id)
+        return 'L-Answer: {}'.format(self.longquestion_id)
 
 class quizMarks(db.Model):
     quizMarks_id = db.Column(db.Integer, primary_key = True, autoincrement=True, unique=True)
@@ -163,7 +164,7 @@ class quizMarks(db.Model):
     feedback = db.Column(db.String(500))
 
 def __repr__(self):
-        return '<quizMarks {}>'.format(self.user_id)
+        return 'Marks: {}'.format(self.user_id)
 
 class multiChoice(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
@@ -176,7 +177,7 @@ class multiChoice(db.Model):
     correct = db.Column(db.String(128), unique=False, nullable=False)
     
     def __repr__(self):
-        return "< Quiz {}>".format(self.question)
+        return "MCQuestion {}>".format(self.question)
         return "< Quiz {} question: {}  {} {} {} {} {} {} >".format(
             self.question,
             self.choice1,
