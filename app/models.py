@@ -126,6 +126,13 @@ class Quizzes(db.Model):
 
     def __repr__(self):
         return 'Quiz: {}'.format(self.name)  
+
+    def Avgmark(self):
+        total_sum = float(sum(quizMarks.mark for quizMarks in self.quizMarks))
+        count = float(quizMarks.query.filter_by(quiz_id=self.id).count())
+        if count > 0:
+            return round(total_sum/count,2)
+        return 0
     
 class Questions(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
