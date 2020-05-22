@@ -1,14 +1,18 @@
-<table>
-    <tr valign="top">
-        <td><img src="{{ post.author.avatar(36) }}"></td>
-        <td>
-            <a href="{{ url_for('user', username=post.author.username) }}">
-                {{ post.author.username }}
-            </a>
-        </td>
-        <td> {{ post.timestamp.strftime('%d/%m/%Y, %I:%M%p') }}</td>
-        <td>
-            </br>{{ post.body }}
-        </td>
-    </tr>
-</table>
+<div class="row" onclick="location.href='{{ url_for('user', username=post.author.username) }}';" style="cursor:pointer;">  
+    <table>
+        <tr>
+            <td colspan=100%;>
+                <a href="{{ url_for('user', username=post.author.username) }}"></a>
+                    <img src="{{ post.author.avatar(36) }}" class=profile-pic>
+                </a>
+                <a href="{{ url_for('user', username=post.author.username) }}" class = "author">
+                    /{{ post.author.username }}
+                </a><span class="date">{{ moment(post.timestamp).fromNow() }}</span>
+        </tr>
+        <tr>
+            <td colspan=5, class="desc">
+                {{ post.body }}
+            </td>
+        </tr>
+    </table>
+</div>
