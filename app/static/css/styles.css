@@ -43,7 +43,7 @@ header {
   background: #666666;
   transition: transform .5s ease-in-out;
   transform: scaleX(0);
-  margin-top:26px;
+  margin-top:25px;
 }
 
 .tags a:hover::after{
@@ -118,7 +118,7 @@ header {
   border: none;
   outline: none;
   color: white;
-  padding-bottom: 26px;
+  /* padding-bottom: 26px; */
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */

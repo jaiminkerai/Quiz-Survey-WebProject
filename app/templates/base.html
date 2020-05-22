@@ -31,7 +31,7 @@
                 <!-- If user is logged in -->
                 {% else %}
                 <li class="tags"><a href="{{ url_for('tutorial') }}">tutorial</a></li>
-                <li><a href="{{ url_for('quizzes') }}"><img class='baselogo' src="{{ url_for('static', filename='css/templogo.png') }}"></a></li>
+                <li class="logo"><a href="{{ url_for('quizzes') }}"><img class='baselogo' src="{{ url_for('static', filename='css/templogo.png') }}"></a></li>
                 <div class="dropdown">
                     <button class="dropbtn"><li class="tags"><a href="{{ url_for('quizzes') }}">Menu</a></li>
                         <i class="fa fa-caret-down"></i>
