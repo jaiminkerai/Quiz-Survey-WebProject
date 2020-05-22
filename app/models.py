@@ -122,7 +122,7 @@ class Quizzes(db.Model):
     pub_date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     quizMarks = db.relationship('quizMarks', backref='quizMarks', lazy='dynamic')
-    posts= db.relationship('Post', backref='Quiz', lazy='dynamic')
+    posts= db.relationship('Post', backref='post', lazy='dynamic')
 
     def __repr__(self):
         return 'Quiz: {}'.format(self.name)  
