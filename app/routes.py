@@ -243,7 +243,7 @@ def assessments(username):
 @app.route('/quizzes/<quizname>/<quizid>', methods=['GET', 'POST'])
 @login_required
 def quizform(quizname, quizid):
-    if not current_user.doneQuiz(quizid):
+    if current_user.doneQuiz(quizid):
         return redirect(url_for('comments', quizid=quizid,  quizname=quizname))
     # Get Quiz by ID, Forms and Questions by Quiz ID
     form = AnswerForm(request.form)
@@ -325,6 +325,8 @@ def tutorial():
 @login_required
 def comments(quizname, quizid):
     # For posting comments 1-140 characters long
+    if not current_user.doneQuiz(quizid):
+        return redirect(url_for('quizform', quizid=quizid,  quizname=quizname))
     form = PostForm()
     if form.validate_on_submit():
         quiz = Quizzes.query.filter_by(id=quizid).first_or_404()

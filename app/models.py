@@ -33,7 +33,7 @@ class User(UserMixin, db.Model):
 
     def doneQuiz(self, quizid):
         quiz_done = quizMarks.query.filter_by(quiz_id=quizid,user_id=self.id).count()
-        return quiz_done == 0
+        return quiz_done != 0
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
