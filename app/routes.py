@@ -429,7 +429,7 @@ class MyAdminIndexView(AdminIndexView):
     def inaccessible_callback(self, name, **kwargs):
         return redirect(url_for('login'))
 
-admin = Admin(app, index_view=MyAdminIndexView())
+admin = Admin(app, index_view=MyAdminIndexView(), name="Quizards")
 
 admin.add_view(MyModelView(User, db.session))
 admin.add_view(MyModelView(Post, db.session))
