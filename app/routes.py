@@ -2,7 +2,7 @@
 Decorators which allows us to write a function that 
 returns the information displayed on the website for a specific route. 
 '''
-from flask import render_template, flash, redirect, url_for, abort
+from flask import render_template, flash, redirect, url_for, abort, jsonify
 from app import app
 from app.forms import LoginForm
 from flask_login import current_user, login_user
@@ -352,13 +352,24 @@ def comments(quizname, quizid):
 @app.route('/quizzes/<quizname>/<quizid>/scores', methods=['GET', 'POST'])
 @login_required
 def scores(quizname, quizid):
+    return render_template('scores.html', quizname=quizname, quizid=quizid)
+    
+
+@app.route('/quizzes/<quizname>/<quizid>/json', methods=['GET', 'POST'])
+@login_required
+def json(quizname, quizid):
     distribution = quizMarks.query.with_entities(quizMarks.mark).filter_by(quiz_id=quizid).all()
+    temp_frequencies = []
     frequencies = []
+
     for mark in distribution:
-        frequencies.append(mark)
+        mark = mark._asdict()
+        temp_frequencies.append(mark)
     
+    for marks in temp_frequencies:
+        frequencies.append(marks['mark'])
     
-    return render_template('scores.html', frequencies=frequencies)
+    return jsonify({'marks':frequencies})
 
 # Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal
 class MyModelView(ModelView):

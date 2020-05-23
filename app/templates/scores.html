@@ -3,7 +3,148 @@
 
 <div style="width:400px">
     <canvas id="barGraph" width="400" height="400"></canvas>
+    <canvas id="leaderboard" width="400" height="400"></canvas>
 </div>
-{{ frequencies }}
+
+
+<script>
+    var myRequest = new XMLHttpRequest();
+    myRequest.open('GET', "{{ url_for('json', quizid=quizid, quizname=quizname) }}");
+
+    console.log("Test")
+    myRequest.onload = function() {
+        var data = myRequest.responseText;
+
+        var ourData = JSON.parse(data);
+
+        renderHTML(ourData);
+    }
+
+    myRequest.send();
+
+    function renderHTML(datum) {
+        let yaxis = [];
+        let frequency = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        let leaderslabel = []
+        for (i = 0; i < datum.marks.length; i++) {
+            leaderslabel.push(" ")
+            yaxis.push(datum.marks[i]);
+            frequency[Math.floor(datum.marks[i]/10)] += 1;
+        }
+        yaxis.sort(function(a, b){return b - a});
+        
+
+        const CHART = document.getElementById("barGraph");
+        const CHART2 = document.getElementById("leaderboard");
+
+        let barGraph = new Chart(CHART, {
+            type: 'bar',
+            data: {
+                labels: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+                datasets: [{
+                    label: 'Frequency Distribution of Marks',
+                    data: frequency,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                },]
+            },
+            options: {
+                        scales: 
+                        {
+                        xAxes: 
+                            [   
+                                {
+                                    display: false,
+                                    barPercentage: 1.3,
+                                    ticks: { max: 90,}
+                                }, 
+                                {
+                                    display: true,
+                                    ticks: {autoSkip: false,max: 100,},
+                                    scaleLabel: {display: true, labelString: 'Score'}
+                                }
+                            ],
+                        yAxes: 
+                            [
+                                {
+                                    ticks: {beginAtZero:true, precision:0   }, //precision 0 removes decimals for frequency
+                                    scaleLabel: {display: true, labelString: 'Frequency'}
+                                },
+                            ]
+                        }   
+                    }
+        })
+    
+        let leaderboard = new Chart(CHART2, {
+                type: 'horizontalBar',
+                data: {
+                    labels: leaderslabel,
+                    datasets: [{
+                        label: 'Leaderboard',
+                        data: yaxis,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    },]
+                },
+                options: {
+                            scales: 
+                            {
+                            xAxes: 
+                                [   
+                                    {
+                                        display: false,
+                                        barPercentage: 1.3,
+                                        ticks: { max: 90,}
+                                    }, 
+                                    {
+                                        display: true,
+                                        ticks: {autoSkip: false,max: 100,},
+                                        scaleLabel: {display: true, labelString: 'Score'}
+                                    }
+                                ],
+                            yAxes: 
+                                [
+                                    {
+                                        ticks: {beginAtZero:true, precision:0   }, //precision 0 removes decimals for frequency
+                                        scaleLabel: {display: true, labelString: 'Leaders'}
+                                    },
+                                ]
+                            }   
+                        }
+            })
+        }
+
+</script>
+
 
 {% endblock %}
