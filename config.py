@@ -20,3 +20,6 @@ class Config(object):
 
     #Posts per page configuration
     POSTS_PER_PAGE = 25
+
+class TestConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'test.db') 
