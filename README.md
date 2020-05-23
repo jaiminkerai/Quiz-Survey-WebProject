@@ -18,25 +18,30 @@ These instructions will allow you to run the quiz application on your local mach
 #### Installing
 Assuming use of cmd:
 1. Clone this repository
-    $ git clone http://github.com/jaiminkerai/CITS3403Project2
-    $ cd CITS3403Project2
+```
+	$ git clone http://github.com/jaiminkerai/CITS3403Project2
+	$ cd CITS3403Project2
+```
 
 2. Create a virtualenv, and activate this: 
-
-    $ virtualenv env 
-    $ source env/bin/activate
+```
+	$ python3 -m venv venv
+	$ . venv/bin/activate
+```
 
 3. Install all necessary dependencies:
-
-    $ pip install -r requirements.txt
+```
+	$ pip install -r requirements.txt
+```
 
 4. Run the application:
-
-	  $ flask run
-
+```
+	$ flask run
+```
 5. To access the Quizards application, visit:
-
-	  http://localhost:5000
+```
+	http://localhost:5000
+```
 	  
 ## Tests
 ### Unit Tests
