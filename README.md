@@ -41,12 +41,16 @@ Assuming use of cmd:
 ## Tests
 ### Unit Tests
 To run the unit tests covering Quizard's User Model:
-    $ python3 tests.py
+
+	$ python3 tests.py
+	
 ### Selenium Test
 #### Disclaimer:
 - Firefox must be installed
 - The original database will be overridden so to restore it, the changes to app.db must be deleted before committing
+
 To run the selenium test covering Quizard's Login feature:
+
     $ python3 system.py
 	
 ## Commit Logs
