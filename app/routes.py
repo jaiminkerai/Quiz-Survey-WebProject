@@ -37,6 +37,7 @@ from flask_admin.menu import MenuLink
 from flask import g
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
+from flask import jsonify
 
 
 
@@ -345,6 +346,17 @@ def comments(quizname, quizid):
     return render_template('index.html', title=quizname, form=form,
                            posts=posts.items, next_url=next_url,
                            prev_url=prev_url, quizname=quizname)
+
+@app.route('/quizzes/<quizname>/<quizid>/scores', methods=['GET', 'POST'])
+@login_required
+def scores(quizname, quizid):
+    distribution = quizMarks.query.with_entities(quizMarks.mark).filter_by(quiz_id=quizid).all()
+    frequencies = []
+    for mark in distribution:
+        frequencies.append(mark)
+    
+    
+    return render_template('scores.html', frequencies=frequencies)
 
 # Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal
 class MyModelView(ModelView):
