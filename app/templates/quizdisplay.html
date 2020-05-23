@@ -2,8 +2,8 @@
         <table>
             <tr>
                 <td colspan=100%;>
-                    <a href="{{ url_for('user', username=quiz.author.username) }}">
-                    <img src="{{ quiz.author.avatar(36) }}" class="profile-pic">
+                    <a href="{{ url_for('user', username=quiz.author.username) }}" style="text-decoration:none">
+                        <img src="{{ quiz.author.avatar(36) }}" class="profile-pic">
                     </a>
                     <a href="{{ url_for('user', username=quiz.author.username) }}" class = "author">
                         /{{ quiz.author.username }}

@@ -2,9 +2,7 @@
     <table>
         <tr>
             <td colspan=100%;>
-                <a href="{{ url_for('user', username=post.author.username) }}"></a>
-                    <img src="{{ post.author.avatar(36) }}" class=profile-pic>
-                </a>
+                <img src="{{ post.author.avatar(36) }}" class=profile-pic>
                 <a href="{{ url_for('user', username=post.author.username) }}" class = "author">
                     /{{ post.author.username }}
                 </a><span class="date">{{ moment(post.timestamp).fromNow() }}</span>
