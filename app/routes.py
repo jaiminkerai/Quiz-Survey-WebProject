@@ -70,6 +70,7 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
+    flash('You have been successfully logged out', 'alertSuccess')
     return redirect(url_for('quizzes'))
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -251,6 +252,7 @@ def quizform(quizname, quizid):
     shortans = Questions.query.filter_by(quiz_id=quizid).all()
     longans = LongQuestions.query.filter_by(quiz_id=quizid).all()
     numOfQuestions = 0.0
+    numOfLongQuestions = 0
 
     #Iterating through the multiple choice questions and adding them to the Field List
     for i, multi in enumerate(multicq):
@@ -268,6 +270,7 @@ def quizform(quizname, quizid):
     #Iterating through the long answer questions and adding them to the Field List
     for i, longq in enumerate(longans):
         numOfQuestions += 1
+        numOfLongQuestions += 1
         form.longanswer.append_entry()
         form.longanswer.entries[i].longanswer = longq.question
     
@@ -309,7 +312,10 @@ def quizform(quizname, quizid):
             db.session.add(submission)
             db.session.commit()
 
-        mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=round(100*(score/numOfQuestions),2), feedback="This is only a preliminary mark, your teacher will update it at a later date")
+        if numOfLongQuestions == 0:
+            mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=round(100*(score/numOfQuestions),2), feedback="This is your final mark, contact your teacher for any queries")
+        else:
+            mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=round(100*(score/numOfQuestions),2), feedback="This is only a preliminary mark, your teacher will update it at a later date")
         db.session.add(mark)
         db.session.commit()
         flash('Your quiz has successfully been submitted!', 'alertSuccess')

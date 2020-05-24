@@ -429,6 +429,11 @@ header {
   color: white;
 }
 
+.clicker:focus {
+  outline: 0;
+}
+
+
 /* RESULTS PAGE */
 .assessments {
   width: 90%;
@@ -501,6 +506,9 @@ header {
 .clicker2:hover {
   background-color:rgb(129, 131, 132, 0.2);
 }
+
+.clicker2:active {
+  outline: auto;
 
 /* Answer Page */
 
