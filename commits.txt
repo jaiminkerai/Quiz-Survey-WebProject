@@ -1,0 +1,2708 @@
+commit 1cd4b24505d0c4d531b5503d8f28b133c93004d8
+Merge: 9d64c3f 2ff9b79
+Author: Jayden <jayden228@gmail.com>
+Date:   Sun May 24 19:56:09 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 9d64c3fbab71f9abfe923ff9c683815c976bdcbd
+Author: Jayden <jayden228@gmail.com>
+Date:   Sun May 24 19:56:02 2020 +0800
+
+    added averages info to /scores page
+
+commit 2ff9b791b4cf7dcb088f7be110d299ac9aa809a7
+Merge: 2b311ea b981db9
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 19:55:13 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 2b311ea2dfb709f0e1decc640ad55bed706cfe30
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 19:55:07 2020 +0800
+
+    comments
+
+commit b981db90668cde51faa1f115c44b99f295593e62
+Author: Anthony Huynh <64474462+anthonyhuynh1@users.noreply.github.com>
+Date:   Sun May 24 19:32:48 2020 +0800
+
+    Updating readme
+
+commit ac42de3d24b928ed27b004dc222b74f729253af4
+Merge: 15147ea 4f19b3c
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 19:31:30 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 15147eab83b19fc39e006a53bff033ba07f531cd
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 19:31:25 2020 +0800
+
+    title change
+
+commit 562661a305958f177f1a8cea3c52bbee83ca36d0
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 19:31:04 2020 +0800
+
+    graphs page
+
+commit 4f19b3cb3ab533650e9191b21b567a99207ba8c0
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Sun May 24 19:11:30 2020 +0800
+
+    adding back normal logo
+
+commit 9aa458ef2c2fe12fffba95d7738b29015d575731
+Merge: 7ec9d4e c57f834
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Sun May 24 18:46:59 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 7ec9d4eb218086971f744bd7d1f6bfd38779ea93
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Sun May 24 18:46:54 2020 +0800
+
+    removing logo png
+
+commit c57f8342d6d07e1a0c4397650fc045686072742f
+Author: Anthony Huynh <64474462+anthonyhuynh1@users.noreply.github.com>
+Date:   Sun May 24 18:38:49 2020 +0800
+
+    Adding purpose to readme
+
+commit 5258eee0e97892b762f9f7ce73dc42396a2e2cc7
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 17:28:41 2020 +0800
+
+    .
+
+commit 1c72ee3e301d665a0322cba3756c01a5bf478aa8
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 16:59:05 2020 +0800
+
+    removing columns for admin views
+
+commit 9220c2978392b5da65f4ef1d45f6f801f063b5fd
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 16:55:10 2020 +0800
+
+    .
+
+commit c36686e55f31f005da3c876fba43a384456ad2f3
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 16:55:04 2020 +0800
+
+    adding views for admin
+
+commit 4a62af4288372182a705c70e6d167b02a70366ba
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 16:54:46 2020 +0800
+
+    sample accounts to work with
+
+commit a340537742caeeedf1e81b465afae7caa51792f5
+Merge: 42c33de 2d1a3f6
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 16:42:57 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 42c33de92c3a208225a894b16666a0023f2a682f
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 24 16:42:52 2020 +0800
+
+    added success messages and button styling
+
+commit 2d1a3f6acef660db795d7914a3d0ac255a090d50
+Author: Jayden <jayden228@gmail.com>
+Date:   Sun May 24 16:41:30 2020 +0800
+
+    added description of website
+
+commit a11fa693de575a57471ce07c3cf57a29898a45a0
+Author: Jayden <jayden228@gmail.com>
+Date:   Sun May 24 16:41:11 2020 +0800
+
+    removed comments from user profile page
+
+commit 10bee4e4727462e7b2ffd2b2e4a9fc3858d2aaeb
+Merge: e3baa8c 10b07b4
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Sun May 24 15:44:39 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit e3baa8c54f417e6359d230a11fe516e47f0b7101
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Sun May 24 15:36:28 2020 +0800
+
+    fixing about me page for edit profile
+
+commit 10b07b464f0cb82d6c15a49390d666eb5eaed161
+Author: Jayden <jayden228@gmail.com>
+Date:   Sun May 24 15:02:38 2020 +0800
+
+    added buttons and fixed minor issues
+
+commit 67c8649718e60f4c3dd2d3a2814decaf2e80f749
+Author: Jayden <jayden228@gmail.com>
+Date:   Sun May 24 15:02:10 2020 +0800
+
+    added comments and scores button
+
+commit b503fb1c1309c78a432d70ad532cfe80d42e8c54
+Author: Jayden <jayden228@gmail.com>
+Date:   Sun May 24 15:01:44 2020 +0800
+
+    added font awesome 5 icons
+
+commit 51ff16d81fb4bdf896a9cc31b04a3ec62dab5d41
+Author: Jayden <jayden228@gmail.com>
+Date:   Sun May 24 15:01:21 2020 +0800
+
+    added buttons css
+
+commit e5ad85729f8b27a1f48d4f72242213a1d4d4f050
+Author: Jayden <jayden228@gmail.com>
+Date:   Sun May 24 15:01:07 2020 +0800
+
+    scores globally accessible & altered flash msgs
+
+commit 35a5913bf630c4861ad3fca6a295272750818876
+Merge: 37e9ab1 41b7ff8
+Author: Jayden <jayden228@gmail.com>
+Date:   Sun May 24 00:34:47 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 37e9ab131b19bb34075b9f8218e95d08e6a81958
+Author: Jayden <jayden228@gmail.com>
+Date:   Sun May 24 00:34:40 2020 +0800
+
+    created leaderboard frequency distribution graph
+
+commit 41b7ff815328337b8c3bcd11db230dd77bb75979
+Author: Anthony Huynh <64474462+anthonyhuynh1@users.noreply.github.com>
+Date:   Sat May 23 23:33:26 2020 +0800
+
+    Update readme
+
+commit 5bc5e213268976328affae771746973165c41c54
+Author: Anthony Huynh <64474462+anthonyhuynh1@users.noreply.github.com>
+Date:   Sat May 23 23:29:19 2020 +0800
+
+    Spacing in readme
+
+commit 33389d62b177a13adaad3424dc03a3232b5b1f69
+Author: Anthony Huynh <64474462+anthonyhuynh1@users.noreply.github.com>
+Date:   Sat May 23 23:27:58 2020 +0800
+
+    Adding unit tests to readme.md
+
+commit 74b1f7ed52d9b935d509fe139eae97153d02d402
+Author: Anthony Huynh <64474462+anthonyhuynh1@users.noreply.github.com>
+Date:   Sat May 23 23:05:57 2020 +0800
+
+    Installing instructions on readme.md
+
+commit 99c116a1aa3544118ee98acd7698ee9e8fd9b092
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Sat May 23 20:44:32 2020 +0800
+
+    Selenium testing
+
+commit 31800255c5df0795308cc95e934e6bb58e82fe5a
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Sat May 23 19:18:28 2020 +0800
+
+    updating requirements.txt
+
+commit 0b4c52c262b0bbacb8f431411bce6355780944e6
+Merge: fc62bbc 1bd1410
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sat May 23 18:47:47 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit fc62bbcb316dc780d830b9212576ceddf7aacfa4
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sat May 23 18:47:41 2020 +0800
+
+    quizards name
+
+commit 1bd1410aba75205dfcdf942013a5cd5ec93a77ee
+Merge: e59a48e deee7ab
+Author: Jayden <jayden228@gmail.com>
+Date:   Sat May 23 18:47:02 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit e59a48eadaeed1a25906e6951d71ad3d88c35114
+Author: Jayden <jayden228@gmail.com>
+Date:   Sat May 23 18:46:54 2020 +0800
+
+    trying to add charts
+
+commit deee7ab9666095f87fcbe9cd4615cce4c85b3531
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sat May 23 17:39:41 2020 +0800
+
+    comments appear only when completed
+
+commit 9fd7c7d5ab353bf324b8a03aa320e20b3b1206a8
+Author: Jayden <jayden228@gmail.com>
+Date:   Sat May 23 12:21:55 2020 +0800
+
+    fixed underline on link tags for imgs
+
+commit d3f66d53e6a6cacdf087b808094b38dc9c704374
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 22 23:51:50 2020 +0800
+
+    quizzes heading
+
+commit c832bdbe748b85d269333387c03503a501a54c63
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 22 23:51:06 2020 +0800
+
+    changing first page to login page
+
+commit 4d9e94049fd7ae3344d1da469963b3fc1f0d3391
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 22 23:37:46 2020 +0800
+
+    adding a Quiz title on quizzes page
+
+commit a185b869eedb75ed120661a160f7d1021e1b07f1
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 21:32:30 2020 +0800
+
+    login and other forms
+
+commit 43ca87fc625317e80de5dfac66da6ffb66a090d3
+Merge: f5fd217 e92f509
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 21:15:36 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit f5fd2178741c62613773e4672f2d97f9a8ab7165
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 21:15:30 2020 +0800
+
+    admin page aesthetic
+
+commit e92f50918d9b20c9e0b53dd54e24496f33cbd4ef
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 22 19:27:37 2020 +0800
+
+    tried fixing navbar slight fix.still slight offset
+
+commit 24a9d37b324b07eccf4a8977db1b71f34adc6c49
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 22 15:39:26 2020 +0800
+
+    applied css to posts
+
+commit c2e1c02ab08de0bfedf3817c8c06a92b18ab2afb
+Merge: d3b51d3 6eb815c
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 22 15:15:57 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit d3b51d354c7257bcdd8a3df41cd617de1ddb2b0f
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 22 15:15:50 2020 +0800
+
+    changed ui
+
+commit 6eb815c0b99c61014356a95dcf00b93f2bd02edb
+Merge: 05e3d3d d365858
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 22 15:12:58 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit d3658583b6e160125fb366bf106c9e2c5c6646ab
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 15:08:50 2020 +0800
+
+    extra quiz info
+
+commit 05e3d3d8a004b64da39c160ebdc720ceff80bb61
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 22 15:08:42 2020 +0800
+
+    fixing error with no route for password
+
+commit e542d5730b4ae0cc2c215988dfa57e95a055d075
+Merge: 733aafa 1d977eb
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 14:35:20 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 733aafadd5b8ca92f8b3d9e1b3418fd424128f12
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 14:35:15 2020 +0800
+
+    checking if no one has done the quiz
+
+commit 1d977ebbb7b1aa8d15bb6668ac1dad16f585b95f
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 22 14:28:25 2020 +0800
+
+    removed index and explore url routes
+
+commit cba8e37b4f062a78513310465dcdf7885b0f5149
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 13:58:12 2020 +0800
+
+    fuzzywuzzy
+
+commit fdcefb693d23162e8858a1727b24e5d5b261ee76
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 13:36:09 2020 +0800
+
+    post backref
+
+commit a414b391fce7d70881dcee04e2ce0d649b728bae
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 13:29:47 2020 +0800
+
+    .
+
+commit aa1c7c3df2f99bcc654997d0949478adbb87589b
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 13:29:42 2020 +0800
+
+    styling for quizzes
+
+commit 0acd27d98c7555c8d059f96438cc3d8e8978e3cc
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 13:29:27 2020 +0800
+
+    average mark for each quiz
+
+commit 82258065ebe05c87f978394bfb361d476a5e42fc
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 13:29:11 2020 +0800
+
+    rid of print
+
+commit 768e762bddc298c4540a5c7a3f67278b55205c74
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 12:14:15 2020 +0800
+
+    see email in user page
+
+commit 9bce3040bedb495a4bcd8aa30942878aa0043c3c
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 12:03:13 2020 +0800
+
+    .
+
+commit c00763a42708de347d74a90608d5a6ca51ce5574
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 12:03:08 2020 +0800
+
+    .
+
+commit 684bf7026aae101468412879670ff50e90140d30
+Merge: a32029c 2e73ffe
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 11:53:51 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit a32029ce7b9f889fbf82eb7d63a4f6ca1f6381a1
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 11:53:45 2020 +0800
+
+    adding messages
+
+commit cf2284d22e3917ccba7bd82135f6ee8b84d6c3c2
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 11:53:34 2020 +0800
+
+    admin views and operations
+
+commit 2e73ffe5bc0a8d5d7c315a5c23d340e9b9ffe2d6
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Fri May 22 11:52:10 2020 +0800
+
+    fixing footer
+
+commit e1e2b94a9f1f6136c53b8f226229f863a4971c48
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 11:01:42 2020 +0800
+
+    more viewability
+
+commit cc72c58dd683f1accda665e58cb95680cde7ed29
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 10:58:25 2020 +0800
+
+    optimised admin viewability
+
+commit ff681bdca2f3f8be5c2c00979088aa2f334d5e10
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 22 09:57:07 2020 +0800
+
+    alert for completed quiz
+
+commit 38bdf9a1c73dfa6090d693d5036e3331eb895bc8
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 22 02:08:51 2020 +0800
+
+    fixed nav bar
+
+commit a396efc16e1b165c782260162a96ff6ef9f63e64
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 22 02:04:59 2020 +0800
+
+    navbar updated (still needs to be worked on)
+
+commit 67b7fd037788be2d9c078f2cc2a89c8b219c4877
+Merge: 60921be cebf34e
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 22 01:49:21 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 60921bee2919227044c4a7bbb8fa4ec239e06ca8
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 22 01:36:21 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit cebf34e41c55072308d7d6ca97c944efe978bb18
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 22 01:08:16 2020 +0800
+
+    updated colors for underline
+
+commit 5dbca0dbad6cd00e357aeea66286f1070299b8aa
+Merge: 284b07e 9e6e66a
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 23:44:34 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 284b07eeee53f18a418fefe64327cc36a508bb7a
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 23:44:28 2020 +0800
+
+    underlining nav bar animation
+
+commit 9e6e66a53a7234b5b8d85e84bb5706708bd04eb7
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 23:43:18 2020 +0800
+
+    quizzes display
+
+commit 2fddf454f3a042f45f0107919df2babf97ce9d4d
+Merge: c2524e5 2152bc8
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 23:05:01 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit c2524e5b1d16653968a416cb56fe61056be26e35
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 23:04:53 2020 +0800
+
+    changes on alerts
+
+commit 2152bc85f4503e0b2686b8e8b05dcc2e8d6add76
+Merge: a5ad748 8b79f3f
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 22:57:54 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit a5ad7485df1918c75bf4851d1d3bd91ede79f490
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 22:57:47 2020 +0800
+
+    added comments sections to quizzes
+
+commit 8b79f3f091da2a98f3efe2af0ad790ede5d01e38
+Merge: feb3f39 9fb3a2f
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 22:56:42 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit feb3f39b2f3a022c88ac3a5cf119601fc262e4e8
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 22:56:35 2020 +0800
+
+    changing css for reset password links
+
+commit 9fb3a2f9d4f7d5b7c8395b881651bf75aef10a3a
+Merge: 50a659a 5a550d8
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 22:47:33 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 50a659a0d18325f5153e9d06172abc439cb44901
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 22:47:28 2020 +0800
+
+    make post page
+
+commit 5a550d8b5e749f44470b4d9bc078218c7f28b7dc
+Merge: aba7b03 c640cee
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 22:44:33 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit aba7b03f93e434189e651a0e2c1d82452662807e
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 22:44:27 2020 +0800
+
+    css for register page
+
+commit c640cee8e4b8fe6e8e893cf4b76326df53b30b6b
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 22:29:28 2020 +0800
+
+    .
+
+commit 7253ef0a9f3f6a4471b2a0309d3de257fc0c54f2
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 22:24:23 2020 +0800
+
+    admin page
+
+commit 4f5d9eb38492d9c489a2c441a5b471de8a442586
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 22:07:54 2020 +0800
+
+    admin page bootswatch
+
+commit c249324b3b6b390eea148dfee3a5bcb0ae7a3325
+Merge: 0b55506 c15f584
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 21:49:42 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 0b555064c421478debfd0e8529b60d4691e87e4b
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 21:49:36 2020 +0800
+
+    changing colour of input box on login
+
+commit c15f5849aec7cca044c97dadddc8588fd9bdeb20
+Merge: bfc5e80 852734d
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 21:44:45 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 852734db5a18f85793340b76a3d5237bbc00a890
+Merge: 91807a3 4e2489e
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 21:44:22 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 91807a3e9c88ebd82fd43d5eddb3074fdaac2b6d
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 21:44:16 2020 +0800
+
+    login page
+
+commit bfc5e809bf6e986ffc6b5068de86c1c350cf8bf4
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 21:41:50 2020 +0800
+
+    red -> grey
+
+commit 4e2489e10f2e67abbfcc87a6e2b05bd19153fb5c
+Merge: a8d7c12 eb38dde
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 21:36:26 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit a8d7c12dbf535be9377067f6eab45dd9094c9616
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 21:36:18 2020 +0800
+
+    .
+
+commit eb38ddec1ac58114c7c27a0c4c417785a89d8295
+Merge: c34101f c2fa55e
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 21:31:09 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit c34101fd271787e13842f576da8d62f9dcd834b4
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 21:31:04 2020 +0800
+
+    removing uncessecary css
+
+commit c2fa55e42db9746e756757f0a3a76a4520adde27
+Merge: 8c2f06b cd1487f
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 21:20:45 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 8c2f06ba0f6d203546f77c698e90c1421fa0959d
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 21:20:25 2020 +0800
+
+    questions page
+
+commit cd1487f21f29952b86959d5819787332d8458806
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 21:19:05 2020 +0800
+
+    updating requirements.txt
+
+commit e58e7d3d63c8fcae6047f444c75ee5553e53aaaf
+Merge: d109297 e413f0a
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 21:18:04 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit d1092972d8cf873e8fd88662052087c57d5eaf94
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 21:16:24 2020 +0800
+
+    moving footer
+
+commit e413f0acebb8fa627c343caf9fbc44564c35bba0
+Merge: b0cf77f 537cf0d
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 21:08:58 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit b0cf77f7a2d4dab3e3970bc4620dd9df0725cecb
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 21:08:34 2020 +0800
+
+    added link to profile by clicking gravatar
+
+commit 44506cc6f61cde60ccb82fe7292e71b025b43f0d
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 21:08:12 2020 +0800
+
+    Added link to profile when clicking gravatar
+
+commit 537cf0d8619c19c64c08370bba45732f185ecec8
+Merge: 348e3e2 9a4c38e
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 21:07:03 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 348e3e28823d5d07a9329db0fb4691a5457041ae
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 21:06:17 2020 +0800
+
+    feedback initialisation and database correction
+
+commit 9a4c38e0c8f88afaae1b6fd2eba71c9bfae215bc
+Merge: 8b97235 dfb2d7a
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 21:03:48 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 8b972350fa2af52663be7c232109caaf33a58c50
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 21:03:42 2020 +0800
+
+    Added moments javascript to convert utc to locale
+
+commit dfb2d7ada2c2153ceadf3b821c9f0853b7fa4550
+Merge: 4786e45 1aafed1
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 20:55:36 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 4786e452fc652e92e57e6a76d5f915e50dc6f7b9
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 20:55:31 2020 +0800
+
+    creating a footer
+
+commit 1aafed1cfaf79e01ae82848cad6be483d6b0352e
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 20:50:46 2020 +0800
+
+    glow for quizzes
+
+commit 117c1d2fbce87e2f67cba4d6acf99100423f7d96
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 20:47:56 2020 +0800
+
+    css for the quizzes and question display
+
+commit 99690b3ce4814c89699070eb1ea62d1a10bb426b
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 20:25:18 2020 +0800
+
+    questions styling
+
+commit 70974791af64f3e99a8ce41ecaaaa40b5d54fd15
+Merge: a9b50db a9d7fd0
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 20:23:40 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit a9b50db935300701f52330bcfec1cfa40053527e
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 20:23:20 2020 +0800
+
+    styling for questions
+
+commit a9d7fd0dc0e620fb27f4644cb8e898425747ddde
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 20:11:09 2020 +0800
+
+    add tutorial page information
+
+commit 772f8c43a61f50650f6c4a78a8bcecf89646ee0e
+Merge: c95940e 505b50f
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 18:28:11 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit c95940e8cdf16fc78c3f8023b0fc8ccc8beffc26
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 18:27:50 2020 +0800
+
+    added tutorial page
+
+commit 505b50f515811ac5d2e588ddca108d5a2fbd3ef6
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 17:44:16 2020 +0800
+
+    added quizzes
+
+commit fe17cc9777b989f62f311d09693bc8dcf6f5ef1b
+Merge: c348910 53882e0
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 17:43:58 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit c3489101d6dd66f99d5a361fa5de178ca758573e
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 17:43:52 2020 +0800
+
+    flash for user
+
+commit 53882e0a96b96389ec36dd252d79f3b48fffe2f1
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 17:12:12 2020 +0800
+
+    reroute to /quizzes as the main page
+
+commit 3cb9271b8a32ab7c698aeaea5f96b469ab3491e9
+Merge: be4df1b ae45c77
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 16:51:27 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit be4df1bd811b5e985bfd7b6d2a6da348118ac1f1
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 16:51:17 2020 +0800
+
+    fixed merge issues
+
+commit ae45c772d7bcb6275b55b610284f0243a206b4b0
+Merge: cee0a00 2976127
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 16:46:09 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit cee0a00678745bfaeaa99d45cc232f309dd9e383
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 16:46:04 2020 +0800
+
+    if the user has completed the quiz redirects them
+
+commit d48250020acb31f2c4d7f75dd084a437682cb96c
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 16:45:34 2020 +0800
+
+    function to see if quiz is done
+
+commit 29761279c31757975440e66ddf66e6b9ef19bc85
+Merge: 0bde100 a7893fa
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 21 16:41:22 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 0bde100bd2e7b5b55aaf1aa73ec3a1624f4c1449
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 21 16:32:08 2020 +0800
+
+    changing font color and fixing remember me button
+
+commit a7893fa7b4fe269b6e6232739f4938ad6b2b33a8
+Merge: 243e0f7 3f40f18
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 16:29:36 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 3f40f184e0cf47a10ed766f21d8c9e13bf98ea34
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 21 16:29:06 2020 +0800
+
+    finished quiz page
+
+commit 243e0f7f16dc17f308d79e08485db32fd813a7e8
+Merge: 9d29702 9e94d5d
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 16:29:05 2020 +0800
+
+    Merge branches 'master' and 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 9d2970237fa52a532523953439990415d2d36771
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 16:24:27 2020 +0800
+
+    changed colour schemes
+
+commit d1d1cbe96628d939f1021a09784ae144a7af2e07
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 16:23:56 2020 +0800
+
+    Changed results table
+
+commit 9e94d5d206ada98a677fb592eb39da941045427d
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 21 15:43:00 2020 +0800
+
+    updating requirements.txt
+
+commit 96ef9a8172c4bfb1005d729605dbb5e63b1fa4d6
+Merge: 0a8f3b4 7f0772d
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 21 15:40:17 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 0a8f3b40f686ceb2c61d29ed5f1a5efa4f6f7ceb
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 21 15:38:39 2020 +0800
+
+    updating quiz page styles
+
+commit 7f0772da48a70f2b9fd1e6e2fa9f393320a9251c
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 15:36:43 2020 +0800
+
+    changes in refs of instances
+
+commit e03cd5a735214f01abd1186029dbc936dd62c3c2
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 15:36:24 2020 +0800
+
+    comparison for multichoice
+
+commit 43a51c59e524053523d7336023370b7e619dab8c
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 15:27:14 2020 +0800
+
+    int to string for multichoice answer
+
+commit 9dbe482facb92213c1ce9ee32f7a72f479e5a7fd
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 15:24:16 2020 +0800
+
+    backref names for LongAnswers
+
+commit a234ce94b2ab17f691fc2ff3a26a3a91601dd04f
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 15:23:32 2020 +0800
+
+    shell context for longanswers table
+
+commit 80ec955c968f5b88bfefa40400d3c7e6dbd1177e
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 15:23:17 2020 +0800
+
+    validation for short and long answer
+
+commit b96a5bd00777607d88366fdeec5f57c3c600ae0d
+Merge: c597aa8 55492b9
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 15:00:49 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit c597aa8438ba14475c2b2ca3f1876386ed523964
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 15:00:42 2020 +0800
+
+    Changed styles
+
+commit 55492b9690bb4654cbe4a29cabff6988ad3fc935
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 15:00:33 2020 +0800
+
+    fuzzywuzzy
+
+commit 97ceed6bdbb9310b208ae1a8e31bbc6f1f938efc
+Merge: 4875897 536a56b
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 14:23:15 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 48758978785896046f24f3b48d09a9fb2c18a2a7
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 14:22:46 2020 +0800
+
+    added created quizzes to user route
+
+commit e9e96a30a8841b34e8ca177418cf7a6cf496c2c5
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 14:22:26 2020 +0800
+
+    created seperate quizdisplay html
+
+commit 16c06f0c09d6102f4bc2d33e28cc14a73808f877
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 14:22:13 2020 +0800
+
+    created seperate quizdisplay html
+
+commit 9b0e85be435dea261baddbb429e5ca073b8319bb
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 14:21:56 2020 +0800
+
+    added created quizzes to user page
+
+commit 536a56b8c4d351fdd40708691a7184eeff36ee9b
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 14:18:46 2020 +0800
+
+    .
+
+commit b1c334c7afef03896f8f26e5db766c77943a4ec1
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 14:03:02 2020 +0800
+
+    added some quizzes and tests
+
+commit 5ba5d554be96bd7577459c7766cbfabd004b1656
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 14:02:49 2020 +0800
+
+    html for showing questions
+
+commit 6cd56b40e45571f66814cdf995bd939845938696
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 14:02:35 2020 +0800
+
+    validation for multichoice
+
+commit bff10eff8344a25b7d5b1ca64244534e48db32e3
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 14:02:27 2020 +0800
+
+    for check if there is an input for multichoice
+
+commit dbfcefb6afa0429a57b97bf25c76d277e0535c68
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 13:45:07 2020 +0800
+
+    Created assessments results table
+
+commit 9214df5f58d0cd5ecc5c16fd8137db9ca04d0fb7
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 13:44:48 2020 +0800
+
+    Added assessments table css
+
+commit c9326c2e1ee204896c1126943f9d3f5f18ec2aa9
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 12:25:01 2020 +0800
+
+    add longanswers db
+
+commit 165e41970b02d05730d14c9059cb2380e9fd0873
+Merge: 4d84168 bbb1c0f
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 21 12:18:25 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 4d8416830269648dabae9bf75e1796ab9ae83c94
+Merge: 8ad7845 6c08352
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 21 12:17:22 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit bbb1c0f0691a12308b86b7dd546ac89c1524c37c
+Merge: eaf1efb 6c08352
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 12:15:39 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 8ad7845ffcd2dd65f88231c506d3194fad4408fb
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 21 12:15:33 2020 +0800
+
+    fixing resizing problem
+
+commit eaf1efb81700c1a8a9e88e427623920f7435434f
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 12:15:29 2020 +0800
+
+    adding the ability to answer multiple questions
+
+commit 6c08352f0d04bf532b2819bdc744a5ac60ebce1b
+Merge: 8729ade 0b89c18
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 10:56:27 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 8729ade760efe713464426ffd4e42ea02a3295ed
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 21 10:56:20 2020 +0800
+
+    background to white temporarily
+
+commit 0b89c18fc9741e3dbce01d093b21dc96c4b64f67
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 21 10:31:32 2020 +0800
+
+    .
+
+commit e7902cd68f6b5945888a0e25b765caaa44434fba
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 00:23:25 2020 +0800
+
+    changes width of quiz page
+
+commit 8792067b2df5f0a058b29c5319664281da3d3691
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Thu May 21 00:20:50 2020 +0800
+
+    fixed error in css
+
+commit 92fbfef90f0d93a566eee95f5d14b60dbb8e0f2b
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Wed May 20 23:12:42 2020 +0800
+
+    Updating quiz page
+
+commit 75b254b901eda9b1a339efa91f8ca455c68b006a
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Wed May 20 23:01:36 2020 +0800
+
+    adding onclick for quizzes page
+
+commit 9560808674cf499dfc61ddae4272b9c124eaa7cb
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Wed May 20 21:30:57 2020 +0800
+
+    Finalised? CSS for quiz page
+
+commit 8ab650b817a948adfcf6aba9cb0a4dfffcf436a1
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Wed May 20 21:13:25 2020 +0800
+
+    Updated basic structure of quiz page CSS
+
+commit 7c8e50458d55738d980b9f8d838fc433f3142a62
+Merge: 0b6a54a 02db3c3
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Wed May 20 20:17:20 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 0b6a54a3c9f6d34c01bd9291a4ecd3823c5748e3
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Wed May 20 20:17:12 2020 +0800
+
+    Basic CSS structure for quiz page
+
+commit 02db3c33a3fc0539a99aa475f3adcba6cd083f97
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 19:50:52 2020 +0800
+
+    flask db upgrade
+
+commit 6a03eded5058420f938050a3797d387acd68ebec
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 19:31:27 2020 +0800
+
+    shell context for long questions
+
+commit 24622017532a297e8009e27274cf3bc23b95d306
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 18:08:20 2020 +0800
+
+    .
+
+commit dc4ffb96b49870d734e1c33960794484bd83fc41
+Merge: dbbbc2c 1fe4a3a
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 17:15:01 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit dbbbc2c598869ea1c20f2e8efd3ae3262dbefd25
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 17:14:54 2020 +0800
+
+    multichoice functionaility
+
+commit 6381c6bba76c6fd8ebfbadf6e0dcd20f1e792635
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 17:14:34 2020 +0800
+
+    reinitialising the html for mcq
+
+commit 1fe4a3a1ca9ef30718e5a899ecea4ca766e614df
+Merge: f992852 91ad972
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 16:05:59 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit f992852df1e9af51f73af1be18c63aa62d7521e7
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 16:05:52 2020 +0800
+
+    Uploading current database
+
+commit bff8e5e218a86fe9c84597900e47da7def1ec858
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 16:05:15 2020 +0800
+
+    Created assessments table
+
+commit 91ad972acd5e3bea825b969fecea6d936fe43c20
+Merge: 031e131 a4f812f
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 15:43:06 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 031e131daa96e7fb884d317ac49ad5e239956020
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 15:43:00 2020 +0800
+
+    radio multichoice value
+
+commit a4f812f8a3f2c63af8ed1c7fc659f558d666ca12
+Merge: bacb980 920472d
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 15:37:38 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit bacb980a8f1e82dfe2edf75b33cc8d68bae114e6
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 15:31:32 2020 +0800
+
+    Added feedback column and changed lngans to 500cha
+
+commit 920472d7def187268a55d81d7aed20adebcd3979
+Merge: 234707a 879c830
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Wed May 20 15:30:51 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 234707acac910084715c2a2b3b65ea987b329a13
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Wed May 20 15:30:46 2020 +0800
+
+    creating scripts.js
+
+commit 879c8305c5c451a5f3893eeb841941e6d2ab769a
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 15:25:38 2020 +0800
+
+    submit button
+
+commit df7b43accea8935c88370ef40d3f2a823609db94
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 15:24:49 2020 +0800
+
+    unifying all forms for answering quizzes
+
+commit e0dfebc84b8b694fa4330bc886fcf8b4d265c731
+Merge: 13f366a c98188a
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 15:14:29 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 13f366a50fa3da2549a8e793ade8ac886f8d1e5a
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 15:14:23 2020 +0800
+
+    long answer html
+
+commit 0c4412392cfc4e2a53d2cc0d346b111cf46e0b57
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 15:14:02 2020 +0800
+
+    form for long answers
+
+commit 89ec07ce6b3ba048c798ad8b32a91bd501ee5389
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 15:13:47 2020 +0800
+
+    database changes for long asnwers
+
+commit c98188a1b673285d477cbc1d5b1877c2819bc6ed
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 15:12:14 2020 +0800
+
+    venv settings
+
+commit 48a775da74431c8b44079edf8dab8aef49768d2c
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 14:54:12 2020 +0800
+
+    added alertInfo css category
+
+commit 2f923c7e81e551e56db17dd139942e94c1e63963
+Merge: 705d92f 767937f
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 14:51:01 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 705d92f19e131945c98ddb04b51116e80e57e970
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 14:48:22 2020 +0800
+
+    html for displaying quizzes
+
+commit c950e21d6611ac803550b5042be88cf08d4fe116
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 14:48:08 2020 +0800
+
+    route quizzes/quiz form
+
+commit 201b9fe6878b2056ae167617b2fcfc0c299e07c0
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 14:47:35 2020 +0800
+
+    answer form
+
+commit 767937f87c1d7e73bf84c10fc3975fbb950d3357
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 14:46:35 2020 +0800
+
+    Referenced specific quiz pages by id
+
+commit ca9f31d10d3edbfd5bd7143997028d35076bab8f
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 14:45:10 2020 +0800
+
+    Fixed relative image reference by using url_for
+
+commit 16a7788aefd91c02432210520384a906a1a2debf
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 14:44:52 2020 +0800
+
+    Reference specific quizzes by id instead of name
+
+commit b366ad1a11019171e58e5fced60b99b0dcfbcdfe
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 14:15:55 2020 +0800
+
+    Added results to nav bar
+
+commit 330f3ff00b691afb82089e0ca989d9bd3645b4ef
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 14:15:43 2020 +0800
+
+    403 Error HTML
+
+commit ae8d2441d19babf5b98c41e234dd964e9c6e2984
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 14:15:29 2020 +0800
+
+    Validate so you can only see your own results pg
+
+commit c4c0dc9ad0025a97f79c2fc3ee2dccdcb54d8a7e
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 14:14:55 2020 +0800
+
+    Added 403 Error handler
+
+commit 4e4c1eb9807ab84249972f60f298fa87c212387b
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 13:53:20 2020 +0800
+
+    added button for quizzes
+
+commit c27eb6bb3e9c48c8e5aedde7b81b911ab0ad4c16
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 13:50:57 2020 +0800
+
+    quizes and upgraded db
+
+commit 4594fc263537e8bd389bac02275bef122a5408ca
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 13:50:46 2020 +0800
+
+    route for quizzes
+
+commit ef175cf564040d20d125dc77481edc157b3970a3
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 13:50:34 2020 +0800
+
+    changed route /quizzes/<quizname>
+
+commit df4defa4ef6fe66366805b3f05c744802d37e67c
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 13:49:32 2020 +0800
+
+    html for displaying quizzes
+
+commit b8be483e805806c4843816b1fed1d6122f163d69
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 20 13:49:17 2020 +0800
+
+    added /quizzes/<quizname>
+
+commit f0c8451dd4b7425270ebe59d3830662917e16197
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 12:57:31 2020 +0800
+
+    Added assessments routes and got it working
+
+commit 59d3366a00fd50dea4a99f1fe48f7e469f81fd5b
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 12:57:12 2020 +0800
+
+    Styling change
+
+commit 6df2b4d4600bceb7fce5499d66db187ecf229b43
+Author: Jayden <jayden228@gmail.com>
+Date:   Wed May 20 12:56:52 2020 +0800
+
+    Added assessments page for users
+
+commit bcdecf4914b505994a48332fe54ed4dfc833ff93
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 22:36:41 2020 +0800
+
+    adding some sample quizzes
+
+commit 64f98625f612d1e058b34b1949078f5d3e085597
+Merge: e6a23bd c8d6a0f
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 20:33:28 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit e6a23bde84c0ba7ffd7e483388554b2c07ab9a2e
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 20:33:20 2020 +0800
+
+    Fixed merge issues
+
+commit c8d6a0fa52c47109830af3e7d41118a4f06d0bec
+Merge: 461f64a 52b1bab
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 20:30:22 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 461f64acd769a68c5ec8ff42a0b3a6bbd8e519ad
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 20:30:16 2020 +0800
+
+    admin back to home capability
+
+commit 52b1bab347d700999cdbebfb3905856cb5a83da4
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 20:26:28 2020 +0800
+
+    Merged conflicts
+
+commit 331b5b82b3dd8adb2956a933b9161cded2f30152
+Merge: 3ee6a79 3a49f36
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 20:25:11 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 3ee6a79340d994445e51cdae4d0fb80c8b42e987
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 20:23:27 2020 +0800
+
+    Fixed unviewable flashed messages
+
+commit 3a5ff0603e0292c98a4811e8787dbfec8e951b48
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 20:22:51 2020 +0800
+
+    Added flashed messages styles
+
+commit c1be38434546060549f7a7f538ee34dff1122524
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 20:22:41 2020 +0800
+
+    Added flashed messages classes
+
+commit 3a49f363de46020b6b6439b57b9daf5f55ad2f8e
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 20:18:28 2020 +0800
+
+    added functionality for navbar admin
+
+commit cb156f05d1d0d800451ea9a0f9c6a22dc8e87e71
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 20:18:12 2020 +0800
+
+    enabled global user for admin check
+
+commit 1feb417fa2437bcad485bb8be4478046cfd4daa7
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 20:17:54 2020 +0800
+
+    db changes
+
+commit e45a703a1e5ba7b9dd149cbf8521ca09b47cacb4
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 19:49:44 2020 +0800
+
+    routes changed for admin
+
+commit c30a05e25d3917baff5ba654ce6520f6b5058878
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 19:48:29 2020 +0800
+
+    admin routes
+
+commit f62c2a46e6f06008c172bcb1be276f2beae003f8
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 19:48:17 2020 +0800
+
+    .
+
+commit 4e080cbbab13ed688d3d2ecf86f87e63244a6804
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 17:50:50 2020 +0800
+
+    changing email for an account
+
+commit 62c98e6b380afef7f6659f6b4bec5d715e3e84a0
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 17:50:38 2020 +0800
+
+    removing admin function
+
+commit 035ad80b9f7bc46b2aca0619fc4cdb7ec4d5274e
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 17:40:12 2020 +0800
+
+    creeated admin account
+
+commit 1ad71205f9890e7a709d7d79198c23d5f464c355
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 17:40:04 2020 +0800
+
+    check to see ifAdmin
+
+commit 6266d5b124872912fca28882daca52da4e6ef17a
+Merge: 6177208 750032b
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 19 17:10:16 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 61772084bd0a0643e0c8e8f5d4031e6c3c8dd453
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 19 17:10:09 2020 +0800
+
+    redirecting main page to quizzes
+
+commit 750032b8ea392b68822cb1c80667e0f1459c0e5a
+Merge: 4abb11c d471766
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 17:08:44 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 4abb11c996b80189dd3e913f8b85f11cd7bb433b
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 17:08:37 2020 +0800
+
+    Fixed admin field database error
+
+commit d471766928a54c6482f29303801e0be689484d17
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 16:49:15 2020 +0800
+
+    shell context for db
+
+commit e2fc37dd8698024cc8fd3ef9de7a174764154b50
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 19 16:48:23 2020 +0800
+
+    add shell context for db
+
+commit 39ecddfda551dd8707a14b1261ad7c73f50e3004
+Merge: 016836e 1847002
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 19 16:45:11 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 016836ec8d47aeadf1275e9278469b07df74edcf
+Merge: 8df6eb3 5979fbb
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 19 16:44:17 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 1847002587adf25aed343bf2b4bbda2df8110791
+Merge: ec23342 5979fbb
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 16:43:39 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 8df6eb3f76bb130ebf4c1a09f3bf31f82c252f88
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 19 16:42:54 2020 +0800
+
+    Displaying quizzes on quiz page
+
+commit ec233426356b9ab4a465aa4c2fb3e38c52880efa
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 16:41:35 2020 +0800
+
+    added assessments route
+
+commit 36ad40a5ca41678068360acca389cee1719a9067
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 16:41:05 2020 +0800
+
+    Assessments page html
+
+commit 5979fbb78a389aa777dd8991f825a9eece57ef0d
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 15:49:39 2020 +0800
+
+    shell processor for db
+
+commit b51c1bb2f688f350d158397c1cedfddf6b6e1bde
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 15:18:58 2020 +0800
+
+    importing tables
+
+commit 0000dbf4d3169fa3c9a18356ff17241be0347081
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 19 12:50:29 2020 +0800
+
+    adding quizMarks table
+
+commit 28d9299e7ee4679d1b50be624afcdfb686a21b96
+Merge: fb6ad5e 70a76e4
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 19 12:47:13 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit fb6ad5e72a721a25fc67505b508f2f62571611df
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 19 12:46:36 2020 +0800
+
+    fixed multichoice error
+
+commit 70a76e428b4370e7a988e76fbc5301d85d8d3376
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 12:45:02 2020 +0800
+
+    Merged changes
+
+commit 5cf0bbd539f3a67d422c53acea00d38c90dea2bb
+Merge: 79788d4 743536b
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 12:43:29 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 79788d4af44901f1d6fcaea11942d33f8f792d08
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 12:41:54 2020 +0800
+
+    Upgraded to current database model
+
+commit 3f4c4607be661b2b1bc3dc22b41190e49d48e3f5
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 12:41:27 2020 +0800
+
+    Added quizMarks database
+
+commit 13eae5f1ebced78966e1aeafe1744f69c07a077e
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 12:41:03 2020 +0800
+
+    Added quizMarks to admin view
+
+commit 743536bdc3aa391397ebee51f23401d709f2df08
+Merge: 71dcb98 f04a934
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 12:40:06 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 71dcb9838d3573e58915a3bdc20a9f2347eefe2d
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 12:39:57 2020 +0800
+
+    isAdmin()
+
+commit f04a9347d88bd5eb75f2c6a417b3d40e6feca48a
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 19 12:35:33 2020 +0800
+
+    multiChoice database
+
+commit 0dc1351c8edc8a798e9bec86949eb9cbb9402fae
+Merge: e3758ca 495751e
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 11:56:03 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit e3758ca8b8d3465ca3843eb246cc59bc966bac38
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 11:55:39 2020 +0800
+
+    Added more post information
+
+commit c79500802a366762e6257833e6c60a1ed67bbf93
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 11:55:10 2020 +0800
+
+    Comments
+
+commit 495751e6d29f8d7d165288c352d3953a71847d6d
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 11:55:06 2020 +0800
+
+    db
+
+commit 43dee72eff7ce904787d4a9cbcf6e1b830f3bcdb
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 19 11:33:08 2020 +0800
+
+    added column for isAdmin()
+
+commit de7708d27086347e1f4d1d64a027bcb37695cb98
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 10:14:03 2020 +0800
+
+    added edit email in edit profile form
+
+commit 3a53fac6a4f5bd63d16a8cffb1b760c9c9751e59
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 10:13:48 2020 +0800
+
+    Added edit email in edit profile html
+
+commit 1e0a97463534878300c02457cf1abd02655a59ca
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 19 10:13:29 2020 +0800
+
+    Added edit email it edit profile route
+
+commit 611d03a1bf4b55ea80c3d0e81f13aba79bad8cbd
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 23:36:32 2020 +0800
+
+    added category for @login_required route error msg
+
+commit ddf03007b932095c9d4283a630ad3daff20f2ab3
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 23:35:08 2020 +0800
+
+    Described reloading the user from user id
+
+commit a2bafef276083192d93a1cf013ec8fe1a5ee8a67
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 23:34:21 2020 +0800
+
+    Described the register and login processes
+
+commit 6483910c658562f6ffb1bc9d7d02c60308250b1b
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 19:25:30 2020 +0800
+
+    Described the init file
+
+commit f5a11bb2764ebe15e92e230544cfc285f9cfc1e3
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 19:25:11 2020 +0800
+
+    Described the database uri
+
+commit 7e099b2f1837b1af193cf04d686729778e26c4ee
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 19:24:51 2020 +0800
+
+    Described the run file
+
+commit 4994dfb7f0b71e3e698c739ac5bdfaa286a33e0a
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 18:15:00 2020 +0800
+
+    Removed [] from error messages
+
+commit 7ebb2c12d50036baf178b67960ea5dbaff8d15f3
+Merge: aae46e8 2261f8d
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 17:55:14 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit aae46e8b410d571fc19180d70fbd3e88f4af8a90
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 17:54:45 2020 +0800
+
+    deleted JS validation
+
+commit 0cf9fb7c60bccee40867c0b204ede39f6efad36b
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 17:54:06 2020 +0800
+
+    added ability to add categories to flashed msgs
+
+commit eaaceb16829a9225c14de2df055fe329bb41b4cf
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 17:53:26 2020 +0800
+
+    Added category to login error flashed messages
+
+commit 4314331b4d2b8b3af31e69e6be70f43b8bb08f83
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 17:53:04 2020 +0800
+
+    Described secret keys
+
+commit 2261f8d41ef6d72f20692d75ceb7fed0cc6e1df8
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 17:44:34 2020 +0800
+
+    an extention of admin route
+
+commit 7696295d636a189d6002af16a51098f1c04a8084
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 16:22:54 2020 +0800
+
+    quizzes and questions databases
+
+commit 8c010a203b9d369148f9debf8d3d31e9037692a7
+Merge: f401357 c0288f6
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 16:16:13 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit f401357409d35e53c99f0bb43042956ef408e042
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 16:15:52 2020 +0800
+
+    Added Comments
+
+commit 30da1ff5d004eff5e10649168805cc2056af932b
+Author: Jayden <jayden228@gmail.com>
+Date:   Mon May 18 16:15:34 2020 +0800
+
+    Added Comments
+
+commit c0288f6c0c70ab26162e81ef6248bccf8d761ffe
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 16:08:58 2020 +0800
+
+    database initialisation
+
+commit 0222dec437fad5b1ec9504d6850a025220151e25
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 16:08:41 2020 +0800
+
+    quizes -> quizzes
+
+commit 22ccd3db9dd8333a370905f5c268b19d4ea88edc
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 16:08:31 2020 +0800
+
+    quizes -> quizzes
+
+commit e0302b73bd9db27919e9915c6f847a2d03240a42
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 16:08:02 2020 +0800
+
+    admin capabilities
+
+commit 6ae510439fd81b3eee63f1a2f17c4a9fa3027414
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 16:07:53 2020 +0800
+
+    adding shell context for question setup
+
+commit f0f8ec2f996cc8f739f616f11b81404795242452
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 13:57:50 2020 +0800
+
+    new pip install
+
+commit 7f370d13b933627d8f181bfbe44ebf506d369212
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 13:57:35 2020 +0800
+
+    database additions for quizes and quesitons
+
+commit b169b7e11bdfb1e3bc7e3b23026c4b2534218534
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 13:57:18 2020 +0800
+
+    database access
+
+commit 688bcb011acedd578e940dae066be7b8bb11e38d
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 13:17:18 2020 +0800
+
+    variable name change
+
+commit 1b702d362c95237913f93b6aecb2c40e0c683329
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Mon May 18 13:16:55 2020 +0800
+
+    imported db variable
+
+commit be490015dfbb9c93d4d36233d2ef4fdb5031357f
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Sun May 17 18:50:59 2020 +0800
+
+    debug true
+
+commit b2e6b507e8c6fd2cbeaf89a043cb76cc8f55180f
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 14 20:09:20 2020 +0800
+
+    html/cc for error messages
+
+commit cbfbb58215ba7dd0ec6f4d07311de3f2012f57e8
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 14 15:40:55 2020 +0800
+
+    login page customisation
+
+commit 7af66e529c495e8e54b4f5d5e7b28b2f372e9dad
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 13 15:00:56 2020 +0800
+
+    addition of html for navbar
+
+commit d028685ddba52b691ba2b3bc388483a949d9ad18
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 13 15:00:44 2020 +0800
+
+    temporary logo for page
+
+commit a5ced9328fe706160eaea62c7c8996094d6f0883
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Wed May 13 15:00:31 2020 +0800
+
+    additional styling for dropdown menu
+
+commit 10f7a7b77b8ed5a146315f6ba9af26e4838b851e
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 12 18:52:57 2020 +0800
+
+    updated admin email so errors are sent there
+
+commit 8df0e0ee53ad967f6c940a680b3d544534bacb8d
+Merge: 3c8b25f c48ae86
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 18:13:40 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 3c8b25f0e7bbfa47a9029cb0cfa6b140ee1fda66
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 18:13:34 2020 +0800
+
+    text file for email
+
+commit 38356a291c9cf4a4c50836e1f8d9df8f56c5cb98
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 18:13:24 2020 +0800
+
+    html for the email
+
+commit ae19b2f7766e0081d0a262bf24f20bbcb775da91
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 18:13:09 2020 +0800
+
+    for email capabilities
+
+commit 780a6d284bccac128b17f6b50570482924421cac
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 18:12:56 2020 +0800
+
+    info about email just for group
+
+commit 9764134a0d6919b46bfd4b335846896efb83959d
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 18:12:42 2020 +0800
+
+    added 3rd party email details
+
+commit c48ae8653e2819f9f3f6d6dffadcfafb66b47c36
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 12 17:20:08 2020 +0800
+
+    Updated installed packages
+
+commit 00edeea3fa887874fa8c626e8df30f33f8f9e71f
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 17:02:43 2020 +0800
+
+    an email template
+
+commit 2aa4c5ae4d6d9e36ea822974b644dc4aab358b08
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 17:02:32 2020 +0800
+
+    an email template
+
+commit 909135b5e64e3a8723c1e197dcb636a99dc85f43
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 17:02:22 2020 +0800
+
+    a page to actually change the password
+
+commit ddf34c0b8f7470f0fd995b4f56fe99460969a325
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 17:01:58 2020 +0800
+
+    a web request to change password
+
+commit cf70f4472e2fb215f0ee651d99d45be739c22c00
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 17:01:14 2020 +0800
+
+    html for "forgot password"
+
+commit 47f4676b7d297d5488c6f4e1132672b1f958aa75
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 17:00:59 2020 +0800
+
+    adding email routes
+
+commit 10fea2e11f3ca9e7202893d1d04444934d5f60e3
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 17:00:47 2020 +0800
+
+    adding email models and classes
+
+commit bf428d1b7a423b140c13fa1123c27e71253e36b6
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 17:00:31 2020 +0800
+
+    adding classes for email
+
+commit 20282d7b5eb95d02e62b019a8d0eeee9a76f1a9c
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 17:00:16 2020 +0800
+
+    setting up the email.py
+
+commit fb94585fc0b4d224ec7c178876a4134a5ff04e56
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 17:00:01 2020 +0800
+
+    implmenting flask-mail
+
+commit 478520ecf7e6959737e56c785f5b7e73fd0f6ddd
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 16:59:39 2020 +0800
+
+    added email into admin
+
+commit dee9717638254bb0ed0408a5fafb6ab17c4d1112
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 16:59:13 2020 +0800
+
+    changed debug to false for python mail server
+
+commit 8aaf2acc710ff66918803c378e100eec66b4a31b
+Merge: b1f9e10 c4f481c
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 12 14:40:23 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit b1f9e10c2b0f65fe89d0fffb09c5c9526a56d8b7
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 12 14:39:25 2020 +0800
+
+    adding a dropdown for profile (can change css)
+
+commit c4f481c9ae747918cd6b858a1d1d62071a423a77
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 14:34:14 2020 +0800
+
+    uploading followers table bugfix
+
+commit 3961a2b51eba6659813ee0a5d12fa84eb59da443
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 14:25:48 2020 +0800
+
+    added email
+
+commit 8ccbf11a07787520d344ef7d191ccf705066a6dc
+Merge: dfd56bf fea6df1
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 14:21:15 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit dfd56bfff9ba11c5de9855e762adca59a22da21a
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Tue May 12 14:16:53 2020 +0800
+
+    database
+
+commit fea6df1d39c81e86c38e220f0453f0c969a8f865
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 12 14:15:51 2020 +0800
+
+    Final pagination done
+
+commit 56fd4db82fc941791f0c12148d57c2d91855cdd8
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 12 14:09:10 2020 +0800
+
+    explore page and limiting posts
+
+commit 212a7a0df1df72892c24fd9f5bde62ea66c53200
+Merge: 4709ba2 c0299cc
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 12 12:43:19 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 4709ba2e87ebc2729bd4eb7dd6b293b14f37a69c
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 12 12:41:31 2020 +0800
+
+    Creating and displaying blog posts
+
+commit 9b585b146e512807988aa4349fe6de29cd5544b1
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Tue May 12 12:37:07 2020 +0800
+
+    Changing title to Quizards
+
+commit c0299cc1aae064f935307155a72979ca2dc2b0cc
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 12 12:23:22 2020 +0800
+
+    Follow and unfollow links in user profile page
+
+commit 71cdcac0e10a702077a74fb55ec3c2c1ff9e1f01
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 12 12:22:55 2020 +0800
+
+    Follow and unfollow routes
+
+commit bbfbbb7fdae1a290ec62840a58b216e6d25bd335
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 12 12:22:29 2020 +0800
+
+    Followers table and queries
+
+commit 3726ce9caeebb1361b7857ece50eda989348eb11
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 12 12:21:59 2020 +0800
+
+    User model unit tests
+
+commit 10f1536f3140608c83f1f3434a146b601b3d706f
+Author: Jayden <jayden228@gmail.com>
+Date:   Tue May 12 12:21:40 2020 +0800
+
+    Added acc: U/N: jaydenteo, P/W: a
+
+commit d17916875d19b77d524cecb47cecc1ebe01491dc
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 8 22:24:13 2020 +0800
+
+    Internal server error template
+
+commit 687eb0f4cec95f0c249213764a40c5685f39fe9a
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 8 22:23:52 2020 +0800
+
+    Error not found template
+
+commit 8675ed5e646529f3b9ada1f44252f734bd8deb8c
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 8 22:23:36 2020 +0800
+
+    Validate username in edit profile form
+
+commit a3417f178d93de7f182cf0722340b2bbc7d24312
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 8 22:23:07 2020 +0800
+
+    Validate username in edit profile form
+
+commit 1d06a6eb754827799bf60040639e8f417971101a
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 8 22:21:36 2020 +0800
+
+    Custom error handlers
+
+commit c1d721e79d88b914d033ca944fd93fd6f73e218c
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 8 22:21:15 2020 +0800
+
+    Error handling: log errors to email and log file
+
+commit 90db5d025625b7baadedd98d6fa8806df0480e65
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 8 22:20:08 2020 +0800
+
+    Add email configuration to receive emails
+
+commit ba2e1a6a197ecd047bc39ac9ae828ca18b839cfc
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 16:39:18 2020 +0800
+
+    database
+
+commit 7c8fca67c05ef35787d4d48947aa65fd737e3c3b
+Merge: 782b7d6 476d0ff
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 8 16:28:29 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 782b7d6baa88637649965bb994a9937834eccb9e
+Merge: 7ef8915 b14583d
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 8 16:28:21 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 7ef89156dd21a6b00d166da2f9c0e01c2fac195a
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 8 16:27:38 2020 +0800
+
+    changing error for user profile
+
+commit 476d0ff7286fc116eaeacbc59447be851e7bbef4
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 16:24:16 2020 +0800
+
+    merge conflict
+
+commit b14583d3b7bb0a77e7d53fb14475ce0a0e414935
+Merge: 5304ab8 c2361aa
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 16:20:47 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 5304ab85af483e0a397ee2c3b4f4a5035209e442
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 16:18:06 2020 +0800
+
+    tag changes
+
+commit 7491c9b3675fee40a74e46061ee2764fe284171c
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 16:17:54 2020 +0800
+
+    changes to return after login
+
+commit 962944140f241d4848b961eb80218972ea55d13e
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 16:17:27 2020 +0800
+
+    UserMixin
+
+commit de9faf92e1ee269f40504455ba3ae74d5e6b4bbd
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 16:17:16 2020 +0800
+
+    database
+
+commit c2361aacb49c9902a449a838f21e3a13c14b84ee
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 8 16:14:10 2020 +0800
+
+    indent fix
+
+commit 137d37c34069d3eb8648e17d4ec3aadaeb29eb88
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 8 16:11:41 2020 +0800
+
+    user profile done
+
+commit 408767587a6f23e7ef6c46b0ef80a2efe537dfeb
+Merge: 01f2f4e 709914c
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 8 16:04:41 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 01f2f4eb819245373f2b20828c99bea90a741514
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 8 16:04:33 2020 +0800
+
+    user profile
+
+commit 709914c0f79d2e53a1b03f4c1274e697e3471d8a
+Author: Jayden <jayden228@gmail.com>
+Date:   Fri May 8 15:43:40 2020 +0800
+
+    Updated venv installed packages
+
+commit cd54915182634635da0017c1d48b730c5cc9d59c
+Merge: 3717fe0 c476947
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 15:30:17 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 3717fe0f2b3184ca344b5d2043787a08f0b482ea
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 15:30:03 2020 +0800
+
+    user -> currentuser
+
+commit e4cdd56ad08843af16b6c3f7bce567f57952dff3
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 15:29:49 2020 +0800
+
+    functions for set_password and check_password
+
+commit 014ec6e8ad5bd33dc7515686962ce3d9abb2d85a
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 15:29:31 2020 +0800
+
+    shell content processor
+
+commit cb4943acd97310fd66985fff909f7170a39274b2
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 15:29:19 2020 +0800
+
+    database upgrade
+
+commit c47694701cde35e13b4439d9ef9b7be33ab3eff0
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 8 14:50:05 2020 +0800
+
+    pippackage email validator
+
+commit bb72551311a563e416d9e228101a28f9c9363e10
+Merge: 9e2015f ff8fed1
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 8 14:41:01 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 9e2015f672deb14403af70302f7bf8042ee2ba0e
+Author: anfony123 <64474462+anfony123@users.noreply.github.com>
+Date:   Fri May 8 14:37:29 2020 +0800
+
+    packages
+
+commit ff8fed137a5ba07e68aced724941acb7aa9cf91b
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 14:23:27 2020 +0800
+
+    changes to User class
+
+commit 251c24359f9969f784cbc6592625c2ded277045e
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 14:03:04 2020 +0800
+
+    html for seperate registration page
+
+commit e460391c3ff0a2932ba8e3647726b21133295e1b
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 14:02:43 2020 +0800
+
+    adding registration html
+
+commit a0cb625c86f3ea96221156617cc2f99bf43746a2
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 14:02:21 2020 +0800
+
+    html for registration
+
+commit 46374e87df5918da740c26eba2f6af3d9c6b05e4
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 14:01:47 2020 +0800
+
+    registration form addition
+
+commit 2d94f394358a384f53b7170e6f9fef89704ec23d
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 14:01:19 2020 +0800
+
+    user class
+
+commit 9aa6997154d575413a36c6386b6ca967566577a8
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 14:01:01 2020 +0800
+
+    adding user functionality
+
+commit 06e8c91a91ca85681ab6574c5349bb796eff3f4f
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 14:00:06 2020 +0800
+
+    adding classes for registration
+
+commit cb09863ead22e3bacb006a00a4de982a5c8f3958
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 13:59:44 2020 +0800
+
+    adding login manager
+
+commit 1b8e6085c26c5bab5f1746db510c91a2812a0c63
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Fri May 8 13:59:18 2020 +0800
+
+    adding pip packages
+
+commit ceea62a91c3c3dafd256ca58d6d31799834bac24
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 19:06:45 2020 +0800
+
+    changing package usage
+
+commit e84c48a0c669883d5816009849914e9fa2e123ad
+Merge: 79dd693 641f672
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 18:01:30 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 641f6729644e9f81458b9694a8f6ce9c2138915c
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 7 17:52:53 2020 +0800
+
+    Creating the nav bar
+
+commit 2bac3cab96c57ddbb67803c77d86b4806161f4dc
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 7 17:52:35 2020 +0800
+
+    Creating the css file
+
+commit 79dd693d00514d5f776a1fc59db98440dbff15d8
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 17:06:03 2020 +0800
+
+    downgrade()
+
+commit 35a54b57b51051befa29e1c33e5b83e97df2a9e8
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 16:45:25 2020 +0800
+
+    added user
+
+commit 70c828efa4b00f8210a6a3622c74a97affc2a454
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 16:33:18 2020 +0800
+
+    database - migration
+
+commit bca4c17ee00aea03f09eced0b479043416acbf2d
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 16:31:58 2020 +0800
+
+    models update - databases
+
+commit 0aafee95439b24fb90ef3df39b1a12caa0df4d69
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 16:30:24 2020 +0800
+
+    migration - database
+
+commit 14512b37b62d2309250df3d5b9fba759f66cbebe
+Merge: 0157ebc 1d79f65
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 16:16:31 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 0157ebc895fe73f9e63286ad15ca3b1fcb932c31
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 16:16:10 2020 +0800
+
+    url for routes and base.html
+
+commit 1d79f65b00fadfa1842c7ef8125963f10822ec4e
+Merge: 8870731 cd087f6
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 7 16:14:04 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 887073162765d000f7a61d9d2619f0931f2cf949
+Merge: 50da18e e9a3100
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 7 16:13:04 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit cd087f6ebcfa8fef75056466f139f2d33d5fefc6
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 16:11:19 2020 +0800
+
+    login for base html and routes py
+
+commit e9a310094838cfb9f7b20f00eb770d1bb329a0cf
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 16:08:15 2020 +0800
+
+    adding login in base.html
+
+commit 77fbf28bae5aa8e8dff749ae177291db9e18788c
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 16:06:30 2020 +0800
+
+    routes for login html
+
+commit ff5444e04dd7ab8554d0b3533bd3d4a8e6de90bf
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 16:03:48 2020 +0800
+
+    login.html
+
+commit 41ed93a572e834003f6572be89068d2e478bc997
+Merge: 0825a23 0a01871
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 16:02:34 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403Project2
+
+commit 0a01871cda5bacbcb27e3bd46a98a4cc8c050018
+Merge: bb632a3 17e397c
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 16:02:11 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit bb632a37e7101fea37061173ef400f0e26e10574
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 16:02:06 2020 +0800
+
+    models - database
+
+commit 0825a23ca4a54f411c003b192a7f4d6d12bbb667
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 16:01:48 2020 +0800
+
+    forms.py in app
+
+commit 17e397c9c314dd877af0def97fcdc14959a15508
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 15:49:55 2020 +0800
+
+    config
+
+commit 55945b5f505b130d9e64daa8e07a5426515b726c
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 15:41:36 2020 +0800
+
+    changing init - databases
+
+commit 50da18eff9a26e8c4154906f741d2ba18ddae880
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 7 15:36:19 2020 +0800
+
+    Updated installed packages
+
+commit 6024b75e9ef822a40d569e062c54c39da3e25811
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 15:34:59 2020 +0800
+
+    adding pip usage
+
+commit 102ee91a87c3dd773427ab16de349ba175b0bbd7
+Merge: f085e1a 152d439
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 15:33:36 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit f085e1a067ff73eefe60407b04d5cd83e1804ada
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 15:33:29 2020 +0800
+
+    config - databases
+
+commit 152d439e8962c89325224ec0d4cbe9edeee68688
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 7 15:33:18 2020 +0800
+
+    Updated installed venv packages
+
+commit 752d4b81518aef442bf87b0543540eb64f86dc1e
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 15:09:41 2020 +0800
+
+    pip install check
+
+commit 537c5a46d8a0b9882b102b4e63032df47129af11
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 7 15:00:03 2020 +0800
+
+    Render templates and create dummy users & posts
+
+commit 29aa3370d4cbe4f52804f6830d0ef3b23a2233eb
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 7 14:59:24 2020 +0800
+
+    Inherit from base template and route users
+
+commit 5bb781e1d6e7cf89cf28022b66e8f8c13a30549a
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 7 14:59:02 2020 +0800
+
+    Base template with nav bar
+
+commit 93c200b3f17c21d7836a0a9c5df7769b86f12bfb
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 7 14:57:39 2020 +0800
+
+    gitignore .vscode file
+
+commit 310c6ad10cbbca2c49811a3cbfc4295e8859c301
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 14:36:54 2020 +0800
+
+    app pycache gitignore
+
+commit 647b4fd41ed6f0c5386ae427b326402b592f8609
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 14:34:52 2020 +0800
+
+    pycache gitignore
+
+commit 51e9f5ed57913ad8ce74e93c1d3e995237025c93
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 14:25:20 2020 +0800
+
+    removing venv and adding gitignore
+
+commit 69e86ad43c195046fec17a6e7154396fb40eb3fe
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 13:40:53 2020 +0800
+
+    Hello world test
+
+commit 1343630e871dac36f52e6e8ea73193c98d13bc64
+Merge: 7433ee9 a9161bf
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 13:25:55 2020 +0800
+
+    Merge branch 'master' of https://github.com/jaiminkerai/CITS3403-Project2
+
+commit 7433ee930b7e74d4b992a45d638f58d7ea51be05
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 13:25:47 2020 +0800
+
+    Initialising venv and flask
+
+commit a9161bf1a7910e15842e517cbf0d145c84d2b7c0
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 13:24:34 2020 +0800
+
+    .
+
+commit 5ea5a922fc9bdcb66daae88d14c412456e746306
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 12:30:08 2020 +0800
+
+    test
+
+commit bdf630c525868b3921b9ecd3889df9deff0fc22a
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 12:29:33 2020 +0800
+
+    test
+
+commit 6b4c60db16617ab415190b0ef355ba69f227698f
+Author: Jayden <jayden228@gmail.com>
+Date:   Thu May 7 12:27:01 2020 +0800
+
+    Test text.
+
+commit 8457cbd34e4f29de75cf6496289ea0823c0dbc91
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 12:22:11 2020 +0800
+
+    remove test
+
+commit 4617995d15cbb80ca937ab702d4bd1b206523bf7
+Author: Anthony Huynh <22716758@student.uwa.edu.au>
+Date:   Thu May 7 12:20:30 2020 +0800
+
+    anthony test
+
+commit d2ec9e41c072a1353b15ae2298f15f17970f89fa
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 12:09:43 2020 +0800
+
+    changing file name
+
+commit 4d4478e4b91a6dbf7db6964d95099ddbe7467460
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 12:08:58 2020 +0800
+
+    changing the read me
+
+commit 357fbeea51912bff9f1146238618c13a5025be97
+Author: Jaimin Kerai <22718975@student.uwa.edu.au>
+Date:   Thu May 7 11:49:23 2020 +0800
+
+    ReadMe
