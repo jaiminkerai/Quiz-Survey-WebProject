@@ -409,6 +409,26 @@ header {
   display:inline-block;
 }
 
+.clicker {
+  background-color: #222222; 
+  border: #222222;
+  font-size: 15px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: rgb(129, 131, 132);
+  font-weight: 700;
+}
+
+.clicker {
+  transition-duration: 0.4s;
+}
+
+.clicker:hover {
+  background-color:rgb(129, 131, 132, 0.2);
+  color: white;
+}
+
 /* RESULTS PAGE */
 .assessments {
   width: 90%;
@@ -461,6 +481,25 @@ header {
 
 .profile-table .about-me{
   color: lightgrey;
+}
+
+.clicker2 {
+  background-color: black; 
+  border: black;
+  font-size: 14px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: rgb(129, 131, 132);
+  font-weight: 700;
+}
+
+.clicker2 {
+  transition-duration: 0.4s;
+}
+
+.clicker2:hover {
+  background-color:rgb(129, 131, 132, 0.2);
 }
 
 /* Answer Page */
