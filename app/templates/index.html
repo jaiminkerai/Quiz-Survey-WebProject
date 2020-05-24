@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <!-- Quiz Thoughts Page -->
     <h1>What did you think of the {{ quizname }} quiz, {{ current_user.username }}?</h1>
     {% if form %}
     <form action="" method="post">
         {{ form.hidden_tag() }}
+        <!-- Post Input Box -->
         <p>
             {{ form.post.label(class="postlabel") }}<br>
             {{ form.post(class='postbox') }}<br>
@@ -14,10 +16,12 @@
         </p>
         <p>{{ form.submit(class="postbtn") }}</p>
     </form>
+    <!-- Showing the Posts -->
     {% endif %}
     {% for post in posts %}
         {% include '_post.html' %}
     {% endfor %}
+    <!-- Pagination -->
     {% if prev_url %}
     <a href="{{ prev_url }}">Newer posts</a>
     {% endif %}
