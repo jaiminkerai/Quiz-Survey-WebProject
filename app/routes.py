@@ -370,7 +370,7 @@ def json(quizname, quizid):
 # Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal
 class MyModelView(ModelView):
     column_searchable_list = [User.username, User.email, Quizzes.name, Quizzes.author_id, Questions.question]
-    form_excluded_columns = ['posts', 'authorOf', 'marksOf', 'longanswers', 'followed', 'followers','quizMarks']
+    form_excluded_columns = ['posts', 'authorOf', 'marksOf', 'longanswers', 'followed', 'followers','quizMarks', 'questions', 'mcquestion', 'longquestions']
     def is_accessible(self):
         if current_user.is_authenticated:
             user = load_user(current_user.id)
