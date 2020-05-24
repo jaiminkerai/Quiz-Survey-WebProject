@@ -11,7 +11,7 @@
     var myRequest = new XMLHttpRequest();
     myRequest.open('GET', "{{ url_for('json', quizid=quizid, quizname=quizname) }}");
 
-    console.log("Test")
+ 
     myRequest.onload = function() {
         var data = myRequest.responseText;
 
