@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-
-<div style="width:400px">
-    <canvas id="barGraph" width="400" height="400"></canvas>
-    <canvas id="leaderboard" width="400" height="400"></canvas>
+<h1 class="quiz_title" id="result_title">{{ quizname }}</h1>
+<div class="flex_container">
+    <div class="flex_child"><canvas id="barGraph"></canvas></div>
+    <div class="flex_child"><canvas id="leaderboard"></canvas></div>
 </div>
 
 

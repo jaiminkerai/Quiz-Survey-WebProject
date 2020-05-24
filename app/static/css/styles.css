@@ -724,3 +724,20 @@ html, body{
   text-align: justify;
   font-size: 15px;
 }
+
+/* Distribution and Leaderboard */
+
+.flex_container{
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+
+.flex_child{
+  margin-top: 50px;
+  flex: 1;
+}
+
+.flex_child:first-child{
+  margin-right: 10px;
+}
