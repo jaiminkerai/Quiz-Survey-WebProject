@@ -637,6 +637,10 @@ header {
   color: white;
 }
 
+.subbutton:focus{
+  outline: 0;
+}
+
 /* TUTORIAL PAGE */
 .tutorialcontainer {
   margin-top: 50px;
@@ -707,6 +711,9 @@ html, body{
   color: white;
 }
 
+.postbtn:focus{
+  outline: 0;
+}
 /* Admin Page */
 .intro{
   text-align: center;
