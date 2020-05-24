@@ -14,7 +14,7 @@
         </tr>
         <tr>
             <td>
-                {% if user.about_me %}<p class="about-me">{{ moment(user.last_seen).format('LLL') }}</p>{% endif %}
+                {% if user.about_me %}<p class="about-me">{{ user.about_me }}</p>{% endif %}
             </td>
         </tr>
         <tr>
