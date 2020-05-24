@@ -415,7 +415,7 @@ class MyLQuestionView(ModelView):
         return redirect(url_for('login'))
 
 class MyLAnswerView(ModelView):
-    column_searchable_list = [User.username, LongQuestions.question, Quizzes.name]
+    column_searchable_list = [User.username, LongQuestions.question, Quizzes.name, User.email]
     form_excluded_columns = ['answer','user','Question']
     def is_accessible(self):
         if current_user.is_authenticated:
@@ -427,7 +427,7 @@ class MyLAnswerView(ModelView):
         return redirect(url_for('login'))
 
 class MyMarksView(ModelView):
-    column_searchable_list = [Quizzes.name, User.username, quizMarks.mark]
+    column_searchable_list = [Quizzes.name, User.username, quizMarks.mark, User.email]
     def is_accessible(self):
         if current_user.is_authenticated:
             user = load_user(current_user.id)
