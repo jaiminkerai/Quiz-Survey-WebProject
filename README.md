@@ -26,6 +26,7 @@ Quizards is a teacher-student web-based quiz application created through Flask.
 │  │  |
 │  │  ├─ _post.html
 │  │  ├─ 403.html
+│  │  ├─ 404.html
 │  │  ├─ 500.html
 │  │  ├─ assessments.html
 │  │  ├─ base.html
@@ -118,7 +119,10 @@ To run the selenium test covering Quizard's Login feature:
 	
 ## Contributions
 
-To see the commit logs
+To see the commit logs visit the commits.txt file
+
+### Contributors:
+![Screenshot (113)](https://user-images.githubusercontent.com/64474462/82753954-60d34780-9dfc-11ea-9e4c-eeaab56fc643.png)
 
 
 
