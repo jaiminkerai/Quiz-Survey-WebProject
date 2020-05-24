@@ -510,6 +510,10 @@ header {
 .clicker2:active {
   outline: auto;
 }
+
+.clicker2:focus{
+  outline: 0;
+}
 /* Answer Page */
 
 .quiz_title{
