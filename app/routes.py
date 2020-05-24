@@ -51,7 +51,7 @@ def login():
         # If user does not exist or the password is incorrect, redirect back to login
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
-            flash('Invalid username or password', category='alertError')
+            flash('Invalid username or password.', category='alertError')
             return redirect(url_for('login'))
 
         # Log the user in
@@ -174,7 +174,7 @@ def unfollow(username):
         return redirect(url_for('user', username=username))
     current_user.unfollow(user)
     db.session.commit()
-    flash('You are not following {}.'.format(username), 'alertError')
+    flash('You have unfollowed {}.'.format(username), 'alertInfo')
     return redirect(url_for('user', username=username))
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
@@ -326,7 +326,8 @@ def tutorial():
 def comments(quizname, quizid):
     # For posting comments 1-140 characters long
     if not current_user.doneQuiz(quizid):
-        return redirect(url_for('quizform', quizid=quizid,  quizname=quizname))
+        flash("You must complete the quiz before you can comment.", 'alertError')
+        return redirect(url_for('quizzes', quizid=quizid,  quizname=quizname))
     form = PostForm()
     if form.validate_on_submit():
         quiz = Quizzes.query.filter_by(id=quizid).first_or_404()
@@ -350,13 +351,11 @@ def comments(quizname, quizid):
                            prev_url=prev_url, quizname=quizname)
 
 @app.route('/quizzes/<quizname>/<quizid>/scores', methods=['GET', 'POST'])
-@login_required
 def scores(quizname, quizid):
     return render_template('scores.html', quizname=quizname, quizid=quizid)
     
 
 @app.route('/quizzes/<quizname>/<quizid>/json', methods=['GET', 'POST'])
-@login_required
 def json(quizname, quizid):
     distribution = quizMarks.query.with_entities(quizMarks.mark).filter_by(quiz_id=quizid).all()
     temp_frequencies = []
