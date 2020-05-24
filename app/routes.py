@@ -349,7 +349,9 @@ def comments(quizname, quizid):
 
 @app.route('/quizzes/<quizname>/<quizid>/scores', methods=['GET', 'POST'])
 def scores(quizname, quizid):
-    return render_template('scores.html', quizname=quizname, quizid=quizid, title=quizname)
+    quiz = Quizzes.query.filter_by(id=quizid).first()
+
+    return render_template('scores.html', quizname=quizname, quizid=quizid, title=quizname, quiz=quiz)
     
 
 @app.route('/quizzes/<quizname>/<quizid>/json', methods=['GET', 'POST'])

@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 <h1 class="quiz_title" id="result_title">{{ quizname }}</h1>
+
+{% if quiz.Avgmark() == False%}
+<p class="avgmark" style="color: rgb(131, 131, 131)">No attempts yet</p>
+{% elif quiz.Avgmark() >= 75.0 %}
+<p class="avgmark good">Average: {{ quiz.Avgmark() }}%</p>
+{% elif quiz.Avgmark() < 75.0 and quiz.Avgmark() >= 50.0 %}
+<p class="avgmark ok">Average: {{ quiz.Avgmark() }}%</p>
+{% elif quiz.Avgmark() < 50 and quiz.Avgmark() >= 0.0 %}
+<p class="avgmark bad">Average: {{ quiz.Avgmark() }}%</p>
+{% endif %}
+
 <div class="flex_container">
     <div class="flex_child"><canvas id="barGraph"></canvas></div>
     <div class="flex_child"><canvas id="leaderboard"></canvas></div>
@@ -76,7 +87,7 @@
                                 {
                                     display: true,
                                     ticks: {autoSkip: false,max: 100,},
-                                    scaleLabel: {display: true, labelString: 'Score'}
+                                    scaleLabel: {display: true, labelString: 'Score (%)'}
                                 }
                             ],
                         yAxes: 
@@ -129,7 +140,7 @@
                                     {
                                         display: true,
                                         ticks: {autoSkip: false,max: 100,},
-                                        scaleLabel: {display: true, labelString: 'Score'}
+                                        scaleLabel: {display: true, labelString: 'Score (%)'}
                                     }
                                 ],
                             yAxes: 
