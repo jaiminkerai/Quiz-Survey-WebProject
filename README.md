@@ -9,8 +9,54 @@ Quizards is a teacher-student web-based quiz application created through Flask.
 
 ## Architecture
 
-- 
-
+``` GAP
+├─ app/         # All application code in this directory.         
+│  ├─ static/   # Static folder for CSS and JavaScript
+│  │  ├─ scripts.js   # JavaScript file
+│  │  └─ css/    # CSS files for all pages
+│  │     ├─ styles.css
+│  │     └─ templogo.png
+│  │         
+│  ├─ templates/      # HTML templates used/included throughout the app.
+│  │  ├─ admin/
+│  │  │    └─ index.html
+│  │  ├─ email/            
+│  │  │    ├─ reset_password.html
+│  │  │    └─ reset_password.txt  
+│  │  |
+│  │  ├─ _post.html
+│  │  ├─ 403.html
+│  │  ├─ 500.html
+│  │  ├─ assessments.html
+│  │  ├─ base.html
+│  │  ├─ edit_profile.html
+│  │  ├─ index.html
+│  │  ├─ login.html
+│  │  ├─ quiz_questions.html
+│  │  ├─ quiz.html
+│  │  ├─ quizdisplay.html
+│  │  ├─ register.html
+│  │  ├─ reset_password_request.html
+│  │  ├─ reset_password.html
+│  │  ├─ scores.html
+│  │  ├─ tutorial.html
+│  │  └─ user.html
+│  ├─ __init__.py
+│  ├─ email.py   
+│  ├─ errors.py     
+│  ├─ forms.py 
+|  ├─ models.py
+│  └─ routes.py  
+│
+├─ logs/   # Logs errors
+├─ requirements.txt # Text file with all necessary dependencies
+├─ config.py 
+├─ geckodriver.exe   # Geckodriver for selenium tests 
+├─ app.db   # Database of Quizards
+├─ .gitignore   # Ignores any files in this text file
+├─ system.py     # Selenium testing for login feature
+└─ tests.py      # Unit testing for User Model
+```
 ### Getting Started
 
 These instructions will allow you to run the quiz application on your local machine for development and testing purposes
@@ -19,9 +65,11 @@ These instructions will allow you to run the quiz application on your local mach
 
 - Python(tested with version 3.8.3)
 - SQLAlchemy(tested with version 1.3.16)
+- SQLite3
+- FireFox 
+- Geckodriver
 
 #### Installing
-Assuming use of cmd:
 1. Clone this repository
 ```
 	$ git clone http://github.com/jaiminkerai/CITS3403Project2
@@ -39,11 +87,16 @@ Assuming use of cmd:
 	$ pip install -r requirements.txt
 ```
 
-4. Run the application:
+4. Exporting the FLASK_APP environment variable:
+```
+	$ export FLASK_APP = CITS3403-PROJECT2.py
+```
+
+5. Run the application:
 ```
 	$ flask run
 ```
-5. To access the Quizards application, visit:
+6. To access the Quizards application, visit:
 ```
 	http://localhost:5000
 ```
@@ -63,7 +116,9 @@ To run the selenium test covering Quizard's Login feature:
 
     $ python3 system.py
 	
-## Commit Logs
+## Contributions
+
+To see the commit logs
 
 
 
