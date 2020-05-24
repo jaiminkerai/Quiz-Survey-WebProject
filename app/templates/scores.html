@@ -18,15 +18,19 @@
 </div>
 
 
+<!-- JAVASCRIPT -->
+
 <script>
+
+    // AJAX API REQUEST
     var myRequest = new XMLHttpRequest();
     myRequest.open('GET', "{{ url_for('json', quizid=quizid, quizname=quizname) }}");
 
- 
-    myRequest.onload = function() {
-        var data = myRequest.responseText;
 
-        var ourData = JSON.parse(data);
+    myRequest.onload = function() {
+        var data = myRequest.responseText; //Get the data as a text
+
+        var ourData = JSON.parse(data); //Parse the data, converting it to JSON
 
         renderHTML(ourData);
     }
@@ -34,19 +38,19 @@
     myRequest.send();
 
     function renderHTML(datum) {
-        let yaxis = [];
-        let frequency = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        let leaderslabel = []
+        let yaxis = []; //Leaderboard Array
+        let frequency = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] //Frequency Distribution Array
+        let leaderslabel = [] //Leaders name array (kept blank for privacy)
         for (i = 0; i < datum.marks.length; i++) {
             leaderslabel.push(" ")
             yaxis.push(datum.marks[i]);
             frequency[Math.floor(datum.marks[i]/10)] += 1;
         }
-        yaxis.sort(function(a, b){return b - a});
+        yaxis.sort(function(a, b){return b - a}); //Sort the array descending (highest scores first)
         
 
-        const CHART = document.getElementById("barGraph");
-        const CHART2 = document.getElementById("leaderboard");
+        const CHART = document.getElementById("barGraph"); //Bar Graph of Frequency Distrubution
+        const CHART2 = document.getElementById("leaderboard"); //Horizontal Bar Graph of Leaderboard
 
         let barGraph = new Chart(CHART, {
             type: 'bar',
@@ -82,11 +86,11 @@
                                 {
                                     display: false,
                                     barPercentage: 1.3,
-                                    ticks: { max: 90,}
+                                    ticks: { max: 90,} //Make the Bar graph a Histogram
                                 }, 
                                 {
                                     display: true,
-                                    ticks: {autoSkip: false,max: 100,},
+                                    ticks: {autoSkip: false,max: 100,}, //Make the Bar graph a Histogram
                                     scaleLabel: {display: true, labelString: 'Score (%)'}
                                 }
                             ],
