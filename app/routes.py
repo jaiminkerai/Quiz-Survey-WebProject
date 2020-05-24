@@ -2,7 +2,7 @@
 Decorators which allows us to write a function that 
 returns the information displayed on the website for a specific route. 
 '''
-from flask import render_template, flash, redirect, url_for, abort
+from flask import render_template, flash, redirect, url_for, abort, jsonify
 from app import app
 from app.forms import LoginForm
 from flask_login import current_user, login_user
@@ -51,7 +51,7 @@ def login():
         # If user does not exist or the password is incorrect, redirect back to login
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
-            flash('Invalid username or password', category='alertError')
+            flash('Invalid username or password.', category='alertError')
             return redirect(url_for('login'))
 
         # Log the user in
@@ -70,6 +70,7 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
+    flash('You have been successfully logged out', 'alertSuccess')
     return redirect(url_for('quizzes'))
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -99,22 +100,13 @@ def user(username):
     # Pagination Variable
     page = request.args.get('page', 1, type=int)
 
-    # Posts of User
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-        page, app.config['POSTS_PER_PAGE'], False)
 
     # Quizzes of User
     quizzes = user.authorOf.paginate(page)
 
-    # Pagination
-    next_url = url_for('user', username=user.username, page=posts.next_num) \
-        if posts.has_next else None
-    prev_url = url_for('user', username=user.username, page=posts.prev_num) \
-        if posts.has_prev else None
 
     # Render the HTML Template
-    return render_template('user.html', user=user, posts=posts.items,
-                           next_url=next_url, prev_url=prev_url, quizzes=quizzes.items)
+    return render_template('user.html', user=user, quizzes=quizzes.items)
 
 @app.before_request
 def before_request():
@@ -174,7 +166,7 @@ def unfollow(username):
         return redirect(url_for('user', username=username))
     current_user.unfollow(user)
     db.session.commit()
-    flash('You are not following {}.'.format(username), 'alertError')
+    flash('You have unfollowed {}.'.format(username), 'alertInfo')
     return redirect(url_for('user', username=username))
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
@@ -251,6 +243,7 @@ def quizform(quizname, quizid):
     shortans = Questions.query.filter_by(quiz_id=quizid).all()
     longans = LongQuestions.query.filter_by(quiz_id=quizid).all()
     numOfQuestions = 0.0
+    numOfLongQuestions = 0
 
     #Iterating through the multiple choice questions and adding them to the Field List
     for i, multi in enumerate(multicq):
@@ -268,6 +261,7 @@ def quizform(quizname, quizid):
     #Iterating through the long answer questions and adding them to the Field List
     for i, longq in enumerate(longans):
         numOfQuestions += 1
+        numOfLongQuestions += 1
         form.longanswer.append_entry()
         form.longanswer.entries[i].longanswer = longq.question
     
@@ -309,7 +303,10 @@ def quizform(quizname, quizid):
             db.session.add(submission)
             db.session.commit()
 
-        mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=round(100*(score/numOfQuestions),2), feedback="This is only a preliminary mark, your teacher will update it at a later date")
+        if numOfLongQuestions == 0:
+            mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=round(100*(score/numOfQuestions),2), feedback="This is your final mark, contact your teacher for any queries")
+        else:
+            mark = quizMarks(user_id=current_user.id, quiz_id=quizid, mark=round(100*(score/numOfQuestions),2), feedback="This is only a preliminary mark, your teacher will update it at a later date")
         db.session.add(mark)
         db.session.commit()
         flash('Your quiz has successfully been submitted!', 'alertSuccess')
@@ -326,7 +323,8 @@ def tutorial():
 def comments(quizname, quizid):
     # For posting comments 1-140 characters long
     if not current_user.doneQuiz(quizid):
-        return redirect(url_for('quizform', quizid=quizid,  quizname=quizname))
+        flash("You must complete the quiz before you can comment.", 'alertError')
+        return redirect(url_for('quizzes', quizid=quizid,  quizname=quizname))
     form = PostForm()
     if form.validate_on_submit():
         quiz = Quizzes.query.filter_by(id=quizid).first_or_404()
@@ -350,20 +348,29 @@ def comments(quizname, quizid):
                            prev_url=prev_url, quizname=quizname)
 
 @app.route('/quizzes/<quizname>/<quizid>/scores', methods=['GET', 'POST'])
-@login_required
 def scores(quizname, quizid):
+    return render_template('scores.html', quizname=quizname, quizid=quizid)
+    
+
+@app.route('/quizzes/<quizname>/<quizid>/json', methods=['GET', 'POST'])
+def json(quizname, quizid):
     distribution = quizMarks.query.with_entities(quizMarks.mark).filter_by(quiz_id=quizid).all()
+    temp_frequencies = []
     frequencies = []
+
     for mark in distribution:
-        frequencies.append(mark)
+        mark = mark._asdict()
+        temp_frequencies.append(mark)
     
+    for marks in temp_frequencies:
+        frequencies.append(marks['mark'])
     
-    return render_template('scores.html', frequencies=frequencies)
+    return jsonify({'marks':frequencies})
 
 # Overrides the Flask_Admin Classes to authenticate users before accessing the admin terminal
 class MyModelView(ModelView):
     column_searchable_list = [User.username, User.email, Quizzes.name, Quizzes.author_id, Questions.question]
-    form_excluded_columns = ['posts', 'authorOf', 'marksOf', 'longanswers', 'followed', 'followers','quizMarks']
+    form_excluded_columns = ['posts', 'authorOf', 'marksOf', 'longanswers', 'followed', 'followers','quizMarks', 'questions', 'mcquestion', 'longquestions']
     def is_accessible(self):
         if current_user.is_authenticated:
             user = load_user(current_user.id)
@@ -408,7 +415,7 @@ class MyLQuestionView(ModelView):
         return redirect(url_for('login'))
 
 class MyLAnswerView(ModelView):
-    column_searchable_list = [User.username, LongQuestions.question, Quizzes.name]
+    column_searchable_list = [User.username, LongQuestions.question, Quizzes.name, User.email]
     form_excluded_columns = ['answer','user','Question']
     def is_accessible(self):
         if current_user.is_authenticated:
@@ -420,7 +427,7 @@ class MyLAnswerView(ModelView):
         return redirect(url_for('login'))
 
 class MyMarksView(ModelView):
-    column_searchable_list = [Quizzes.name, User.username, quizMarks.mark]
+    column_searchable_list = [Quizzes.name, User.username, quizMarks.mark, User.email]
     def is_accessible(self):
         if current_user.is_authenticated:
             user = load_user(current_user.id)

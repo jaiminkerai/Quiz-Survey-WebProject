@@ -1,0 +1,36 @@
+ADMINS
+username : ADMIN
+email : cits3403test@gmail.com
+password : 3403projecttest
+name: TEST 3403Website
+
+username : MarkJones
+email : markjones@gmail.com
+password : a
+
+username : DebbieMiller
+email : debbiemiller@gmail.com
+password : a
+
+STUDENTS
+
+username: jaxond
+email: jaxond@gmail.com
+password: a
+
+username: rachelm
+email: rachelm@gmail.com
+password: a
+
+username: mitchellt
+email: mitchellt@gmail.com
+password: a
+
+username: abbyg
+email: abbyg@gmail.com
+password: a
+
+username: lebronj
+email: lebronj@gmail.com
+password: a
+
