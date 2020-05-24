@@ -4,7 +4,12 @@ Quizards is a teacher-student web-based quiz application created through Flask.
 
 ## Purpose
 
-To allow teachers to create quizzes that involve multiple-choice, short answer and/or long answer questions which are easily accessible by students. 
+- To allow teachers to create quizzes that involve multiple-choice, short answer and/or long answer questions which are easily accessible by students
+- Quizards acts as a platform for Educational Assessments and utilises several assessment mechanisms including: multiple-choice, short answer with fuzzy matching and manual assessment of long answers
+
+## Architecture
+
+- 
 
 ### Getting Started
 
