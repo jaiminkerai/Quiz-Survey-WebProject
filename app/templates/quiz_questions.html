@@ -4,29 +4,29 @@
     <h4 class="quiz_desc">{{ quiz.description }}</h4>
     <h5 class="quiz_warning">All questions must be answered!<h5>
     <form method="POST" action="">
-    <div class="quizwrapper">
-    {% for mcqs in MCQ %}
-    <div class="qwrapper">
-        <p class="questions">{{ mcqs.question }}</p>
-        <div>{{ form.options[loop.index0] }}</div>
-    </div>
-    {% endfor %}
-    {% for qs in worded %}
-    <div class="qwrapper">
-        <p class="questions">{{ qs.question }}</p>
-           {{ form.shortanswer[loop.index0](class="inputbox")}}
-    </div>
-    {% endfor %}
-    {% for lqs in longworded %}
-    <div class="qwrapper lqwrapper">
-        <p class="questions lquestion">{{ lqs.question }}</p>
-           {{ form.longanswer[loop.index0](class="inputbox long") }}
-    </div>
-    {% endfor %}
-    </div>
-    {{ form.submit(class="subbutton") }}
+        <div class="quizwrapper">
+        <!--  Multiple Choice Questions -->
+            {% for mcqs in MCQ %}
+            <div class="qwrapper">
+                <p class="questions">{{ mcqs.question }}</p>
+                <div>{{ form.options[loop.index0] }}</div>
+            </div>
+            {% endfor %}
+        <!-- Short Answer Questions -->
+            {% for qs in worded %}
+            <div class="qwrapper">
+                <p class="questions">{{ qs.question }}</p>
+                {{ form.shortanswer[loop.index0](class="inputbox")}}
+            </div>
+            {% endfor %}
+        <!-- Long Answer Questions -->
+            {% for lqs in longworded %}
+            <div class="qwrapper lqwrapper">
+                <p class="questions lquestion">{{ lqs.question }}</p>
+                {{ form.longanswer[loop.index0](class="inputbox long") }}
+            </div>
+            {% endfor %}
+        </div>
+        {{ form.submit(class="subbutton") }}
     </form>
-    
-
-    
 {% endblock %}

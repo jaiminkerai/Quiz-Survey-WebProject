@@ -5,6 +5,7 @@
     <h1>Edit Profile</h1>
     <form action="" method="post">
         {{ form.hidden_tag() }}
+        <!-- Username  -->
         <div class="input_field">
         <p>
             {{ form.username.label(class="label") }}<br>
@@ -14,6 +15,7 @@
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
         </p>
+        <!-- Email  -->
         <div class="input_field">
         <p>
             {{ form.email.label(class="label") }}<br>
@@ -23,6 +25,7 @@
             <span style="color: red;">{{ error }}</span>
             {% endfor %}
         </p>
+        <!-- About Me -->
         <div class="input_field">
         <p>
             {{ form.about_me.label(class="label") }}<br>

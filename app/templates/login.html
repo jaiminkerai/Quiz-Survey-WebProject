@@ -7,23 +7,23 @@
     
                 <form id="myform" action="" method="post" novalidate>
                     {{ form.hidden_tag() }}
+                    <!-- Username -->
                     <div class="input_field">
                         {{ form.username.label(class="label") }}
                         <div>{{ form.username(class="inputbox", placeholder="Username") }}</div>
                     </div>
+                    <!-- Password -->
                     <div class="input_field">
                         {{ form.password.label(class="label") }}
                         <div>{{ form.password(class="inputbox", placeholder="Password") }}
                     </div>
+                    <!-- Remember Me -->
                     <div>{{ form.remember_me(class="rbtn") }}</div>
                     <div>{{ form.remember_me.label(class="rtext") }}</div>
                     <div>{{ form.submit(class="sbtn") }}</div>
                 </form>
     </div>
     <p>
-        {% if current_user.is_anonymous %}
-        {% else %}
-        {% endif %}
         Forgot Your Password?
         <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
     </p>
