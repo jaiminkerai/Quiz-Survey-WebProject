@@ -1,3 +1,0 @@
-email : cits3403test@gmail.com
-password : 3403projecttest
-name: TEST 3403Website
