@@ -54,6 +54,7 @@ Quizards is a teacher-student web-based quiz application created through Flask.
 ├─ config.py 
 ├─ geckodriver.exe   # Geckodriver for selenium tests 
 ├─ app.db   # Database of Quizards
+├─ test.db   # Testing database
 ├─ .gitignore   # Ignores any files in this text file
 ├─ system.py     # Selenium testing for login feature
 └─ tests.py      # Unit testing for User Model
@@ -113,7 +114,7 @@ To run the unit tests covering Quizard's User Model:
 - Firefox must be installed
 
 To run the selenium test covering Quizard's Login & Register feature:
-1. Change config of the app to the TestConfig in app/__init__.py:
+1. Change config of the app to the TestConfig in app/__init__.py BEFORE flask run:
 ```
 	app.config.from_object(Config)
 ```
@@ -134,7 +135,8 @@ To run the selenium test covering Quizard's Login & Register feature:
 To see the commit logs visit the commits.txt file
 
 ### Contributors:
-![Screenshot (113)](https://user-images.githubusercontent.com/64474462/82753954-60d34780-9dfc-11ea-9e4c-eeaab56fc643.png)
+![Screenshot (116)](https://user-images.githubusercontent.com/64474462/82783979-3502a100-9e92-11ea-9d34-02bb3e9a19da.png)
+
 
 
 
