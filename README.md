@@ -111,11 +111,23 @@ To run the unit tests covering Quizard's User Model:
 ### Selenium Test
 #### Disclaimer:
 - Firefox must be installed
-- The original database will be overridden so to restore it, the changes to app.db must be deleted before committing
 
-To run the selenium test covering Quizard's Login feature:
+To run the selenium test covering Quizard's Login & Register feature:
+1. Change config of the app to the TestConfig in app/__init__.py:
+```
+	app.config.from_object(Config)
+```
+  to
+```
+	app.config.from_object(TestConfig)
+```
+
+2. Run the selenium test:
 
     $ python3 system.py
+
+#### Note:
+- To return to the original Quizards database, change app.config.from_object(TestConfig) back to app.config.from_object(Config)
 	
 ## Contributions
 
