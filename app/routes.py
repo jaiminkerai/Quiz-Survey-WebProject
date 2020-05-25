@@ -128,7 +128,7 @@ def edit_profile():
         current_user.about_me = form.about_me.data
         db.session.commit()
         flash('Your changes have been saved.', 'alertSuccess')
-        return redirect(url_for('edit_profile'))
+        return redirect(url_for('user', username=current_user.username))
     
     # Show current account details
     elif request.method == 'GET':
