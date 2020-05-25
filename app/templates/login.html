@@ -2,8 +2,8 @@
 
 {% block content %}
     <div class="wrapper">
-    <h1>Sign In</h1>
-    <p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+    <h1 id = "signin">Sign In</h1>
+    <p>New User? <a href="{{ url_for('register') }}" id = "registerbtn">Click to Register!</a></p>
     
                 <form id="myform" action="" method="post" novalidate>
                     {{ form.hidden_tag() }}

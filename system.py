@@ -36,6 +36,7 @@ class SystemTest(unittest.TestCase):
             db.session.commit()
             db.session.remove()
     
+    
     def test_login(self):
         #go to local host (app)
         self.driver.get('http://localhost:5000/')
@@ -55,6 +56,35 @@ class SystemTest(unittest.TestCase):
         #finds element by id equal to greeting and matches it to html of 'Quizzes'
         greeting = self.driver.find_element_by_id('greeting').get_attribute('innerHTML')
         self.assertEqual(greeting, 'Quizzes')
+
+    def test_register(self):
+        #go to local host (app)
+        self.driver.get('http://localhost:5000/')
+        #provides operating system time to load
+        time.sleep(1)
+
+        registerLink = self.driver.find_element_by_id('registerbtn')
+        registerLink.click()
+        time.sleep(1)
+
+        #finds username, password and submit field by id
+        user_field = self.driver.find_element_by_id('username')
+        email_field = self.driver.find_element_by_id('email')
+        password_field = self.driver.find_element_by_id('password')
+        password2_field = self.driver.find_element_by_id('password2')
+        submit = self.driver.find_element_by_id('submit')
+
+        #submits jaimin and pw in the userfield and password
+        user_field.send_keys('jayden')
+        email_field.send_keys('jayden@teo.com')
+        password_field.send_keys('pw')
+        password2_field.send_keys('pw')
+        submit.click()
+        time.sleep(1)
+
+        #finds element by id equal to greeting and matches it to html of 'Quizzes'
+        signin = self.driver.find_element_by_id('signin').get_attribute('innerHTML')
+        self.assertEqual(signin, 'Sign In')
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

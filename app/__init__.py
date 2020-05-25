@@ -16,7 +16,7 @@ from flask_mail import Mail
 from flask_moment import Moment
 
 app = Flask(__name__) # Instantiate Flask application; __name__ a variable equal to the name of the module
-app.config.from_object(Config)
+app.config.from_object(TestConfig)
 db = SQLAlchemy(app) # Create a database instance
 migrate = Migrate(app, db)
 app.config['FLASK_ADMIN_SWATCH'] = 'cosmo'
