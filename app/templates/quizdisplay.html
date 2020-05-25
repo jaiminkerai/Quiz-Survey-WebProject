@@ -30,7 +30,13 @@
             <tr>
                 <td colspan=100%>
                     <a href="{{ url_for('comments', quizid=quiz.id, quizname=quiz.name) }}" style="text-decoration:none">
-                        <button class="clicker"><i class='fas fa-comment-alt' style="color:gray"></i> Comments({{ quiz.numOfPosts() }})</button>
+                        <button class="clicker"><i class='fas fa-comment-alt' style="color:gray"></i> 
+                            {% if quiz.numOfPosts() == 1 %}
+                            {{ quiz.numOfPosts() }} Comment
+                            {% else %}
+                            {{ quiz.numOfPosts() }} comments
+                            {% endif %}
+                        </button>
                     </a>
                     <a href="{{ url_for('scores', quizid=quiz.id, quizname=quiz.name) }}" style="text-decoration:none">
                         <button class="clicker"><i class='fas fa-chart-line' style="color:gray"></i> Scores</button>
