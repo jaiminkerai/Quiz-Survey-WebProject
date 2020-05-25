@@ -71,6 +71,12 @@ These instructions will allow you to run the quiz application on your local mach
 - FireFox 
 - Geckodriver
 
+#### Libraries
+
+- Python fuzzywuzzy
+- Chart.js (version 2.9.3)
+- Font Awesome 5
+
 #### Installing
 1. Clone this repository
 ```
