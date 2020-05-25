@@ -134,6 +134,10 @@ class Quizzes(db.Model):
             return round(total_sum/count,2)
         if count == 0:
             return False
+
+    def numOfPosts(self):
+        postsnum = Post.query.filter_by(quiz_id=self.id).count()
+        return postsnum
     
 class Questions(db.Model):
     id = db.Column(db.Integer, primary_key = True, autoincrement=True)
