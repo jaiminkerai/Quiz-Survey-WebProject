@@ -5,7 +5,7 @@ Quizards is a teacher-student web-based quiz application created through Flask.
 ## Authors
 
 - Anthony Huynh (22716758)
-- Jaimin Kerai (22718975)
+- Jaimin Kerai (--------)
 - Jayden Teo (22713211)
 
 ## Purpose
